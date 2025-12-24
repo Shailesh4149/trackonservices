@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import FloatingButtons from "@/components/FloatingButtons";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingButtons />
     </>
   );
 };

@@ -1,4 +1,5 @@
-import { Package, Truck, Plane, Clock, Shield, MapPin } from "lucide-react";
+import { Package, Truck, Plane, Clock, Shield, MapPin, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -51,14 +52,20 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <article
               key={service.title}
-              className="group bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border"
+              className="group bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-accent-gradient transition-colors duration-300">
                 <service.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <p className="text-muted-foreground mb-4">{service.description}</p>
+              <Button variant="outline" size="sm" className="w-full" asChild>
+                <a href="tel:9864251628" className="flex items-center justify-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Call to Enquire
+                </a>
+              </Button>
             </article>
           ))}
         </div>
