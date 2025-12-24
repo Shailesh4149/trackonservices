@@ -4,7 +4,7 @@ const mumbaiAreas = [
   "Andheri", "Bandra", "Borivali", "Churchgate", "Dadar",
   "Goregaon", "Juhu", "Kandivali", "Kurla", "Malad",
   "Marine Lines", "Mulund", "Powai", "Thane", "Vashi",
-  "Worli", "BKC", "Lower Parel", "Santacruz", "Vikhroli"
+  "Worli", "BKC", "Lower Parel", "Santacruz", "Vikhroli","DN Nagar","Kapaswadi","Mahada"
 ];
 
 const majorCities = [
