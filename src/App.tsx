@@ -5,15 +5,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Lazy load pages for code splitting
 const Index = lazy(() => import("./pages/Index"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
 const AreaDetail = lazy(() => import("./pages/AreaDetail"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-// Simple loading fallback
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
@@ -31,7 +31,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/area/:slug" element={<AreaDetail />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
