@@ -5,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import Breadcrumb from "@/components/seo/Breadcrumb";
+import ServiceFAQ from "@/components/service/ServiceFAQ";
+import HowItWorks from "@/components/service/HowItWorks";
+import ServiceUseCases from "@/components/service/ServiceUseCases";
+import ServiceBenefits from "@/components/service/ServiceBenefits";
+import ServiceComparison from "@/components/service/ServiceComparison";
+import RelatedServices from "@/components/service/RelatedServices";
+import { serviceFAQs } from "@/data/serviceFAQs";
 
 const servicesData = {
   "domestic-courier": {
@@ -197,6 +205,13 @@ const ServiceDetail = () => {
   }
 
   const ServiceIcon = service.icon;
+  const serviceData = slug ? serviceFAQs[slug as keyof typeof serviceFAQs] : null;
+
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/#services" },
+    { label: service.shortTitle }
+  ];
 
   return (
     <>
@@ -205,10 +220,7 @@ const ServiceDetail = () => {
         {/* Hero Section */}
         <section className="bg-primary/5 py-12 md:py-20">
           <div className="container">
-            <Link to="/#services" className="inline-flex items-center gap-2 text-accent hover:underline mb-6">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Services
-            </Link>
+            <Breadcrumb items={breadcrumbItems} />
             
             <div className="flex items-start gap-6">
               <div className="w-20 h-20 rounded-2xl bg-accent-gradient flex items-center justify-center flex-shrink-0">
@@ -267,6 +279,40 @@ const ServiceDetail = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* How It Works */}
+                {serviceData?.howItWorks && serviceData.howItWorks.length > 0 && (
+                  <HowItWorks steps={serviceData.howItWorks} serviceName={service.shortTitle} />
+                )}
+
+                {/* Benefits */}
+                {serviceData?.benefits && serviceData.benefits.length > 0 && (
+                  <ServiceBenefits benefits={serviceData.benefits} />
+                )}
+
+                {/* Use Cases */}
+                {serviceData?.useCases && serviceData.useCases.length > 0 && (
+                  <ServiceUseCases useCases={serviceData.useCases} />
+                )}
+
+                {/* Comparison */}
+                {serviceData?.comparison && serviceData.comparison.length > 0 && (
+                  <ServiceComparison 
+                    comparison={serviceData.comparison} 
+                    serviceName={service.shortTitle}
+                    alternativeName="Alternative"
+                  />
+                )}
+
+                {/* FAQ */}
+                {serviceData?.faqs && serviceData.faqs.length > 0 && (
+                  <ServiceFAQ faqs={serviceData.faqs} serviceName={service.shortTitle} />
+                )}
+
+                {/* Related Services */}
+                {serviceData?.relatedServices && serviceData.relatedServices.length > 0 && (
+                  <RelatedServices services={serviceData.relatedServices} currentService={slug} />
+                )}
               </div>
 
               {/* Right Sidebar - Contact Card */}
