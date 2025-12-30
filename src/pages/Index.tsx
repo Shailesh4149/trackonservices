@@ -10,6 +10,9 @@ import FloatingButtons from "@/components/FloatingButtons";
 import StatsInfographic from "@/components/infographics/StatsInfographic";
 import ProcessFlow from "@/components/infographics/ProcessFlow";
 import DeliveryTimeChart from "@/components/infographics/DeliveryTimeChart";
+import AboutPreview from "@/components/AboutPreview";
+import FAQPreview from "@/components/FAQPreview";
+import BlogPreview from "@/components/BlogPreview";
 
 const Index = () => {
   return (
@@ -39,10 +42,16 @@ const Index = () => {
           </div>
         </section>
 
+        {/* About Preview */}
+        <AboutPreview />
+
         <WhyChooseUs />
 
+        {/* FAQ Preview */}
+        <FAQPreview />
+
         {/* Delivery Time Chart */}
-        <section className="py-12 md:py-16 bg-secondary/30">
+        <section className="py-12 md:py-16">
           <div className="container">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
               Estimated Delivery Times
@@ -50,6 +59,9 @@ const Index = () => {
             <DeliveryTimeChart />
           </div>
         </section>
+
+        {/* Blog Preview */}
+        <BlogPreview />
 
         <ContactSection />
       </main>
