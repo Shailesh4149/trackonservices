@@ -26,6 +26,19 @@ const mumbaiAreas = [
   { name: "Airport Road", slug: "airport-road" },
   { name: "Dadar", slug: "dadar" },
   { name: "CST", slug: "cst" },
+  { name: "Chandivali", slug: "chandivali" },
+  { name: "Vikhroli", slug: "vikhroli" },
+  { name: "Vikhroli East", slug: "vikhroli-east" },
+  { name: "Vikhroli West", slug: "vikhroli-west" },
+  { name: "SEEPZ", slug: "seepz" },
+  { name: "Mahakali", slug: "mahakali" },
+  { name: "Shanti Nagar", slug: "shanti-nagar" },
+  { name: "Lokhandwala", slug: "lokhandwala" },
+  { name: "Oshiwara", slug: "oshiwara" },
+  { name: "MIDC", slug: "midc" },
+  { name: "Vasai", slug: "vasai" },
+  { name: "Virar", slug: "virar" },
+  { name: "Nalasopara", slug: "nalasopara" },
 ];
 
 const majorCities = [
@@ -134,22 +147,25 @@ const AreasSection = () => {
           </article>
         </div>
 
-        {/* SEO Content Block */}
+        {/* SEO Content Block - Optimized for singular/plural keyword variations */}
         <div className="mt-12 bg-card rounded-2xl p-6 md:p-8 shadow-card">
-          <h3 className="text-xl font-bold text-foreground mb-4">Best Courier Services in Mumbai</h3>
+          <h3 className="text-xl font-bold text-foreground mb-4">Best Courier Service & Courier Services in Mumbai</h3>
           <div className="prose prose-sm max-w-none text-muted-foreground">
             <p>
-              <strong>Trackon Courier</strong> provides the best courier services in Mumbai with coverage across all major areas including 
+              <strong>Trackon Courier Mumbai</strong> provides the <strong>fastest courier service in Mumbai</strong> and the best <strong>courier services near me</strong>. 
+              Looking for <strong>courier service near me</strong> or <strong>courier office near me</strong>? We cover all major areas including 
               <strong> Andheri East, Andheri West, Bandra, Juhu, DN Nagar, Azad Nagar, Versova, Vile Parle, Goregaon, Malad, Kandivali, 
-              Jogeshwari, Saki Naka, Marol, Kapaswadi, </strong> and <strong>Juhu Versova Link Road</strong>.
+              Jogeshwari, Saki Naka, Marol, Kapaswadi, Chandivali, Vikhroli, SEEPZ, Mahakali, Shanti Nagar, Lokhandwala, Oshiwara, MIDC, Vasai, Virar, </strong> and <strong>Nalasopara</strong>.
             </p>
             <p className="mt-3">
-              We also offer specialized <strong>airport courier services</strong> at <strong>Andheri Airport, Terminal 1, Terminal 2, 
-              and Airport Road</strong>. For <strong>Pan India delivery</strong>, we cover <strong>Delhi, Bengaluru, Chennai, Kolkata, 
-              Hyderabad, Pune, Rajasthan, Valsad, South India,</strong> and all major cities.
+              <strong>Trackon Courier Andheri</strong> | <strong>Trackon Courier Versova</strong> | <strong>Trackon Courier DN Nagar</strong> | 
+              <strong> Trackon Courier Jogeshwari</strong> | <strong>Trackon Courier Goregaon</strong> - We offer specialized <strong>airport courier services</strong> at 
+              <strong> Andheri Airport, Terminal 1, Terminal 2, and Airport Road</strong>. For <strong>Pan India delivery</strong>, we cover 
+              <strong> Delhi, Bengaluru, Chennai, Kolkata, Hyderabad, Pune, Rajasthan, Valsad, South India,</strong> and all major cities.
             </p>
             <p className="mt-3">
-              Looking for <strong>fast courier services near you</strong>? <strong>Cheap courier services in Mumbai</strong>? 
+              Need <strong>courier tracking</strong>? Check <strong>Trackon Courier tracking</strong> status anytime. Want to know <strong>courier charges</strong>? 
+              We offer the <strong>fastest courier service in India</strong> with competitive rates. Looking for <strong>fastest courier service near me</strong>? 
               Call <a href="tel:9864251628" className="text-accent font-semibold">9864251628</a> for instant quotes and same-day pickup!
             </p>
           </div>

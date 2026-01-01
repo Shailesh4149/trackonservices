@@ -17,12 +17,12 @@ const HeroSection = () => {
           <div className="text-primary-foreground space-y-6 animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2 border border-primary-foreground/20">
               <MapPin className="w-4 h-4 text-accent" />
-              <span className="text-sm font-medium">Trusted Courier Services in Mumbai & Pan India</span>
+              <span className="text-sm font-medium">Fastest Courier Service in Mumbai & Pan India</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
               Fast & Reliable{" "}
-              <span className="text-gradient">Courier Services</span>{" "}
+              <span className="text-gradient">Courier Service</span>{" "}
               Near You
             </h1>
 
