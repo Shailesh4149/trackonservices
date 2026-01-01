@@ -2,33 +2,37 @@ import { useEffect } from "react";
 
 const SEOHead = () => {
   useEffect(() => {
-    // Update document title
-    document.title = "Trackon Courier - Fast Courier Services in Mumbai | Same Day Delivery | 9864251628";
+    // Update document title - optimized for singular/plural keywords
+    document.title = "Trackon Courier Mumbai | Fastest Courier Service Near Me | Courier Services | 9864251628";
 
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
+    const descriptionContent = "Trackon Courier Mumbai - Fastest courier service near me & best courier services in Mumbai. Courier tracking, courier charges inquiry, courier office near me. Same-day delivery, express shipping. Call 9864251628. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon, Versova.";
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Trackon Courier offers fast, reliable courier services in Mumbai & Pan India. Same-day delivery, express shipping, doorstep pickup. Call 9864251628 for instant quotes. Trusted by 50,000+ customers.");
+      metaDescription.setAttribute("content", descriptionContent);
     } else {
       const meta = document.createElement("meta");
       meta.name = "description";
-      meta.content = "Trackon Courier offers fast, reliable courier services in Mumbai & Pan India. Same-day delivery, express shipping, doorstep pickup. Call 9864251628 for instant quotes. Trusted by 50,000+ customers.";
+      meta.content = descriptionContent;
       document.head.appendChild(meta);
     }
 
-    // Add keywords meta
+    // Add keywords meta - optimized for singular/plural variations
     const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
+    const keywordsContent = "courier service, courier services, courier service near me, courier services near me, courier tracking, courier charges, courier office near me, fastest courier service in india, fastest courier service, fastest courier service in mumbai, fastest courier service near me, trackon courier, trackon courier mumbai, trackon courier DN nagar, trackon courier Jogeshwari, trackon courier Goregaon, trackon courier near me, trackon courier tracking, trackon courier Andheri, trackon courier Versova, same day delivery mumbai, express courier, parcel delivery, shipping services india, best courier in mumbai, courier service mumbai, courier services mumbai, cheap courier service, cheap courier services, document courier, parcel courier, international courier service, international courier services, domestic courier, domestic courier service";
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", keywordsContent);
+    } else {
       const keywords = document.createElement("meta");
       keywords.name = "keywords";
-      keywords.content = "courier services mumbai, trackon courier, courier near me, same day delivery mumbai, express courier, parcel delivery, shipping services india, courier services near me, best courier in mumbai";
+      keywords.content = keywordsContent;
       document.head.appendChild(keywords);
     }
 
-    // Add Open Graph tags
+    // Add Open Graph tags - optimized for singular/plural
     const ogTags = [
-      { property: "og:title", content: "Trackon Courier - Fast & Reliable Courier Services in Mumbai" },
-      { property: "og:description", content: "Same-day delivery, express shipping & doorstep pickup. Call 9864251628 for instant quotes." },
+      { property: "og:title", content: "Trackon Courier Mumbai | Fastest Courier Service & Courier Services Near Me" },
+      { property: "og:description", content: "Fastest courier service in Mumbai. Courier tracking, courier charges, courier office near me. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon. Call 9864251628." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
     ];
@@ -50,8 +54,9 @@ const SEOHead = () => {
       script.text = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Trackon Courier",
-        "description": "Fast and reliable courier services in Mumbai and Pan India. Same-day delivery, express shipping, and doorstep pickup available.",
+        "name": "Trackon Courier Mumbai",
+        "alternateName": ["Trackon Courier", "Trackon Courier Service", "Trackon Courier Services"],
+        "description": "Fastest courier service in Mumbai. Best courier services near me. Courier tracking, courier charges, courier office near me. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon, Versova. Same-day delivery and express shipping.",
         "telephone": "+91-9864251628",
         "email": "info@trackoncourier.com",
         "address": {
@@ -69,6 +74,25 @@ const SEOHead = () => {
         "priceRange": "$$",
         "areaServed": [
           "Mumbai",
+          "Andheri",
+          "DN Nagar",
+          "Jogeshwari",
+          "Goregaon",
+          "Versova",
+          "Bandra",
+          "Juhu",
+          "Vile Parle",
+          "Malad",
+          "Kandivali",
+          "Chandivali",
+          "Vikhroli",
+          "SEEPZ",
+          "Mahakali",
+          "Lokhandwala",
+          "Oshiwara",
+          "Vasai",
+          "Virar",
+          "Nalasopara",
           "Delhi",
           "Bangalore",
           "Chennai",
@@ -77,11 +101,15 @@ const SEOHead = () => {
           "Pune"
         ],
         "serviceType": [
+          "Courier Service",
+          "Courier Services",
           "Domestic Courier",
           "International Shipping",
           "Express Delivery",
           "Same Day Delivery",
-          "Doorstep Pickup"
+          "Doorstep Pickup",
+          "Courier Tracking",
+          "Fastest Courier Service"
         ],
         "sameAs": [],
         "aggregateRating": {
