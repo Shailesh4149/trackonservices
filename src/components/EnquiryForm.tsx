@@ -21,16 +21,31 @@ const EnquiryForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Format message for WhatsApp
+    const whatsappMessage = `*New Quote Request*
+
+*Name:* ${formData.name.trim()}
+*Phone:* ${formData.phone.trim()}
+*Email:* ${formData.email.trim() || "Not provided"}
+*Pickup Location:* ${formData.pickupLocation.trim()}
+*Delivery Location:* ${formData.deliveryLocation.trim()}
+*Package Details:* ${formData.message.trim() || "Not specified"}`;
+
+    // WhatsApp business number (replace with actual number)
+    const whatsappNumber = "919876543210"; // Format: country code + number without +
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, "_blank");
 
     toast({
-      title: "Enquiry Submitted Successfully!",
-      description: "Our team will contact you within 30 minutes.",
+      title: "Opening WhatsApp",
+      description: "Complete your enquiry in WhatsApp.",
     });
 
     setFormData({
