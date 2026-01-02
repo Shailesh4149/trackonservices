@@ -16,23 +16,23 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-6">
-              <a href="tel:9864251628" className="flex items-center gap-4 group">
+              <a href="tel:8097512951" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 rounded-xl bg-accent-gradient flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <div>
                   <div className="text-sm text-primary-foreground/70">Call Us Now</div>
-                  <div className="text-2xl font-bold">9864251628</div>
+                  <div className="text-2xl font-bold">8097512951</div>
                 </div>
               </a>
 
-              <a href="mailto:info@trackoncourier.com" className="flex items-center gap-4 group">
+              <a href="mailto:sonacourierservices@gmail.com" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 rounded-xl bg-primary-foreground/10 flex items-center justify-center border border-primary-foreground/20 group-hover:bg-primary-foreground/20 transition-colors">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="text-sm text-primary-foreground/70">Email Us</div>
-                  <div className="text-lg font-semibold">info@trackoncourier.com</div>
+                  <div className="text-lg font-semibold">sonacourierservices@gmail.com</div>
                 </div>
               </a>
 
@@ -42,7 +42,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm text-primary-foreground/70">Head Office</div>
-                  <div className="text-lg font-semibold">Mumbai, Maharashtra, India</div>
+                  <div className="text-lg font-semibold">Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, Kapaswadi Loknayak Nagar, Near Hotel Shankri, Andheri (W) Mumbai</div>
                 </div>
               </div>
 
@@ -69,7 +69,7 @@ const ContactSection = () => {
               asChild
             >
               <a 
-                href={`https://wa.me/919864251628?text=${encodeURIComponent("Hi, I want to enquire about courier services.")}`}
+                href={`https://wa.me/918097512951?text=${encodeURIComponent("Hi, I want to enquire about courier services.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -85,9 +85,9 @@ const ContactSection = () => {
               className="w-full"
               asChild
             >
-              <a href="tel:9864251628" className="flex items-center gap-2">
+              <a href="tel:8097512951" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-                Call: 9864251628
+                Call: 8097512951
               </a>
             </Button>
 

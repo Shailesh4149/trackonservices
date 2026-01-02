@@ -3,11 +3,11 @@ import { useEffect } from "react";
 const SEOHead = () => {
   useEffect(() => {
     // Update document title - optimized for singular/plural keywords
-    document.title = "Trackon Courier Mumbai | Fastest Courier Service Near Me | Courier Services | 9864251628";
+    document.title = "Trackon Courier Mumbai | Fastest Courier Service Near Me | Courier Services | 8097512951";
 
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
-    const descriptionContent = "Trackon Courier Mumbai - Fastest courier service near me & best courier services in Mumbai. Courier tracking, courier charges inquiry, courier office near me. Same-day delivery, express shipping. Call 9864251628. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon, Versova.";
+    const descriptionContent = "Trackon Courier Mumbai - Fastest courier service near me & best courier services in Mumbai. Courier tracking, courier charges inquiry, courier office near me. Same-day delivery, express shipping. Call 8097512951. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon, Versova.";
     if (metaDescription) {
       metaDescription.setAttribute("content", descriptionContent);
     } else {
@@ -32,7 +32,7 @@ const SEOHead = () => {
     // Add Open Graph tags - optimized for singular/plural
     const ogTags = [
       { property: "og:title", content: "Trackon Courier Mumbai | Fastest Courier Service & Courier Services Near Me" },
-      { property: "og:description", content: "Fastest courier service in Mumbai. Courier tracking, courier charges, courier office near me. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon. Call 9864251628." },
+      { property: "og:description", content: "Fastest courier service in Mumbai. Courier tracking, courier charges, courier office near me. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon. Call 8097512951." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
     ];
@@ -57,11 +57,12 @@ const SEOHead = () => {
         "name": "Trackon Courier Mumbai",
         "alternateName": ["Trackon Courier", "Trackon Courier Service", "Trackon Courier Services"],
         "description": "Fastest courier service in Mumbai. Best courier services near me. Courier tracking, courier charges, courier office near me. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon, Versova. Same-day delivery and express shipping.",
-        "telephone": "+91-9864251628",
-        "email": "info@trackoncourier.com",
+        "telephone": "+91-8097512951",
+        "email": "sonacourierservices@gmail.com",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Mumbai",
+          "streetAddress": "Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, Kapaswadi Loknayak Nagar, Near Hotel Shankri",
+          "addressLocality": "Andheri West, Mumbai",
           "addressRegion": "Maharashtra",
           "addressCountry": "IN"
         },
