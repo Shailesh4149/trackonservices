@@ -1,10 +1,19 @@
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
-const Footer = () => {
+const Footer = React.forwardRef<HTMLElement>((props, ref) => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  const getLink = (hash: string) => {
+    return isHomePage ? hash : `/${hash}`;
+  };
+
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer ref={ref} className="bg-foreground text-background py-12">
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -38,11 +47,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
             <nav className="space-y-2">
-              <a href="#services" className="block text-background/70 hover:text-accent transition-colors">Our Services</a>
-              <a href="#areas" className="block text-background/70 hover:text-accent transition-colors">Service Areas</a>
-              <a href="#about" className="block text-background/70 hover:text-accent transition-colors">About Us</a>
-              <a href="#contact" className="block text-background/70 hover:text-accent transition-colors">Contact</a>
-              <a href="#enquiry" className="block text-background/70 hover:text-accent transition-colors">Get Quote</a>
+              <Link to={getLink("#services")} className="block text-background/70 hover:text-accent transition-colors">Our Services</Link>
+              <Link to={getLink("#areas")} className="block text-background/70 hover:text-accent transition-colors">Service Areas</Link>
+              <Link to="/about" className="block text-background/70 hover:text-accent transition-colors">About Us</Link>
+              <Link to={getLink("#contact")} className="block text-background/70 hover:text-accent transition-colors">Contact</Link>
+              <Link to={getLink("#enquiry")} className="block text-background/70 hover:text-accent transition-colors">Get Quote</Link>
             </nav>
           </div>
 
@@ -50,11 +59,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Our Services</h4>
             <nav className="space-y-2">
-              <a href="#services" className="block text-background/70 hover:text-accent transition-colors">Domestic Courier</a>
-              <a href="#services" className="block text-background/70 hover:text-accent transition-colors">International Shipping</a>
-              <a href="#services" className="block text-background/70 hover:text-accent transition-colors">Express Delivery</a>
-              <a href="#services" className="block text-background/70 hover:text-accent transition-colors">Same Day Delivery</a>
-              <a href="#services" className="block text-background/70 hover:text-accent transition-colors">Doorstep Pickup</a>
+              <Link to="/service/domestic-courier" className="block text-background/70 hover:text-accent transition-colors">Domestic Courier</Link>
+              <Link to="/service/international-courier" className="block text-background/70 hover:text-accent transition-colors">International Shipping</Link>
+              <Link to="/service/express-delivery" className="block text-background/70 hover:text-accent transition-colors">Express Delivery</Link>
+              <Link to="/service/same-day-delivery" className="block text-background/70 hover:text-accent transition-colors">Same Day Delivery</Link>
+              <Link to="/service/doorstep-pickup" className="block text-background/70 hover:text-accent transition-colors">Doorstep Pickup</Link>
             </nav>
           </div>
         </div>
@@ -65,6 +74,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;

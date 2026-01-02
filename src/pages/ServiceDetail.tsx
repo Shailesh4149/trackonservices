@@ -22,7 +22,7 @@ const servicesData = {
     description: "Fast and reliable courier services across India. Same-day and next-day delivery options available.",
     details: "Our domestic courier service covers all major cities and towns across India. We offer flexible pickup and delivery options with real-time tracking. Whether you need to send documents, parcels, or bulk shipments, we ensure timely and secure delivery.",
     features: ["Pan India coverage", "Real-time tracking", "Doorstep pickup", "Insurance available", "COD facility"],
-    metaDescription: "Trackon Courier offers fast domestic courier services in Mumbai & across India. Same-day delivery, doorstep pickup, real-time tracking. Call 9864251628 for instant quotes.",
+    metaDescription: "Trackon Courier offers fast domestic courier services in Mumbai & across India. Same-day delivery, doorstep pickup, real-time tracking. Call 8097512951 for instant quotes.",
     keywords: "domestic courier mumbai, courier services india, parcel delivery, same day courier, document courier",
     areas: ["Mumbai", "Delhi", "Bangalore", "Chennai", "Kolkata", "Hyderabad", "Pune", "Ahmedabad"],
     pricing: "Starting from ₹50 for documents",
@@ -35,7 +35,7 @@ const servicesData = {
     description: "Send parcels worldwide with tracked international courier services to 200+ countries.",
     details: "Ship your packages to over 200 countries worldwide with our reliable international courier service. We handle customs documentation and ensure your shipments reach their destination safely and on time.",
     features: ["200+ countries", "Customs clearance", "Express & economy options", "Door-to-door delivery", "Online tracking"],
-    metaDescription: "International courier services from Mumbai to 200+ countries. Customs clearance, express shipping, door-to-door delivery. Contact Trackon Courier at 9864251628.",
+    metaDescription: "International courier services from Mumbai to 200+ countries. Customs clearance, express shipping, door-to-door delivery. Contact Trackon Courier at 8097512951.",
     keywords: "international courier mumbai, worldwide shipping, international parcel delivery, customs clearance, express international shipping",
     areas: ["USA", "UK", "Canada", "Australia", "UAE", "Singapore", "Germany", "Japan"],
     pricing: "Starting from ₹1500 for documents",
@@ -48,7 +48,7 @@ const servicesData = {
     description: "Urgent deliveries with express courier services. Get your package delivered within hours.",
     details: "For time-sensitive shipments, our express delivery service guarantees the fastest possible delivery. Perfect for urgent documents, medical supplies, or any critical packages that need immediate attention.",
     features: ["Same-day delivery", "Priority handling", "Dedicated vehicles", "Live updates", "24/7 support"],
-    metaDescription: "Express courier delivery in Mumbai - urgent packages delivered within hours. Priority handling, 24/7 support. Call Trackon Courier 9864251628 for express shipping.",
+    metaDescription: "Express courier delivery in Mumbai - urgent packages delivered within hours. Priority handling, 24/7 support. Call Trackon Courier 8097512951 for express shipping.",
     keywords: "express delivery mumbai, urgent courier, fast delivery service, priority courier, same day express",
     areas: ["Mumbai Central", "Andheri", "Bandra", "Dadar", "Thane", "Navi Mumbai", "Borivali", "Goregaon"],
     pricing: "Starting from ₹150 for local express",
@@ -61,7 +61,7 @@ const servicesData = {
     description: "Book before 2 PM for same-day courier delivery within city limits in Mumbai.",
     details: "Need it delivered today? Book before 2 PM and we'll deliver your package within the same day across Mumbai city limits. Ideal for last-minute gifts, important documents, or urgent business needs.",
     features: ["Delivery by evening", "Mumbai city coverage", "Quick pickup", "SMS notifications", "Proof of delivery"],
-    metaDescription: "Same day courier delivery in Mumbai. Book before 2 PM, delivered by evening. Trackon Courier - your trusted same day delivery partner. Call 9864251628.",
+    metaDescription: "Same day courier delivery in Mumbai. Book before 2 PM, delivered by evening. Trackon Courier - your trusted same day delivery partner. Call 8097512951.",
     keywords: "same day delivery mumbai, today delivery courier, urgent same day courier, local courier mumbai",
     areas: ["South Mumbai", "Western Suburbs", "Central Mumbai", "Eastern Suburbs", "Harbour Line areas"],
     pricing: "Starting from ₹100 within city",
@@ -74,7 +74,7 @@ const servicesData = {
     description: "Professional packaging services for fragile items. 100% safe delivery guaranteed.",
     details: "We provide professional packaging solutions for all types of items, especially fragile and valuable goods. Our trained staff uses quality materials to ensure your items are protected during transit.",
     features: ["Bubble wrap & foam", "Custom boxes", "Fragile item handling", "Damage protection", "Free assessment"],
-    metaDescription: "Professional secure packaging for fragile items in Mumbai. Custom boxes, bubble wrap, 100% damage protection. Trackon Courier packaging services. Call 9864251628.",
+    metaDescription: "Professional secure packaging for fragile items in Mumbai. Custom boxes, bubble wrap, 100% damage protection. Trackon Courier packaging services. Call 8097512951.",
     keywords: "secure packaging mumbai, fragile item courier, custom packaging, safe delivery packaging",
     areas: ["Mumbai", "All service areas"],
     pricing: "Free with shipments over ₹500",
@@ -87,7 +87,7 @@ const servicesData = {
     description: "Free doorstep pickup for your convenience. Schedule a pickup at your preferred time.",
     details: "No need to visit our office. We offer free doorstep pickup service across Mumbai. Schedule a pickup at your preferred time slot and our executive will collect the package from your location.",
     features: ["Free pickup", "Flexible timing", "Scheduled pickups", "Multiple pickups", "Corporate accounts"],
-    metaDescription: "Free doorstep pickup courier service in Mumbai. Schedule pickup at your convenience. Trackon Courier - call 9864251628 for home pickup.",
+    metaDescription: "Free doorstep pickup courier service in Mumbai. Schedule pickup at your convenience. Trackon Courier - call 8097512951 for home pickup.",
     keywords: "doorstep pickup mumbai, home pickup courier, free pickup service, scheduled courier pickup",
     areas: ["All Mumbai locations", "Thane", "Navi Mumbai", "Kalyan", "Dombivli", "Vasai-Virar"],
     pricing: "FREE pickup for all orders",
@@ -98,7 +98,7 @@ const servicesData = {
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? servicesData[slug as keyof typeof servicesData] : null;
-  const phoneNumber = "9864251628";
+  const phoneNumber = "8097512951";
 
   useEffect(() => {
     if (service) {

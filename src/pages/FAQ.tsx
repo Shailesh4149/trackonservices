@@ -14,7 +14,7 @@ import { Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FAQ = () => {
-  const phoneNumber = "9864251628";
+  const phoneNumber = "8097512951";
   
   const faqCategories = [
     {
@@ -30,7 +30,7 @@ const FAQ = () => {
         },
         {
           question: "How can I contact Trackon Courier?",
-          answer: "You can reach us by phone at 9864251628, via WhatsApp, or through our website's contact form. Our team typically responds within 30 minutes during business hours."
+          answer: "You can reach us by phone at 8097512951, via WhatsApp, or through our website's contact form. Our team typically responds within 30 minutes during business hours."
         },
         {
           question: "Do you offer corporate accounts?",
@@ -181,7 +181,7 @@ const FAQ = () => {
       }
     };
 
-    updateMeta("description", "Find answers to common questions about Trackon Courier services - shipping, tracking, pricing, pickup, international delivery, and more. Call 9864251628 for help.");
+    updateMeta("description", "Find answers to common questions about Trackon Courier services - shipping, tracking, pricing, pickup, international delivery, and more. Call 8097512951 for help.");
     updateMeta("og:title", "FAQ | Trackon Courier Mumbai", true);
   }, []);
 
