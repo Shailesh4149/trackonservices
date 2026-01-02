@@ -26,9 +26,9 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:9864251628" className="flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors">
+          <a href="tel:8097512951" className="flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors">
             <Phone className="w-5 h-5" />
-            <span>9864251628</span>
+            <span>8097512951</span>
           </a>
           <Button variant="accent" asChild>
             <a href="/#enquiry">Get Quote</a>
@@ -53,9 +53,9 @@ const Header = () => {
             <Link to="/about" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">About Us</Link>
             <Link to="/faq" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">FAQ</Link>
             <a href="/#contact" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">Contact</a>
-            <a href="tel:9864251628" className="flex items-center gap-2 text-primary font-bold py-2">
+            <a href="tel:8097512951" className="flex items-center gap-2 text-primary font-bold py-2">
               <Phone className="w-5 h-5" />
-              <span>9864251628</span>
+              <span>8097512951</span>
             </a>
             <Button variant="accent" className="w-full" asChild>
               <a href="/#enquiry">Get Quote</a>

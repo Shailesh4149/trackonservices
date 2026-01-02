@@ -45,9 +45,9 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <Button variant="hero" size="lg" asChild>
-                <a href="tel:9864251628" className="flex items-center gap-2">
+                <a href="tel:8097512951" className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  Call Now: 9864251628
+                  Call Now: 8097512951
                 </a>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>

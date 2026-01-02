@@ -70,7 +70,7 @@ const AreasSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             Fast courier services in Andheri, Bandra, Juhu, DN Nagar, Goregaon, Malad, Kandivali, Vile Parle, Versova & 500+ cities. 
-            Call <a href="tel:9864251628" className="text-accent font-semibold hover:underline">9864251628</a> for same-day delivery.
+            Call <a href="tel:8097512951" className="text-accent font-semibold hover:underline">8097512951</a> for same-day delivery.
           </p>
         </header>
 
@@ -83,7 +83,7 @@ const AreasSection = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground">Mumbai & Suburbs</h3>
-                <p className="text-muted-foreground text-sm">Same-day delivery available | Call 9864251628</p>
+                <p className="text-muted-foreground text-sm">Same-day delivery available | Call 8097512951</p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
@@ -101,11 +101,11 @@ const AreasSection = () => {
             </div>
             <div className="mt-6 pt-4 border-t border-border">
               <a 
-                href="tel:9864251628" 
+                href="tel:8097512951" 
                 className="flex items-center gap-2 text-accent font-semibold hover:underline"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call Now: 9864251628</span>
+                <span>Call Now: 8097512951</span>
               </a>
             </div>
           </article>
@@ -136,7 +136,7 @@ const AreasSection = () => {
             </div>
             <div className="mt-6 pt-4 border-t border-border">
               <a 
-                href="https://wa.me/919864251628?text=Hi, I need courier services for Pan India delivery" 
+                href="https://wa.me/918097512951?text=Hi, I need courier services for Pan India delivery" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-primary font-semibold hover:underline"
@@ -166,7 +166,7 @@ const AreasSection = () => {
             <p className="mt-3">
               Need <strong>courier tracking</strong>? Check <strong>Trackon Courier tracking</strong> status anytime. Want to know <strong>courier charges</strong>? 
               We offer the <strong>fastest courier service in India</strong> with competitive rates. Looking for <strong>fastest courier service near me</strong>? 
-              Call <a href="tel:9864251628" className="text-accent font-semibold">9864251628</a> for instant quotes and same-day pickup!
+              Call <a href="tel:8097512951" className="text-accent font-semibold">8097512951</a> for instant quotes and same-day pickup!
             </p>
           </div>
         </div>

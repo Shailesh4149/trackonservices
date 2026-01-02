@@ -35,8 +35,8 @@ const EnquiryForm = () => {
 *Delivery Location:* ${formData.deliveryLocation.trim()}
 *Package Details:* ${formData.message.trim() || "Not specified"}`;
 
-    // WhatsApp business number (replace with actual number)
-    const whatsappNumber = "919876543210"; // Format: country code + number without +
+    // WhatsApp business number
+    const whatsappNumber = "918097512951"; // Format: country code + number without +
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
