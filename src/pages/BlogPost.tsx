@@ -61,16 +61,16 @@ const BlogPost = () => {
 
           <div className="py-12 md:py-16">
             <div className="container max-w-4xl">
-              <div className="prose prose-lg max-w-none text-foreground prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-accent">
-                <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>').replace(/## /g, '<h2 class="text-2xl font-bold mt-8 mb-4 text-foreground">').replace(/### /g, '<h3 class="text-xl font-semibold mt-6 mb-3 text-foreground">').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+              <div className="max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-foreground [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-foreground [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4 [&_strong]:text-foreground [&_a]:text-accent">
+                <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>').replace(/## /g, '<h2>').replace(/### /g, '<h3>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
               </div>
 
               <div className="mt-12 p-6 bg-accent/10 rounded-xl border border-accent/20">
                 <h3 className="text-xl font-bold text-foreground mb-2">Need Courier Services?</h3>
                 <p className="text-muted-foreground mb-4">Contact Trackon Courier for fast, reliable delivery across India and worldwide.</p>
                 <Button variant="accent" asChild>
-                  <a href="tel:9864251628" className="flex items-center gap-2">
-                    <Phone className="w-4 h-4" /> Call: 9864251628
+                  <a href="tel:8097512951" className="flex items-center gap-2">
+                    <Phone className="w-4 h-4" /> Call: 8097512951
                   </a>
                 </Button>
               </div>
