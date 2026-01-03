@@ -8,7 +8,7 @@ const LocalTrust = () => {
           <article>
             <span className="inline-block text-accent font-semibold mb-4">About Us</span>
             <h2 id="trust-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Trusted Courier Service in Andheri West
+              Courier Service in Andheri West
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
               Trackon Courier Mumbai has been providing dependable courier and logistics services to businesses 
