@@ -1,74 +1,64 @@
-import { Shield, Clock, Truck, HeadphonesIcon, Award, ThumbsUp } from "lucide-react";
+import { Truck, Users, IndianRupee, MapPin, HeadphonesIcon } from "lucide-react";
 
 const features = [
   {
-    icon: Clock,
-    title: "On-Time Delivery",
-    stat: "98%",
-    description: "Delivery success rate",
-  },
-  {
-    icon: Shield,
-    title: "Safe & Secure",
-    stat: "100%",
-    description: "Insured shipments",
-  },
-  {
     icon: Truck,
-    title: "Fast Shipping",
-    stat: "24hr",
-    description: "Express delivery",
+    title: "Fast Pickup Within Andheri",
+    description: "Our delivery team is based locally, ensuring quick pickup from your doorstep in Andheri West and nearby areas.",
+  },
+  {
+    icon: Users,
+    title: "Trusted Local Courier Partner",
+    description: "We have been serving businesses and individuals in Andheri for years with reliable, consistent service.",
+  },
+  {
+    icon: IndianRupee,
+    title: "Affordable Courier Charges",
+    description: "Competitive pricing for local and long-distance deliveries. No hidden fees – transparent rates always.",
+  },
+  {
+    icon: MapPin,
+    title: "Real-Time Shipment Tracking",
+    description: "Track your parcel at every step with live updates via SMS and our online tracking system.",
   },
   {
     icon: HeadphonesIcon,
-    title: "24/7 Support",
-    stat: "365",
-    description: "Days availability",
-  },
-  {
-    icon: Award,
-    title: "Years Experience",
-    stat: "15+",
-    description: "In courier industry",
-  },
-  {
-    icon: ThumbsUp,
-    title: "Happy Customers",
-    stat: "50K+",
-    description: "Satisfied clients",
+    title: "Dedicated Customer Support",
+    description: "Our support team is available to assist you with bookings, tracking, and any delivery queries.",
   },
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-background">
+    <section id="why-choose-us" className="py-16 md:py-24 bg-background" aria-labelledby="why-choose-heading">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-block text-accent font-semibold mb-4">Why Trackon Courier</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Trusted by Thousands for Reliable Delivery
+        <header className="text-center max-w-2xl mx-auto mb-12">
+          <span className="inline-block text-accent font-semibold mb-4">Why Us</span>
+          <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Why Choose Trackon Courier Mumbai
           </h2>
           <p className="text-muted-foreground text-lg">
-            We combine speed, safety, and exceptional customer service to deliver your parcels on time, every time.
+            We combine local expertise with professional courier services to deliver your packages safely and on time.
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+        <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 list-none">
           {features.map((feature, index) => (
-            <div
+            <li
               key={feature.title}
-              className="text-center p-6 rounded-xl bg-card shadow-card hover:shadow-elevated transition-all duration-300 border border-border"
+              className="bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-300 border border-border"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-3xl font-extrabold text-accent mb-1">{feature.stat}</div>
-              <div className="text-sm font-medium text-foreground mb-1">{feature.title}</div>
-              <div className="text-xs text-muted-foreground">{feature.description}</div>
-            </div>
+              <article>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4" aria-hidden="true">
+                  <feature.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </article>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
