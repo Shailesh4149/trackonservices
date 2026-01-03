@@ -40,7 +40,7 @@ const LocalTrust = () => {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3" aria-hidden="true">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <p className="text-3xl font-extrabold text-primary mb-1">500+</p>
+                <p className="text-3xl font-extrabold text-primary mb-1">5000+</p>
                 <p className="text-sm text-muted-foreground">Happy Customers</p>
               </li>
               <li className="bg-card rounded-xl p-6 shadow-card text-center">
