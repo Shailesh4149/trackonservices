@@ -83,28 +83,33 @@ function getStaticHomepageHtml(): string {
       </header>
       <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0">
         <li class="bg-card rounded-xl p-6 shadow-sm border border-border">
-          <h3 class="text-xl font-bold text-foreground mb-3">Same Day Courier Service</h3>
-          <p class="text-muted-foreground">Urgent delivery within Mumbai? Get same-day pickup and delivery for documents and parcels across Andheri, Bandra, Juhu, and nearby areas.</p>
+          <h3 class="text-xl font-bold text-foreground mb-3"><a href="/same-day-courier-andheri-west" class="hover:text-primary">Same Day Courier Service</a></h3>
+          <p class="text-muted-foreground">Book before 2 PM for guaranteed same-day delivery in Mumbai.</p>
+          <a href="/same-day-courier-andheri-west" class="text-accent font-semibold text-sm">Learn More →</a>
         </li>
         <li class="bg-card rounded-xl p-6 shadow-sm border border-border">
-          <h3 class="text-xl font-bold text-foreground mb-3">Express Courier Service</h3>
-          <p class="text-muted-foreground">Time-sensitive shipments delivered with priority handling. Express courier service with guaranteed delivery timelines.</p>
+          <h3 class="text-xl font-bold text-foreground mb-3"><a href="/express-courier-mumbai" class="hover:text-primary">Express Courier Service</a></h3>
+          <p class="text-muted-foreground">Priority handling with 2-6 hour delivery across Mumbai.</p>
+          <a href="/express-courier-mumbai" class="text-accent font-semibold text-sm">Learn More →</a>
         </li>
         <li class="bg-card rounded-xl p-6 shadow-sm border border-border">
-          <h3 class="text-xl font-bold text-foreground mb-3">Pan India Courier Service</h3>
-          <p class="text-muted-foreground">Send parcels anywhere in India with our reliable pan-India courier network. Delivery to Delhi, Bangalore, Chennai, Kolkata, and 500+ cities.</p>
+          <h3 class="text-xl font-bold text-foreground mb-3"><a href="/pan-india-courier" class="hover:text-primary">Pan India Courier Service</a></h3>
+          <p class="text-muted-foreground">Nationwide delivery to 500+ cities with real-time tracking.</p>
+          <a href="/pan-india-courier" class="text-accent font-semibold text-sm">Learn More →</a>
         </li>
         <li class="bg-card rounded-xl p-6 shadow-sm border border-border">
-          <h3 class="text-xl font-bold text-foreground mb-3">International Courier Service</h3>
-          <p class="text-muted-foreground">Ship documents and parcels worldwide with our international courier partnerships. USA, UK, UAE, Singapore, and 200+ countries.</p>
+          <h3 class="text-xl font-bold text-foreground mb-3"><a href="/international-courier-mumbai" class="hover:text-primary">International Courier Service</a></h3>
+          <p class="text-muted-foreground">Ship to 200+ countries with customs clearance included.</p>
+          <a href="/international-courier-mumbai" class="text-accent font-semibold text-sm">Learn More →</a>
         </li>
         <li class="bg-card rounded-xl p-6 shadow-sm border border-border">
-          <h3 class="text-xl font-bold text-foreground mb-3">Airport Courier (Terminal 1 &amp; 2)</h3>
-          <p class="text-muted-foreground">Convenient courier pickup and delivery near Mumbai Airport. Serving Terminal 1, Terminal 2, and Sahar Road area.</p>
+          <h3 class="text-xl font-bold text-foreground mb-3"><a href="/airport-courier-mumbai" class="hover:text-primary">Airport Courier (Terminal 1 &amp; 2)</a></h3>
+          <p class="text-muted-foreground">Quick pickup and delivery near Mumbai Airport.</p>
+          <a href="/airport-courier-mumbai" class="text-accent font-semibold text-sm">Learn More →</a>
         </li>
         <li class="bg-card rounded-xl p-6 shadow-sm border border-border">
           <h3 class="text-xl font-bold text-foreground mb-3">Secure Document Courier</h3>
-          <p class="text-muted-foreground">Safe handling of important documents, legal papers, and certificates with signature confirmation and proof of delivery.</p>
+          <p class="text-muted-foreground">Safe handling of important documents with proof of delivery.</p>
         </li>
       </ul>
     </div>

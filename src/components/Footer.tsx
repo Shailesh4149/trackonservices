@@ -59,11 +59,11 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
           <div>
             <h4 className="font-bold text-lg mb-4">Our Services</h4>
             <nav className="space-y-2">
-              <Link to="/service/domestic-courier" className="block text-background/70 hover:text-accent transition-colors">Domestic Courier</Link>
-              <Link to="/service/international-courier" className="block text-background/70 hover:text-accent transition-colors">International Shipping</Link>
-              <Link to="/service/express-delivery" className="block text-background/70 hover:text-accent transition-colors">Express Delivery</Link>
-              <Link to="/service/same-day-delivery" className="block text-background/70 hover:text-accent transition-colors">Same Day Delivery</Link>
-              <Link to="/service/doorstep-pickup" className="block text-background/70 hover:text-accent transition-colors">Doorstep Pickup</Link>
+              <Link to="/same-day-courier-andheri-west" className="block text-background/70 hover:text-accent transition-colors">Same Day Courier</Link>
+              <Link to="/express-courier-mumbai" className="block text-background/70 hover:text-accent transition-colors">Express Courier</Link>
+              <Link to="/pan-india-courier" className="block text-background/70 hover:text-accent transition-colors">Pan India Courier</Link>
+              <Link to="/international-courier-mumbai" className="block text-background/70 hover:text-accent transition-colors">International Courier</Link>
+              <Link to="/airport-courier-mumbai" className="block text-background/70 hover:text-accent transition-colors">Airport Courier</Link>
             </nav>
           </div>
         </div>

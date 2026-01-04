@@ -5,38 +5,38 @@ const services = [
   {
     icon: Clock,
     title: "Same Day Courier Service",
-    slug: "same-day-delivery",
-    description: "Book before 2 PM for same-day courier delivery within Andheri West and nearby Mumbai areas.",
+    href: "/same-day-courier-andheri-west",
+    description: "Book before 2 PM for guaranteed same-day delivery in Mumbai.",
   },
   {
     icon: Truck,
     title: "Express Courier Service",
-    slug: "express-delivery",
-    description: "Urgent deliveries with express courier services. Get your package delivered within hours across Mumbai.",
+    href: "/express-courier-mumbai",
+    description: "Priority handling with 2-6 hour delivery across Mumbai.",
   },
   {
     icon: Package,
     title: "Pan India Courier Service",
-    slug: "domestic-courier",
-    description: "Reliable courier services across India with tracking. Next-day delivery to major cities.",
+    href: "/pan-india-courier",
+    description: "Nationwide delivery to 500+ cities with real-time tracking.",
   },
   {
     icon: Plane,
     title: "International Courier Service",
-    slug: "international-shipping",
-    description: "Send parcels worldwide with tracked international courier services to 200+ countries.",
+    href: "/international-courier-mumbai",
+    description: "Ship to 200+ countries with customs clearance included.",
   },
   {
     icon: MapPin,
     title: "Airport Courier (Terminal 1 & 2)",
-    slug: "doorstep-pickup",
-    description: "Quick courier pickup and delivery at Mumbai Airport Terminal 1 and Terminal 2. Ideal for urgent shipments.",
+    href: "/airport-courier-mumbai",
+    description: "Quick pickup and delivery near Mumbai Airport.",
   },
   {
     icon: Shield,
     title: "Secure Document Courier",
-    slug: "secure-packaging",
-    description: "Safe handling and delivery of important documents with proof of delivery and tracking.",
+    href: "/services/secure-packaging",
+    description: "Safe handling of important documents with proof of delivery.",
   },
 ];
 
@@ -50,7 +50,7 @@ const ServicesSection = () => {
             Our Courier Services in Andheri West
           </h2>
           <p className="text-muted-foreground text-lg">
-            From local same-day deliveries to international shipping, Trackon Courier provides reliable solutions for all your courier needs in Andheri West and across Mumbai.
+            From local same-day deliveries to international shipping — reliable courier solutions for Andheri West and Mumbai.
           </p>
         </header>
 
@@ -58,7 +58,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <li key={service.title}>
               <Link
-                to={`/services/${service.slug}`}
+                to={service.href}
                 className="group bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border cursor-pointer block h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
