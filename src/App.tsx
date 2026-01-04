@@ -15,6 +15,13 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Dedicated SEO-optimized service pages
+const SameDayCourier = lazy(() => import("./pages/SameDayCourier"));
+const ExpressCourier = lazy(() => import("./pages/ExpressCourier"));
+const PanIndiaCourier = lazy(() => import("./pages/PanIndiaCourier"));
+const InternationalCourier = lazy(() => import("./pages/InternationalCourier"));
+const AirportCourier = lazy(() => import("./pages/AirportCourier"));
+
 const queryClient = new QueryClient();
 
 const PageLoader = () => (
@@ -39,6 +46,14 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/sitemap" element={<Sitemap />} />
+            
+            {/* Dedicated SEO service pages */}
+            <Route path="/same-day-courier-andheri-west" element={<SameDayCourier />} />
+            <Route path="/express-courier-mumbai" element={<ExpressCourier />} />
+            <Route path="/pan-india-courier" element={<PanIndiaCourier />} />
+            <Route path="/international-courier-mumbai" element={<InternationalCourier />} />
+            <Route path="/airport-courier-mumbai" element={<AirportCourier />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
