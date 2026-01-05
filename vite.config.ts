@@ -124,23 +124,31 @@ function getStaticHomepageHtml(): string {
       <article>
         <h3 class="text-2xl font-bold text-foreground mb-6">Primary Service Areas</h3>
         <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 list-none p-0 mb-8">
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/andheri-west" class="text-foreground hover:text-primary font-medium">Andheri West</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/andheri-east" class="text-foreground hover:text-primary font-medium">Andheri East</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/bandra-west" class="text-foreground hover:text-primary font-medium">Bandra West</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/bandra-east" class="text-foreground hover:text-primary font-medium">Bandra East</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/juhu" class="text-foreground hover:text-primary font-medium">Juhu</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/dn-nagar" class="text-foreground hover:text-primary font-medium">DN Nagar</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/versova" class="text-foreground hover:text-primary font-medium">Versova</a></li>
-          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/area/goregaon-west" class="text-foreground hover:text-primary font-medium">Goregaon West</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-andheri" class="text-foreground hover:text-primary font-medium">Andheri</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-andheri-west" class="text-foreground hover:text-primary font-medium">Andheri West</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-andheri-east" class="text-foreground hover:text-primary font-medium">Andheri East</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-juhu" class="text-foreground hover:text-primary font-medium">Juhu</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-dn-nagar" class="text-foreground hover:text-primary font-medium">DN Nagar</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-versova" class="text-foreground hover:text-primary font-medium">Versova</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-bandra-west" class="text-foreground hover:text-primary font-medium">Bandra West</a></li>
+          <li class="bg-card rounded-lg p-4 text-center border border-border"><a href="/areas/courier-service-in-bandra-east" class="text-foreground hover:text-primary font-medium">Bandra East</a></li>
         </ul>
         <h3 class="text-2xl font-bold text-foreground mb-6">Additional Service Areas</h3>
         <ul class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 list-none p-0">
-          <li class="text-muted-foreground text-sm"><a href="/area/goregaon-east" class="hover:text-primary">Goregaon East</a></li>
-          <li class="text-muted-foreground text-sm"><a href="/area/jogeshwari" class="hover:text-primary">Jogeshwari</a></li>
-          <li class="text-muted-foreground text-sm"><a href="/area/malad" class="hover:text-primary">Malad</a></li>
-          <li class="text-muted-foreground text-sm"><a href="/area/kandivali" class="hover:text-primary">Kandivali</a></li>
-          <li class="text-muted-foreground text-sm"><a href="/area/vile-parle" class="hover:text-primary">Vile Parle</a></li>
-          <li class="text-muted-foreground text-sm"><a href="/area/santacruz" class="hover:text-primary">Santacruz</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-andheri-station" class="hover:text-primary">Andheri Station</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-azad-nagar" class="hover:text-primary">Azad Nagar</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-juhu-versova-link-road" class="hover:text-primary">Juhu Versova Link Road</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-saki-naka" class="hover:text-primary">Saki Naka</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-marol" class="hover:text-primary">Marol</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-jogeshwari" class="hover:text-primary">Jogeshwari</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-kapaswadi" class="hover:text-primary">Kapaswadi</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-chakala" class="hover:text-primary">Chakala</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-vile-parle" class="hover:text-primary">Vile Parle</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-goregaon-west" class="hover:text-primary">Goregaon West</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-goregaon-east" class="hover:text-primary">Goregaon East</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-malad" class="hover:text-primary">Malad</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-kandivali" class="hover:text-primary">Kandivali</a></li>
+          <li class="text-muted-foreground text-sm"><a href="/areas/courier-service-in-santacruz" class="hover:text-primary">Santacruz</a></li>
         </ul>
       </article>
     </div>

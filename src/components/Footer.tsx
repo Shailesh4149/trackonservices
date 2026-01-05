@@ -68,6 +68,35 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
           </div>
         </div>
 
+        {/* Service Areas */}
+        <div className="border-t border-background/20 pt-8 mb-8">
+          <h4 className="font-bold text-lg mb-4">Service Areas in Mumbai</h4>
+          <nav className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            <Link to="/areas/courier-service-in-andheri" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri</Link>
+            <Link to="/areas/courier-service-in-andheri-west" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri West</Link>
+            <Link to="/areas/courier-service-in-andheri-east" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri East</Link>
+            <Link to="/areas/courier-service-in-andheri-station" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri Station</Link>
+            <Link to="/areas/courier-service-in-juhu" className="text-background/70 hover:text-accent transition-colors text-sm">Juhu</Link>
+            <Link to="/areas/courier-service-in-dn-nagar" className="text-background/70 hover:text-accent transition-colors text-sm">DN Nagar</Link>
+            <Link to="/areas/courier-service-in-azad-nagar" className="text-background/70 hover:text-accent transition-colors text-sm">Azad Nagar</Link>
+            <Link to="/areas/courier-service-in-versova" className="text-background/70 hover:text-accent transition-colors text-sm">Versova</Link>
+            <Link to="/areas/courier-service-in-juhu-versova-link-road" className="text-background/70 hover:text-accent transition-colors text-sm">Juhu Versova Link Road</Link>
+            <Link to="/areas/courier-service-in-saki-naka" className="text-background/70 hover:text-accent transition-colors text-sm">Saki Naka</Link>
+            <Link to="/areas/courier-service-in-marol" className="text-background/70 hover:text-accent transition-colors text-sm">Marol</Link>
+            <Link to="/areas/courier-service-in-jogeshwari" className="text-background/70 hover:text-accent transition-colors text-sm">Jogeshwari</Link>
+            <Link to="/areas/courier-service-in-kapaswadi" className="text-background/70 hover:text-accent transition-colors text-sm">Kapaswadi</Link>
+            <Link to="/areas/courier-service-in-chakala" className="text-background/70 hover:text-accent transition-colors text-sm">Chakala</Link>
+            <Link to="/areas/courier-service-in-vile-parle" className="text-background/70 hover:text-accent transition-colors text-sm">Vile Parle</Link>
+            <Link to="/areas/courier-service-in-goregaon-west" className="text-background/70 hover:text-accent transition-colors text-sm">Goregaon West</Link>
+            <Link to="/areas/courier-service-in-goregaon-east" className="text-background/70 hover:text-accent transition-colors text-sm">Goregaon East</Link>
+            <Link to="/areas/courier-service-in-malad" className="text-background/70 hover:text-accent transition-colors text-sm">Malad</Link>
+            <Link to="/areas/courier-service-in-kandivali" className="text-background/70 hover:text-accent transition-colors text-sm">Kandivali</Link>
+            <Link to="/areas/courier-service-in-bandra-west" className="text-background/70 hover:text-accent transition-colors text-sm">Bandra West</Link>
+            <Link to="/areas/courier-service-in-bandra-east" className="text-background/70 hover:text-accent transition-colors text-sm">Bandra East</Link>
+            <Link to="/areas/courier-service-in-santacruz" className="text-background/70 hover:text-accent transition-colors text-sm">Santacruz</Link>
+          </nav>
+        </div>
+
         <div className="border-t border-background/20 pt-8 text-center text-background/50 text-sm">
           <p>© {currentYear} Trackon Courier. All rights reserved. | Courier Services in Mumbai | Trackon Courier Near Me</p>
         </div>
