@@ -216,7 +216,7 @@ function getStaticHomepageHtml(): string {
           <h3 class="text-xl font-bold text-foreground mb-4">Trackon Courier Mumbai</h3>
           <p class="text-muted-foreground mb-2"><strong>Address:</strong> Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Andheri West, Mumbai - 400053</p>
           <p class="text-muted-foreground mb-2"><strong>Phone:</strong> <a href="tel:8097512951" class="text-primary hover:underline">8097512951</a></p>
-          <p class="text-muted-foreground mb-2"><strong>Email:</strong> <a href="mailto:info@trackoncourier.com" class="text-primary hover:underline">info@trackoncourier.com</a></p>
+          <p class="text-muted-foreground mb-2"><strong>Email:</strong> <a href="mailto:sonacourierservices@gmail.com" class="text-primary hover:underline">sonacourierservices@gmail.com</a></p>
           <p class="text-muted-foreground"><strong>Service Area:</strong> Andheri West, Mumbai &amp; surrounding areas</p>
         </address>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
