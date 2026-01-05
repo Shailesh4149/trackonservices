@@ -2,25 +2,31 @@ import { MapPin, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const primaryAreas = [
+  { name: "Andheri", slug: "andheri" },
   { name: "Andheri West", slug: "andheri-west" },
   { name: "Andheri East", slug: "andheri-east" },
-  { name: "Bandra West & East", slug: "bandra" },
   { name: "Juhu", slug: "juhu" },
   { name: "DN Nagar", slug: "dn-nagar" },
   { name: "Versova", slug: "versova" },
-  { name: "Goregaon West", slug: "goregaon-west" },
+  { name: "Bandra West", slug: "bandra-west" },
+  { name: "Bandra East", slug: "bandra-east" },
 ];
 
 const additionalAreas = [
-  { name: "Goregaon East", slug: "goregaon-east" },
+  { name: "Andheri Station", slug: "andheri-station" },
+  { name: "Azad Nagar", slug: "azad-nagar" },
+  { name: "Juhu Versova Link Road", slug: "juhu-versova-link-road" },
+  { name: "Saki Naka", slug: "saki-naka" },
+  { name: "Marol", slug: "marol" },
+  { name: "Jogeshwari", slug: "jogeshwari" },
+  { name: "Kapaswadi", slug: "kapaswadi" },
+  { name: "Chakala", slug: "chakala" },
   { name: "Vile Parle", slug: "vile-parle" },
+  { name: "Goregaon West", slug: "goregaon-west" },
+  { name: "Goregaon East", slug: "goregaon-east" },
   { name: "Malad", slug: "malad" },
   { name: "Kandivali", slug: "kandivali" },
-  { name: "Jogeshwari", slug: "jogeshwari" },
-  { name: "Lokhandwala", slug: "lokhandwala" },
-  { name: "Oshiwara", slug: "oshiwara" },
-  { name: "Airport Terminal 1", slug: "airport-terminal-1" },
-  { name: "Airport Terminal 2", slug: "airport-terminal-2" },
+  { name: "Santacruz", slug: "santacruz" },
 ];
 
 const AreasSection = () => {
@@ -54,9 +60,9 @@ const AreasSection = () => {
               {primaryAreas.map((area) => (
                 <li key={area.slug}>
                   <Link 
-                    to={`/area/${area.slug}`}
+                    to={`/areas/courier-service-in-${area.slug}`}
                     className="flex items-center gap-3 hover:text-accent transition-colors group p-2 rounded-lg hover:bg-accent/5"
-                    title={`Courier services in ${area.name}`}
+                    title={`Courier service in ${area.name}`}
                   >
                     <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" aria-hidden="true" />
                     <span className="text-foreground font-medium group-hover:text-accent">{area.name}</span>
@@ -90,9 +96,9 @@ const AreasSection = () => {
               {additionalAreas.map((area) => (
                 <li key={area.slug}>
                   <Link 
-                    to={`/area/${area.slug}`}
+                    to={`/areas/courier-service-in-${area.slug}`}
                     className="flex items-center gap-2 hover:text-primary transition-colors group"
-                    title={`Courier services in ${area.name}`}
+                    title={`Courier service in ${area.name}`}
                   >
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
                     <span className="text-foreground text-sm group-hover:text-primary">{area.name}</span>

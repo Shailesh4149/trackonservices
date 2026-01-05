@@ -20,6 +20,18 @@ interface AreaData {
 }
 
 const areasData: Record<string, AreaData> = {
+  "andheri": {
+    name: "Andheri",
+    description: "Fast & Reliable Courier Services in Andheri, Mumbai",
+    metaDescription: "Fast & reliable courier service in Andheri, Mumbai. Same-day pickup, express delivery, Pan India & international shipping. Call 8097512951.",
+    keywords: "courier service in Andheri, courier services Andheri Mumbai, same day courier Andheri, express courier Andheri, Trackon Courier Andheri",
+    content: "Trackon Courier provides comprehensive courier services across Andheri covering both Andheri East and Andheri West. Located in the heart of Mumbai's western suburbs, we offer fast pickup and reliable delivery for businesses and residents. Our team is familiar with every lane and locality in Andheri, ensuring your parcels reach their destination quickly and safely.",
+    features: ["Same-day delivery within Mumbai", "Express shipping to Pan India", "Local area expertise", "Doorstep pickup", "Real-time tracking", "Affordable rates"],
+    nearbyAreas: ["Andheri West", "Andheri East", "Jogeshwari", "Goregaon", "Vile Parle"],
+    latitude: 19.1197,
+    longitude: 72.8468,
+    pincode: "400058"
+  },
   "andheri-east": {
     name: "Andheri East",
     description: "Fast & Reliable Courier Services in Andheri East, Mumbai",
@@ -67,6 +79,54 @@ const areasData: Record<string, AreaData> = {
     latitude: 19.0596,
     longitude: 72.8295,
     pincode: "400050"
+  },
+  "bandra-west": {
+    name: "Bandra West",
+    description: "Premium Courier Services in Bandra West, Mumbai",
+    metaDescription: "Fast & reliable courier service in Bandra West, Mumbai. Same-day pickup, express delivery near Linking Road, Hill Road. Call 8097512951.",
+    keywords: "courier service in Bandra West, courier services Bandra West Mumbai, same day courier Bandra West, express courier Linking Road",
+    content: "Trackon Courier is your trusted courier partner in Bandra West. We serve the prestigious localities near Linking Road, Hill Road, Pali Hill, and Carter Road with premium courier services. Whether you need same-day delivery within Mumbai or express shipping across India, our experienced team ensures safe and timely delivery of your parcels.",
+    features: ["Linking Road coverage", "Premium residential service", "Same-day delivery", "Fashion logistics", "Secure handling", "Real-time tracking"],
+    nearbyAreas: ["Bandra East", "Khar West", "Santacruz", "Juhu", "Linking Road"],
+    latitude: 19.0596,
+    longitude: 72.8295,
+    pincode: "400050"
+  },
+  "bandra-east": {
+    name: "Bandra East",
+    description: "Express Courier Services in Bandra East, Mumbai",
+    metaDescription: "Fast & reliable courier service in Bandra East, Mumbai. Same-day pickup, express delivery near BKC. Call 8097512951.",
+    keywords: "courier service in Bandra East, courier services Bandra East Mumbai, same day courier BKC, express courier Bandra East",
+    content: "Trackon Courier provides efficient courier services in Bandra East covering BKC (Bandra Kurla Complex), Kalanagar, and surrounding business districts. Our corporate courier solutions are trusted by businesses in the BKC financial hub for document delivery, e-commerce logistics, and express shipping needs.",
+    features: ["BKC corporate service", "Financial district coverage", "Same-day express", "Document courier", "Corporate accounts", "Secure packaging"],
+    nearbyAreas: ["Bandra West", "BKC", "Kurla", "Santacruz East", "Kalina"],
+    latitude: 19.0596,
+    longitude: 72.8697,
+    pincode: "400051"
+  },
+  "santacruz": {
+    name: "Santacruz",
+    description: "Reliable Courier Services in Santacruz, Mumbai",
+    metaDescription: "Fast & reliable courier service in Santacruz, Mumbai. Same-day pickup, express delivery near Santacruz Station. Call 8097512951.",
+    keywords: "courier service in Santacruz, courier services Santacruz Mumbai, same day courier Santacruz, express courier Santacruz East West",
+    content: "Trackon Courier offers reliable courier services in Santacruz covering both Santacruz East and Santacruz West. Located close to the domestic airport, we provide quick pickup and delivery services for residents, businesses, and travelers. Our team ensures your parcels are handled with care and delivered on time.",
+    features: ["Airport proximity service", "Residential coverage", "Same-day delivery", "Business logistics", "Secure handling", "Affordable rates"],
+    nearbyAreas: ["Vile Parle", "Bandra", "Khar", "Juhu", "Santacruz Station"],
+    latitude: 19.0833,
+    longitude: 72.8416,
+    pincode: "400054"
+  },
+  "chakala": {
+    name: "Chakala",
+    description: "Corporate Courier Services in Chakala, Mumbai",
+    metaDescription: "Fast & reliable courier service in Chakala, Mumbai. Same-day pickup, express delivery for IT parks & offices. Call 8097512951.",
+    keywords: "courier service in Chakala, courier services Chakala Mumbai, same day courier Chakala, express courier Chakala Andheri",
+    content: "Trackon Courier specializes in corporate courier services in Chakala, the bustling commercial hub near Andheri East. We serve IT parks, corporate offices, MIDC industrial area, and business establishments with reliable same-day and express delivery. Our proximity to the airport makes us ideal for urgent shipments.",
+    features: ["IT Park coverage", "Corporate accounts", "Airport connectivity", "Same-day express", "Bulk shipping", "Regular pickup schedules"],
+    nearbyAreas: ["Andheri East", "Marol", "MIDC", "SEEPZ", "Saki Naka"],
+    latitude: 19.1091,
+    longitude: 72.8656,
+    pincode: "400059"
   },
   "juhu": {
     name: "Juhu",
@@ -647,13 +707,16 @@ const areasData: Record<string, AreaData> = {
 };
 
 const AreaDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const area = slug ? areasData[slug] : null;
+  const { slug, areaSlug } = useParams<{ slug?: string; areaSlug?: string }>();
+  
+  // Extract area slug - handle both /area/:slug and /areas/courier-service-in-:slug formats
+  const extractedSlug = slug || (areaSlug?.replace('courier-service-in-', '') || '');
+  const area = extractedSlug ? areasData[extractedSlug] : null;
 
   useEffect(() => {
     if (area) {
       // Update document title
-      document.title = `Courier Services in ${area.name} | Trackon Courier Mumbai | Call 8097512951`;
+      document.title = `Courier Service in ${area.name}, Mumbai | Same Day Pickup – Trackon Courier`;
 
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
@@ -787,10 +850,10 @@ const AreaDetail = () => {
                 <span className="text-accent font-semibold">{area.name}</span>
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
-                Courier Services in {area.name}
+                Courier Service in {area.name}, Mumbai
               </h1>
               <p className="text-lg text-primary-foreground/90 mb-6">
-                {area.description}
+                {area.description}. Fast pickup within 1-2 hours, same-day delivery across Mumbai, and express shipping to all India destinations. Call 8097512951 for instant service.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="tel:8097512951">
@@ -835,29 +898,113 @@ const AreaDetail = () => {
                   </p>
                 </article>
 
+                {/* Services Section */}
                 <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
                   <h2 className="text-2xl font-bold text-foreground mb-6">
-                    Our Services in {area.name}
+                    Services Available in {area.name}
                   </h2>
+                  <ul className="grid sm:grid-cols-2 gap-4 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Link to="/same-day-courier-andheri-west" className="text-foreground hover:text-accent transition-colors">Same Day Courier Service</Link>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Link to="/express-courier-mumbai" className="text-foreground hover:text-accent transition-colors">Express Courier Service</Link>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Link to="/pan-india-courier" className="text-foreground hover:text-accent transition-colors">Pan India Courier</Link>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Link to="/international-courier-mumbai" className="text-foreground hover:text-accent transition-colors">International Courier</Link>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground">Secure Document Courier</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <Link to="/airport-courier-mumbai" className="text-foreground hover:text-accent transition-colors">Airport Courier (T1 & T2)</Link>
+                    </li>
+                  </ul>
                   <div className="grid sm:grid-cols-2 gap-4">
                     {area.features.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </article>
 
+                {/* Why Choose Section */}
+                <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
+                  <h2 className="text-2xl font-bold text-foreground mb-6">
+                    Why Choose Trackon Courier in {area.name}
+                  </h2>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Fast Pickup (1-2 hours)</span>
+                        <p className="text-muted-foreground text-sm">Quick doorstep pickup available throughout {area.name}</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Local Area Familiarity</span>
+                        <p className="text-muted-foreground text-sm">Our delivery partners know every lane in {area.name}</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Affordable Rates</span>
+                        <p className="text-muted-foreground text-sm">Competitive pricing for all courier services</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Real-Time Tracking</span>
+                        <p className="text-muted-foreground text-sm">Track your shipment status anytime</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Secure Handling</span>
+                        <p className="text-muted-foreground text-sm">Safe packaging and careful handling of all items</p>
+                      </div>
+                    </li>
+                  </ul>
+                </article>
+
+                {/* Nearby Areas Section */}
                 <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
                   <h2 className="text-2xl font-bold text-foreground mb-4">
-                    Nearby Areas We Serve
+                    Areas Covered Near {area.name}
                   </h2>
                   <p className="text-muted-foreground mb-4">
-                    Besides {area.name}, we also provide courier services in these nearby areas:
+                    Besides {area.name}, Trackon Courier also provides courier services in these nearby areas:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {area.nearbyAreas.map((nearby, index) => (
+                    {area.nearbyAreas.slice(0, 3).map((nearby, index) => {
+                      const nearbySlug = nearby.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                      return (
+                        <Link 
+                          key={index}
+                          to={`/areas/courier-service-in-${nearbySlug}`}
+                          className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm hover:bg-accent/20 transition-colors"
+                        >
+                          Courier in {nearby}
+                        </Link>
+                      );
+                    })}
+                    {area.nearbyAreas.slice(3).map((nearby, index) => (
                       <span 
                         key={index}
                         className="px-3 py-1 bg-secondary text-foreground rounded-full text-sm"
@@ -866,6 +1013,19 @@ const AreaDetail = () => {
                       </span>
                     ))}
                   </div>
+                </article>
+
+                {/* Internal Links Section */}
+                <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
+                  <h3 className="text-xl font-bold text-foreground mb-4">Quick Links</h3>
+                  <nav className="grid sm:grid-cols-2 gap-3">
+                    <Link to="/" className="text-accent hover:underline flex items-center gap-2">
+                      <ArrowLeft className="w-4 h-4" /> Back to Home
+                    </Link>
+                    <Link to="/#contact" className="text-accent hover:underline">Contact Trackon Courier</Link>
+                    <Link to="/pan-india-courier" className="text-accent hover:underline">Pan India Courier Service</Link>
+                    <Link to="/same-day-courier-andheri-west" className="text-accent hover:underline">Same Day Courier</Link>
+                  </nav>
                 </article>
               </div>
 
@@ -924,14 +1084,24 @@ const AreaDetail = () => {
           </div>
         </section>
 
+        {/* Local SEO Footer Block */}
+        <section className="py-8 bg-secondary">
+          <div className="container">
+            <p className="text-center text-muted-foreground">
+              <strong>Service Area:</strong> {area.name}, Mumbai – {area.pincode} | 
+              Serving nearby locations including {area.nearbyAreas.slice(0, 3).join(', ')}
+            </p>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-12 bg-accent">
           <div className="container text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-accent-foreground mb-4">
-              Need Courier Services in {area.name}?
+              Need Courier Service in {area.name}?
             </h2>
             <p className="text-accent-foreground/90 mb-6 max-w-2xl mx-auto">
-              Get instant quotes and same-day pickup. Trackon Courier - Your trusted delivery partner in {area.name}.
+              Get instant quotes and same-day pickup. Trackon Courier Mumbai - Your trusted delivery partner in {area.name} and nearby areas.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:8097512951">
@@ -941,7 +1111,7 @@ const AreaDetail = () => {
                 </Button>
               </a>
               <a 
-                href={`https://wa.me/918097512951?text=Hi, I need courier services in ${area.name}. Please share rates.`}
+                href={`https://wa.me/918097512951?text=Hi, I need courier service in ${area.name}. Please share rates.`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
