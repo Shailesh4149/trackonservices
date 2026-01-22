@@ -21,6 +21,7 @@ const ExpressCourier = lazy(() => import("./pages/ExpressCourier"));
 const PanIndiaCourier = lazy(() => import("./pages/PanIndiaCourier"));
 const InternationalCourier = lazy(() => import("./pages/InternationalCourier"));
 const AirportCourier = lazy(() => import("./pages/AirportCourier"));
+const MumbaiCourier = lazy(() => import("./pages/MumbaiCourier"));
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/pan-india-courier" element={<PanIndiaCourier />} />
             <Route path="/international-courier-mumbai" element={<InternationalCourier />} />
             <Route path="/airport-courier-mumbai" element={<AirportCourier />} />
+            <Route path="/courier-service-mumbai" element={<MumbaiCourier />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

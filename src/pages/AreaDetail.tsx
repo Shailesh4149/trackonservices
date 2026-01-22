@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { MapPin, Phone, MessageCircle, Clock, CheckCircle, ArrowLeft, Star } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Clock, CheckCircle, ArrowLeft, Star, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,6 +17,10 @@ interface AreaData {
   latitude: number;
   longitude: number;
   pincode: string;
+  // New fields for Phase 3B
+  landmarks?: string[];
+  pickupTime?: string;
+  isMumbaiArea?: boolean;
 }
 
 const areasData: Record<string, AreaData> = {
@@ -30,7 +34,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Andheri West", "Andheri East", "Jogeshwari", "Goregaon", "Vile Parle"],
     latitude: 19.1197,
     longitude: 72.8468,
-    pincode: "400058"
+    pincode: "400058",
+    landmarks: ["Andheri Railway Station", "Andheri Sports Complex", "D.N. Nagar Metro Station"],
+    pickupTime: "45-90 minutes",
+    isMumbaiArea: true
   },
   "andheri-east": {
     name: "Andheri East",
@@ -42,19 +49,25 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Marol", "Saki Naka", "Chakala", "MIDC", "Andheri West"],
     latitude: 19.1136,
     longitude: 72.8697,
-    pincode: "400069"
+    pincode: "400069",
+    landmarks: ["MIDC Industrial Area", "Western Express Highway", "SEEPZ"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "andheri-west": {
     name: "Andheri West",
-    description: "Premium Courier Services in Andheri West, Mumbai",
-    metaDescription: "Best courier services in Andheri West, Mumbai. Trackon Courier offers same-day delivery, doorstep pickup near Versova, DN Nagar, Lokhandwala. Call 8097512951.",
-    keywords: "courier services in Andheri West, courier near Versova, fast delivery DN Nagar, Trackon courier Lokhandwala, same day courier Andheri West, parcel delivery Four Bungalows",
-    content: "Trackon Courier is your trusted partner for courier services in Andheri West. We cover Versova, DN Nagar, Lokhandwala, Four Bungalows, and all nearby areas with reliable same-day and express delivery options.",
-    features: ["Same-day local delivery", "Next-day Pan India shipping", "Residential & commercial pickup", "Secure packaging available", "Real-time tracking", "24/7 customer support"],
+    description: "Premium Courier Services in Andheri West, Mumbai – Our Headquarters",
+    metaDescription: "Best courier services in Andheri West, Mumbai. Trackon Courier HQ offers same-day delivery, doorstep pickup near Versova, DN Nagar, Lokhandwala. Call 8097512951.",
+    keywords: "courier services in Andheri West, courier near Versova, fast delivery DN Nagar, Trackon courier Lokhandwala, same day courier Andheri West, parcel delivery Four Bungalows, Trackon Courier headquarters",
+    content: "Welcome to Trackon Courier headquarters in Andheri West! Located at Juhu Versova Link Road near Kapaswadi, we are the central hub for all courier operations across Mumbai. We cover Versova, DN Nagar, Lokhandwala, Four Bungalows, and all nearby areas with the fastest pickup times in the city.",
+    features: ["Fastest pickup (30-60 mins)", "HQ location advantage", "Residential & commercial pickup", "Secure packaging available", "Real-time tracking", "24/7 customer support"],
     nearbyAreas: ["DN Nagar", "Versova", "Lokhandwala", "Four Bungalows", "Juhu"],
     latitude: 19.1365,
     longitude: 72.8296,
-    pincode: "400053"
+    pincode: "400053",
+    landmarks: ["Juhu Versova Link Road", "DN Nagar Metro Station", "Lokhandwala Complex"],
+    pickupTime: "30-60 minutes",
+    isMumbaiArea: true
   },
   "andheri-station": {
     name: "Andheri Station",
@@ -66,7 +79,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Andheri East", "Andheri West", "Jogeshwari", "Goregaon"],
     latitude: 19.1197,
     longitude: 72.8468,
-    pincode: "400058"
+    pincode: "400058",
+    landmarks: ["Andheri Railway Station East", "Andheri Railway Station West", "Metro Station"],
+    pickupTime: "45-75 minutes",
+    isMumbaiArea: true
   },
   "bandra": {
     name: "Bandra",
@@ -78,7 +94,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Khar", "Santacruz", "BKC", "Linking Road", "Kurla"],
     latitude: 19.0596,
     longitude: 72.8295,
-    pincode: "400050"
+    pincode: "400050",
+    landmarks: ["Linking Road", "Bandra Bandstand", "Mount Mary Church"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "bandra-west": {
     name: "Bandra West",
@@ -90,7 +109,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Bandra East", "Khar West", "Santacruz", "Juhu", "Linking Road"],
     latitude: 19.0596,
     longitude: 72.8295,
-    pincode: "400050"
+    pincode: "400050",
+    landmarks: ["Linking Road", "Hill Road", "Carter Road Promenade"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "bandra-east": {
     name: "Bandra East",
@@ -102,7 +124,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Bandra West", "BKC", "Kurla", "Santacruz East", "Kalina"],
     latitude: 19.0596,
     longitude: 72.8697,
-    pincode: "400051"
+    pincode: "400051",
+    landmarks: ["Bandra Kurla Complex (BKC)", "Kalanagar Junction", "MMRDA Grounds"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "santacruz": {
     name: "Santacruz",
@@ -114,7 +139,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Vile Parle", "Bandra", "Khar", "Juhu", "Santacruz Station"],
     latitude: 19.0833,
     longitude: 72.8416,
-    pincode: "400054"
+    pincode: "400054",
+    landmarks: ["Santacruz Railway Station", "Domestic Airport T1", "Vakola Junction"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "chakala": {
     name: "Chakala",
@@ -126,7 +154,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Andheri East", "Marol", "MIDC", "SEEPZ", "Saki Naka"],
     latitude: 19.1091,
     longitude: 72.8656,
-    pincode: "400059"
+    pincode: "400059",
+    landmarks: ["Chakala Junction", "MIDC Industrial Estate", "Airport Road"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "juhu": {
     name: "Juhu",
@@ -138,7 +169,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Vile Parle", "Andheri West", "Santacruz", "Versova", "JVPD"],
     latitude: 19.1075,
     longitude: 72.8263,
-    pincode: "400049"
+    pincode: "400049",
+    landmarks: ["Juhu Beach", "JVPD Scheme", "Juhu Tara Road"],
+    pickupTime: "45-75 minutes",
+    isMumbaiArea: true
   },
   "dn-nagar": {
     name: "DN Nagar",
@@ -150,7 +184,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Andheri West", "Azad Nagar", "Versova", "Lokhandwala", "Four Bungalows"],
     latitude: 19.1269,
     longitude: 72.8355,
-    pincode: "400053"
+    pincode: "400053",
+    landmarks: ["DN Nagar Metro Station", "Bhavan's College", "Lokhandwala Market"],
+    pickupTime: "30-60 minutes",
+    isMumbaiArea: true
   },
   "azad-nagar": {
     name: "Azad Nagar",
@@ -162,7 +199,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["DN Nagar", "Andheri West", "Versova", "Jogeshwari"],
     latitude: 19.1322,
     longitude: 72.8384,
-    pincode: "400053"
+    pincode: "400053",
+    landmarks: ["Azad Nagar Metro Station", "Andheri Link Road", "Four Bungalows"],
+    pickupTime: "30-60 minutes",
+    isMumbaiArea: true
   },
   "versova": {
     name: "Versova",
@@ -174,7 +214,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Andheri West", "DN Nagar", "Four Bungalows", "Lokhandwala", "Juhu"],
     latitude: 19.1376,
     longitude: 72.8139,
-    pincode: "400061"
+    pincode: "400061",
+    landmarks: ["Versova Beach", "Seven Bungalows", "Yari Road"],
+    pickupTime: "30-60 minutes",
+    isMumbaiArea: true
   },
   "vile-parle": {
     name: "Vile Parle",
@@ -186,7 +229,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Santacruz", "Andheri", "Juhu", "Parle Point", "NMIMS Area"],
     latitude: 19.0968,
     longitude: 72.8432,
-    pincode: "400057"
+    pincode: "400057",
+    landmarks: ["Vile Parle Railway Station", "NMIMS University", "Mithibai College"],
+    pickupTime: "45-75 minutes",
+    isMumbaiArea: true
   },
   "goregaon-east": {
     name: "Goregaon East",
@@ -198,7 +244,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Goregaon West", "Malad", "Jogeshwari", "Aarey Colony", "Film City"],
     latitude: 19.1663,
     longitude: 72.8526,
-    pincode: "400063"
+    pincode: "400063",
+    landmarks: ["Film City", "Oberoi Mall", "NESCO Exhibition Centre"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "goregaon-west": {
     name: "Goregaon West",
@@ -210,7 +259,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Goregaon East", "Malad West", "Jogeshwari West", "Oshiwara"],
     latitude: 19.1550,
     longitude: 72.8347,
-    pincode: "400062"
+    pincode: "400062",
+    landmarks: ["Infinity Mall", "SV Road", "Goregaon Railway Station"],
+    pickupTime: "60-90 minutes",
+    isMumbaiArea: true
   },
   "malad": {
     name: "Malad",
@@ -222,7 +274,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Goregaon", "Kandivali", "Borivali", "Mindspace", "Inorbit"],
     latitude: 19.1874,
     longitude: 72.8484,
-    pincode: "400064"
+    pincode: "400064",
+    landmarks: ["Inorbit Mall", "Mindspace IT Park", "Malad Railway Station"],
+    pickupTime: "75-120 minutes",
+    isMumbaiArea: true
   },
   "kandivali": {
     name: "Kandivali",
@@ -234,7 +289,10 @@ const areasData: Record<string, AreaData> = {
     nearbyAreas: ["Malad", "Borivali", "Dahisar", "Thakur Village", "Charkop"],
     latitude: 19.2047,
     longitude: 72.8567,
-    pincode: "400067"
+    pincode: "400067",
+    landmarks: ["Raghuleela Mall", "Thakur Village", "Kandivali Railway Station"],
+    pickupTime: "75-120 minutes",
+    isMumbaiArea: true
   },
   "jogeshwari": {
     name: "Jogeshwari",
@@ -887,9 +945,31 @@ const AreaDetail = () => {
                   <h2 className="text-2xl font-bold text-foreground mb-4">
                     About Our Courier Services in {area.name}
                   </h2>
-                  <p className="text-muted-foreground mb-6">
+                  
+                  {/* HQ Reference for Mumbai Areas */}
+                  {area.isMumbaiArea && slug !== 'andheri-west' && (
+                    <div className="flex items-start gap-3 p-4 bg-accent/10 rounded-xl mb-6">
+                      <Building2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <p className="text-foreground">
+                        <strong>Based in Andheri West</strong>, we provide fast courier pickup and delivery in {area.name} and nearby locations. 
+                        {area.pickupTime && <span> Estimated pickup time: <strong>{area.pickupTime}</strong>.</span>}
+                      </p>
+                    </div>
+                  )}
+                  
+                  <p className="text-muted-foreground mb-4">
                     {area.content}
                   </p>
+                  
+                  {/* Landmarks Section */}
+                  {area.landmarks && area.landmarks.length > 0 && (
+                    <div className="mb-4">
+                      <p className="text-muted-foreground">
+                        <strong>Key landmarks we serve:</strong> {area.landmarks.join(', ')}.
+                      </p>
+                    </div>
+                  )}
+                  
                   <p className="text-muted-foreground">
                     Whether you need same-day delivery within Mumbai, express shipping to Pan India destinations, or 
                     international courier services, Trackon Courier in {area.name} has you covered. 
@@ -1022,6 +1102,12 @@ const AreaDetail = () => {
                     <Link to="/" className="text-accent hover:underline flex items-center gap-2">
                       <ArrowLeft className="w-4 h-4" /> Back to Home
                     </Link>
+                    <Link to="/courier-service-mumbai" className="text-accent hover:underline">Courier Service in Mumbai</Link>
+                    {area.isMumbaiArea && slug !== 'andheri-west' && (
+                      <Link to="/areas/courier-service-in-andheri-west" className="text-accent hover:underline font-semibold">
+                        Courier Service in Andheri West (HQ)
+                      </Link>
+                    )}
                     <Link to="/#contact" className="text-accent hover:underline">Contact Trackon Courier</Link>
                     <Link to="/pan-india-courier" className="text-accent hover:underline">Pan India Courier Service</Link>
                     <Link to="/same-day-courier-andheri-west" className="text-accent hover:underline">Same Day Courier</Link>
