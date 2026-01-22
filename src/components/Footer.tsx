@@ -98,6 +98,7 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
         </div>
 
         <div className="border-t border-background/20 pt-8 text-center text-background/50 text-sm">
+          <p className="mb-2 text-background/70 font-medium">Trackon Courier – Courier Service in Andheri West, Mumbai</p>
           <p>© {currentYear} Trackon Courier. All rights reserved. | Courier Services in Mumbai | Trackon Courier Near Me</p>
         </div>
       </div>
