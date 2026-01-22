@@ -25,91 +25,79 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "#TrackonCourier",
-      "name": "Trackon Courier Mumbai",
-      "description": "Best courier services in Mumbai. Fast delivery in Andheri, Bandra, Juhu, DN Nagar, Goregaon, Malad, Kandivali, Vile Parle, Versova. Same-day courier, Pan India & International shipping.",
-      "url": "https://trackoncourier.com",
+      "@type": ["LocalBusiness", "CourierService"],
+      "@id": "https://trackonservices.lovable.app/#TrackonCourier",
+      "name": "Trackon Courier",
+      "alternateName": ["Trackon Courier Mumbai", "Trackon Courier Service", "Trackon Courier Andheri"],
+      "description": "Fast and reliable courier service in Andheri West, Mumbai. Same-day pickup, express delivery, Pan India and international shipping. Serving Mumbai and suburban areas.",
+      "url": "https://trackonservices.lovable.app",
       "telephone": "+91-8097512951",
       "email": "sonacourierservices@gmail.com",
-      "image": "https://trackoncourier.com/logo.png",
+      "image": "https://trackonservices.lovable.app/logo.png",
       "priceRange": "₹50 - ₹5000",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, UPI, Bank Transfer",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Andheri West",
-        "addressLocality": "Mumbai",
+        "streetAddress": "Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Near Shankri Hotel, Kapaswadi",
+        "addressLocality": "Andheri West",
         "addressRegion": "Maharashtra",
         "postalCode": "400053",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 19.1365,
+        "latitude": 19.1351,
         "longitude": 72.8296
       },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "20:00"
         }
       ],
       "areaServed": [
+        {"@type": "Place", "name": "Andheri West, Mumbai"},
+        {"@type": "Place", "name": "Andheri East, Mumbai"},
+        {"@type": "Place", "name": "Bandra, Mumbai"},
+        {"@type": "Place", "name": "Juhu, Mumbai"},
+        {"@type": "Place", "name": "DN Nagar, Mumbai"},
+        {"@type": "Place", "name": "Versova, Mumbai"},
+        {"@type": "Place", "name": "Goregaon, Mumbai"},
+        {"@type": "Place", "name": "Malad, Mumbai"},
+        {"@type": "Place", "name": "Kandivali, Mumbai"},
+        {"@type": "Place", "name": "Santacruz, Mumbai"},
+        {"@type": "Place", "name": "Vile Parle, Mumbai"},
+        {"@type": "Place", "name": "Jogeshwari, Mumbai"},
+        {"@type": "Place", "name": "Marol, Mumbai"},
+        {"@type": "Place", "name": "Saki Naka, Mumbai"},
+        {"@type": "Place", "name": "Kapaswadi, Mumbai"},
         {"@type": "City", "name": "Mumbai"},
-        {"@type": "City", "name": "Andheri"},
-        {"@type": "City", "name": "Bandra"},
-        {"@type": "City", "name": "Juhu"},
-        {"@type": "City", "name": "DN Nagar"},
-        {"@type": "City", "name": "Goregaon"},
-        {"@type": "City", "name": "Malad"},
-        {"@type": "City", "name": "Kandivali"},
-        {"@type": "City", "name": "Vile Parle"},
-        {"@type": "City", "name": "Versova"},
-        {"@type": "City", "name": "Jogeshwari"},
-        {"@type": "City", "name": "Saki Naka"},
-        {"@type": "City", "name": "Marol"},
-        {"@type": "City", "name": "Delhi"},
-        {"@type": "City", "name": "Bengaluru"},
-        {"@type": "City", "name": "Chennai"},
-        {"@type": "City", "name": "Kolkata"},
-        {"@type": "City", "name": "Hyderabad"},
-        {"@type": "City", "name": "Pune"}
+        {"@type": "City", "name": "Suburban Mumbai"}
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Courier Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Same Day Delivery Mumbai"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Express Courier Services"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Same Day Courier Service"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Express Courier Service"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pan India Courier"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "International Shipping"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "International Courier"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Airport Courier Services"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Document Courier"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Doorstep Pickup"}}
         ]
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
+        "ratingValue": "5.0",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingCount": "2850",
-        "reviewCount": "1850"
+        "ratingCount": "25",
+        "reviewCount": "25"
       },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Rahul Sharma"},
-          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
-          "reviewBody": "Best courier service in Andheri. Same day delivery was excellent!"
-        },
-        {
-          "@type": "Review",
-          "author": {"@type": "Person", "name": "Priya Mehta"},
-          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
-          "reviewBody": "Very reliable courier service in Bandra. Highly recommended!"
-        }
-      ],
       "sameAs": []
     }
     </script>
