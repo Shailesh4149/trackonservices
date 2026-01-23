@@ -21,8 +21,8 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              Fast Courier Pickup in{" "}
-              <span className="text-gradient">Andheri West – Call Now</span>
+              Courier Service in{" "}
+              <span className="text-gradient">Andheri West, Mumbai</span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">
