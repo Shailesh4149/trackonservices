@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import CustomerReviews from "@/components/CustomerReviews";
 
 interface AreaData {
   name: string;
@@ -908,11 +909,20 @@ const AreaDetail = () => {
                 <span className="text-accent font-semibold">{area.name}</span>
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
-                Courier Service in {area.name}, Mumbai
+                {slug === 'andheri-west' ? 'Fast Courier Pickup in' : 'Courier Service in'} {area.name} – Call Now
               </h1>
-              <p className="text-lg text-primary-foreground/90 mb-6">
-                {area.description}. Fast pickup within 1-2 hours, same-day delivery across Mumbai, and express shipping to all India destinations. Call 8097512951 for instant service.
+              <p className="text-lg text-primary-foreground/90 mb-3">
+                {area.description}. Fast pickup within {area.pickupTime || '1-2 hours'}, same-day delivery across Mumbai, and express shipping to all India destinations.
               </p>
+              {(slug === 'andheri-west' || area.isMumbaiArea) && (
+                <p className="text-primary-foreground/80 mb-6 flex flex-wrap items-center gap-3 text-sm font-medium">
+                  <span>★★★★★ Rated by local customers</span>
+                  <span>•</span>
+                  <span>Trusted by local businesses</span>
+                  <span>•</span>
+                  <span>Serving Mumbai since 2019</span>
+                </p>
+              )}
               <div className="flex flex-wrap gap-4">
                 <a href="tel:8097512951">
                   <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2">
@@ -1162,7 +1172,8 @@ const AreaDetail = () => {
                       <Star className="w-4 h-4 text-accent" />
                       <span className="text-sm text-muted-foreground">Customer Rating</span>
                     </div>
-                    <p className="font-semibold text-foreground">4.8/5 (500+ reviews)</p>
+                    <p className="font-semibold text-foreground">★★★★★ 5.0/5</p>
+                    <p className="text-xs text-muted-foreground">Find us on Google</p>
                   </div>
                 </div>
               </aside>
@@ -1170,12 +1181,18 @@ const AreaDetail = () => {
           </div>
         </section>
 
+        {/* Customer Reviews Section - Only for key areas */}
+        {(slug === 'andheri-west' || slug === 'andheri') && (
+          <CustomerReviews areaName={area.name} />
+        )}
+
         {/* Local SEO Footer Block */}
         <section className="py-8 bg-secondary">
           <div className="container">
             <p className="text-center text-muted-foreground">
               <strong>Service Area:</strong> {area.name}, Mumbai – {area.pincode} | 
-              Serving nearby locations including {area.nearbyAreas.slice(0, 3).join(', ')}
+              Serving nearby locations including {area.nearbyAreas.slice(0, 3).join(', ')} | 
+              Find us on Google • Trusted by local customers in {area.name}
             </p>
           </div>
         </section>

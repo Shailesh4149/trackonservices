@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import CustomerReviews from "@/components/CustomerReviews";
 
 // All Mumbai micro-areas for internal linking
 const mumbaiAreas = [
@@ -34,12 +35,12 @@ const mumbaiAreas = [
 
 const MumbaiCourier = () => {
   useEffect(() => {
-    // SEO Meta Tags
-    document.title = "Courier Service in Mumbai | Same Day Pickup – Trackon Courier";
+    // SEO Meta Tags - CTR optimized
+    document.title = "Fast Courier Service Mumbai – Call Now | Same Day Pickup | Trackon Courier";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Fast & reliable courier service across Mumbai. Based in Andheri West, serving all Mumbai suburbs. Same-day pickup, express delivery, Pan India & international shipping. Call 8097512951.');
+      metaDescription.setAttribute('content', 'Same Day Courier Near You in Mumbai. ★★★★★ rated, 2,000+ deliveries, serving Mumbai since 2019. Doorstep pickup in 1-2 hours. Based in Andheri West. Call 8097512951.');
     }
 
     const metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -102,13 +103,19 @@ const MumbaiCourier = () => {
                 <span className="text-accent font-semibold">Headquarters: Andheri West, Mumbai</span>
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
-                Courier Service in Mumbai
+                Fast Courier Service in Mumbai – Call Now
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl">
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-4 max-w-3xl">
                 Trackon Courier is Mumbai's trusted courier partner, headquartered in Andheri West. 
                 We provide fast, reliable courier services across all Mumbai suburbs with same-day pickup, 
-                express delivery, and Pan India shipping. From Andheri to Bandra, Goregaon to Santacruz – 
-                we've got Mumbai covered.
+                express delivery, and Pan India shipping.
+              </p>
+              <p className="text-primary-foreground/80 mb-8 flex flex-wrap items-center gap-4 text-sm font-medium">
+                <span>★★★★★ Rated by local customers</span>
+                <span>•</span>
+                <span>2,000+ successful deliveries</span>
+                <span>•</span>
+                <span>Serving Mumbai since 2019</span>
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="tel:8097512951">
@@ -334,12 +341,16 @@ const MumbaiCourier = () => {
           </div>
         </section>
 
+        {/* Customer Reviews Section */}
+        <CustomerReviews areaName="Mumbai" />
+
         {/* Local SEO Footer Block */}
         <section className="py-8 bg-secondary">
           <div className="container">
             <p className="text-center text-muted-foreground">
               <strong>Trackon Courier Mumbai</strong> – Headquarters: Andheri West, Mumbai – 400053 | 
-              Serving all Mumbai suburbs including Andheri, Bandra, Goregaon, Malad, Kandivali, Santacruz, and more.
+              Serving all Mumbai suburbs including Andheri, Bandra, Goregaon, Malad, Kandivali, Santacruz, and more. 
+              Find us on Google • Trusted by local customers.
             </p>
           </div>
         </section>
