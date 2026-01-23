@@ -21,12 +21,14 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Fast Courier Pickup in{" "}
+              <span className="text-gradient">Andheri West – Call Now</span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">
               Same Day Courier Near You | Trusted Local Service. Trackon Courier offers fast and reliable 
               same-day and express courier services in Andheri West. Doorstep pickup within 30-60 minutes, 
-              20,000+ successful deliveries, serving Mumbai since 2019.
+              2,000+ successful deliveries, serving Mumbai since 2019.
             </p>
 
             {/* Trust Badges */}
