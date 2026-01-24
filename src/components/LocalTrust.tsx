@@ -1,6 +1,7 @@
 import { Award, Users, Clock, Shield } from "lucide-react";
+import React from "react";
 
-const LocalTrust = () => {
+const LocalTrust = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <section className="py-16 md:py-24 bg-secondary" aria-labelledby="trust-heading">
       <div className="container">
@@ -63,6 +64,8 @@ const LocalTrust = () => {
       </div>
     </section>
   );
-};
+});
+
+LocalTrust.displayName = "LocalTrust";
 
 export default LocalTrust;
