@@ -2,6 +2,7 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import trackonLogo from "@/assets/trackon-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,11 +10,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
       <nav className="container flex items-center justify-between h-16 md:h-20" aria-label="Main navigation">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-hero-gradient flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-xl">T</span>
-          </div>
-          <span className="font-bold text-xl text-foreground">Trackon<span className="text-accent">Courier</span></span>
+        <Link to="/" className="flex items-center">
+          <img 
+            src={trackonLogo} 
+            alt="Trackon Courier - Swift. Safe. Sure." 
+            className="h-10 md:h-12 w-auto"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
