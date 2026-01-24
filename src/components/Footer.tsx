@@ -20,10 +20,10 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <img 
+            <img 
                 src={trackonLogo} 
                 alt="Trackon Courier - Swift. Safe. Sure." 
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-background/70 mb-4 max-w-md">
