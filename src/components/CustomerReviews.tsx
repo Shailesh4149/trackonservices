@@ -46,7 +46,7 @@ const CustomerReviews = ({ areaName = "Andheri West & Mumbai" }: CustomerReviews
               className="bg-secondary rounded-xl p-6 shadow-card relative"
             >
               <Quote className="w-8 h-8 text-accent/20 absolute top-4 right-4" aria-hidden="true" />
-              <div className="flex items-center gap-1 mb-3 text-accent" aria-label="5 star rating">
+              <div className="flex items-center gap-1 mb-3 text-accent" role="img" aria-label="5 star rating">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
