@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import trackonLogo from "@/assets/trackon-logo.png";
 
 const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   const location = useLocation();
@@ -18,11 +19,12 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-accent-gradient flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">T</span>
-              </div>
-              <span className="font-bold text-xl">Trackon<span className="text-accent">Courier</span></span>
+            <div className="mb-4">
+              <img 
+                src={trackonLogo} 
+                alt="Trackon Courier - Swift. Safe. Sure." 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-background/70 mb-4 max-w-md">
               Your trusted partner for fast, reliable, and secure courier services across Mumbai and Pan India. Same-day delivery, express shipping, and doorstep pickup available.
