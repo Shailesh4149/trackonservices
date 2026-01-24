@@ -1,10 +1,12 @@
 import { Star, MapPin, Quote } from "lucide-react";
+import React from "react";
 
 interface CustomerReviewsProps {
   areaName?: string;
 }
 
-const CustomerReviews = ({ areaName = "Andheri West & Mumbai" }: CustomerReviewsProps) => {
+const CustomerReviews = React.forwardRef<HTMLElement, CustomerReviewsProps>(
+  ({ areaName = "Andheri West & Mumbai" }, ref) => {
   const reviews = [
     {
       text: "Excellent service! Pickup was within an hour and delivery was same-day. Highly recommended for urgent documents.",
@@ -70,6 +72,8 @@ const CustomerReviews = ({ areaName = "Andheri West & Mumbai" }: CustomerReviews
       </div>
     </section>
   );
-};
+});
+
+CustomerReviews.displayName = "CustomerReviews";
 
 export default CustomerReviews;
