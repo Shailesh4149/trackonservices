@@ -102,7 +102,7 @@ const ServiceDetail = () => {
 
   useEffect(() => {
     if (service) {
-      document.title = `${service.title} | Trackon Courier Mumbai | ${phoneNumber}`;
+      document.title = `${service.title} | Trackon Courier | ${phoneNumber}`;
 
       const updateMeta = (name: string, content: string, isProperty = false) => {
         const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;

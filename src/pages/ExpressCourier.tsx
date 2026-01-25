@@ -30,7 +30,7 @@ const ExpressCourier = () => {
       }
     };
 
-    updateMeta("description", "Express courier service in Mumbai with priority handling. Urgent deliveries within 2-6 hours. Trackon Courier Mumbai - Call 8097512951 for express pickup.");
+    updateMeta("description", "Express courier service in Mumbai with priority handling. Urgent deliveries within 2-6 hours. Trackon Courier - Call 8097512951 for express pickup.");
     updateMeta("keywords", "express courier mumbai, urgent courier service, priority delivery, fast courier mumbai, express delivery andheri");
     updateMeta("og:title", "Express Courier Service Mumbai | Trackon Courier", true);
     updateMeta("og:description", "Express courier service in Mumbai with priority handling. Urgent deliveries within 2-6 hours. Call 8097512951.", true);
@@ -58,7 +58,7 @@ const ExpressCourier = () => {
       "description": "Priority express courier delivery service in Mumbai with 2-6 hour delivery times.",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Trackon Courier Mumbai",
+        "name": "Trackon Courier",
         "telephone": `+91-${phoneNumber}`,
         "address": {
           "@type": "PostalAddress",
@@ -120,7 +120,7 @@ const ExpressCourier = () => {
                 <article className="bg-card rounded-xl p-6 md:p-8 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Service Overview</h2>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                    Express courier service is designed for time-critical shipments that cannot wait. At Trackon Courier Mumbai, we offer priority express delivery with dedicated vehicles and immediate dispatch for urgent packages.
+                    Express courier service is designed for time-critical shipments that cannot wait. At Trackon Courier, we offer priority express delivery with dedicated vehicles and immediate dispatch for urgent packages.
                   </p>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                     Whether you need to send urgent medical samples, legal documents for court deadlines, or business contracts requiring immediate signatures — our express service ensures your package receives top priority from pickup to delivery.
@@ -238,7 +238,7 @@ const ExpressCourier = () => {
                 <article className="bg-card rounded-xl p-6 md:p-8 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Pickup & Contact Information</h2>
                   <address className="not-italic text-muted-foreground space-y-3 mb-6">
-                    <p><strong className="text-foreground">Business:</strong> Trackon Courier Mumbai</p>
+                    <p><strong className="text-foreground">Business:</strong> Trackon Courier</p>
                     <p><strong className="text-foreground">Office:</strong> Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Andheri West, Mumbai - 400053</p>
                     <p><strong className="text-foreground">Phone:</strong> <a href="tel:8097512951" className="text-primary hover:underline">8097512951</a></p>
                     <p><strong className="text-foreground">Express Availability:</strong> 7 AM to 10 PM daily</p>

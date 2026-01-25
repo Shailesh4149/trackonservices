@@ -12,7 +12,7 @@ const LocalTrust = React.forwardRef<HTMLElement>((_, ref) => {
               Courier Service in Andheri West
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Trackon Courier Mumbai has been providing dependable courier and logistics services to businesses 
+              Trackon Courier has been providing dependable courier and logistics services to businesses 
               and individuals in Andheri West and surrounding areas. Our local presence means faster pickups, 
               better understanding of delivery routes, and personalized service that larger companies cannot match.
             </p>

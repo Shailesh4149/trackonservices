@@ -8,7 +8,7 @@ import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   useEffect(() => {
-    document.title = "Courier & Logistics Blog | Tips & Guides | Trackon Courier Mumbai";
+    document.title = "Courier & Logistics Blog | Tips & Guides | Trackon Courier";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute("content", "Read expert tips on courier services, shipping guides, logistics efficiency, and more. Stay updated with Trackon Courier's blog.");

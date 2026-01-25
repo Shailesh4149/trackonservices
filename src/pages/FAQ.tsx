@@ -162,7 +162,7 @@ const FAQ = () => {
   };
 
   useEffect(() => {
-    document.title = "Frequently Asked Questions | Trackon Courier Mumbai";
+    document.title = "Frequently Asked Questions | Trackon Courier";
     
     const updateMeta = (name: string, content: string, isProperty = false) => {
       const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
@@ -182,7 +182,7 @@ const FAQ = () => {
     };
 
     updateMeta("description", "Find answers to common questions about Trackon Courier services - shipping, tracking, pricing, pickup, international delivery, and more. Call 8097512951 for help.");
-    updateMeta("og:title", "FAQ | Trackon Courier Mumbai", true);
+    updateMeta("og:title", "FAQ | Trackon Courier", true);
   }, []);
 
   const breadcrumbItems = [

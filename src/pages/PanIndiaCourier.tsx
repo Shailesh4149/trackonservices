@@ -32,7 +32,7 @@ const PanIndiaCourier = () => {
 
     updateMeta("description", "Pan India courier service from Mumbai to all major cities. Reliable parcel delivery to Delhi, Bangalore, Chennai, Kolkata. Trackon Courier - Call 8097512951.");
     updateMeta("keywords", "pan india courier, all india courier service, domestic courier mumbai, parcel delivery india, courier to delhi bangalore");
-    updateMeta("og:title", "Pan India Courier Service | Trackon Courier Mumbai", true);
+    updateMeta("og:title", "Pan India Courier Service | Trackon Courier", true);
     updateMeta("og:description", "Pan India courier service from Mumbai to all major cities. Delivery to 500+ cities. Call 8097512951.", true);
 
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -58,7 +58,7 @@ const PanIndiaCourier = () => {
       "description": "Nationwide courier delivery service from Mumbai to 500+ cities across India.",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Trackon Courier Mumbai",
+        "name": "Trackon Courier",
         "telephone": `+91-${phoneNumber}`,
         "address": {
           "@type": "PostalAddress",
@@ -103,7 +103,7 @@ const PanIndiaCourier = () => {
                   Pan India Courier Service
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
-                  Send parcels anywhere in India with Trackon Courier Mumbai. Reliable delivery to 500+ cities including Delhi, Bangalore, Chennai, Kolkata, and Hyderabad.
+                  Send parcels anywhere in India with Trackon Courier. Reliable delivery to 500+ cities including Delhi, Bangalore, Chennai, Kolkata, and Hyderabad.
                 </p>
               </div>
             </div>
@@ -254,7 +254,7 @@ const PanIndiaCourier = () => {
                 <article className="bg-card rounded-xl p-6 md:p-8 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Pickup & Contact Information</h2>
                   <address className="not-italic text-muted-foreground space-y-3 mb-6">
-                    <p><strong className="text-foreground">Business:</strong> Trackon Courier Mumbai</p>
+                    <p><strong className="text-foreground">Business:</strong> Trackon Courier</p>
                     <p><strong className="text-foreground">Office:</strong> Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Andheri West, Mumbai - 400053</p>
                     <p><strong className="text-foreground">Phone:</strong> <a href="tel:8097512951" className="text-primary hover:underline">8097512951</a></p>
                     <p><strong className="text-foreground">Pickup Hours:</strong> Monday to Saturday, 9 AM to 7 PM</p>

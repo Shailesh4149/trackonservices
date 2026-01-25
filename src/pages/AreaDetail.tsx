@@ -1204,7 +1204,7 @@ const AreaDetail = () => {
               Need Courier Service in {area.name}?
             </h2>
             <p className="text-accent-foreground/90 mb-6 max-w-2xl mx-auto">
-              Get instant quotes and same-day pickup. Trackon Courier Mumbai - Your trusted delivery partner in {area.name} and nearby areas.
+              Get instant quotes and same-day pickup. Trackon Courier - Your trusted delivery partner in {area.name} and nearby areas.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:8097512951">
