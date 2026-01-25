@@ -1,8 +1,10 @@
 import React from "react";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
-  return <section id="contact" ref={ref} className="py-16 md:py-24 bg-hero-gradient" aria-labelledby="contact-heading">
+  return (
+    <section id="contact" ref={ref} className="py-16 md:py-24 bg-hero-gradient" aria-labelledby="contact-heading">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <article className="text-primary-foreground">
@@ -23,7 +25,7 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm text-primary-foreground/70">Business Name</p>
-                  <p className="text-base md:text-lg font-bold">Trackon Courier </p>
+                  <p className="text-base md:text-lg font-bold">Trackon Courier Mumbai</p>
                   <p className="text-sm text-primary-foreground/70 mt-1">Service Area: Andheri West, Mumbai</p>
                 </div>
               </div>
@@ -68,14 +70,29 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Request a Pickup</h3>
             <p className="text-muted-foreground mb-6">Get in touch for instant courier booking and quotes</p>
             
-            <Button variant="accent" size="lg" className="w-full mb-4" asChild>
-              <a href={`https://wa.me/918097512951?text=${encodeURIComponent("Hi, I want to book a courier pickup from Andheri West.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <Button 
+              variant="accent" 
+              size="lg" 
+              className="w-full mb-4"
+              asChild
+            >
+              <a 
+                href={`https://wa.me/918097512951?text=${encodeURIComponent("Hi, I want to book a courier pickup from Andheri West.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
                 <MessageCircle className="w-5 h-5" aria-hidden="true" />
                 Request Pickup on WhatsApp
               </a>
             </Button>
 
-            <Button variant="outline" size="lg" className="w-full" asChild>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full"
+              asChild
+            >
               <a href="tel:8097512951" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" aria-hidden="true" />
                 Call: 8097512951
@@ -90,7 +107,10 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
           </aside>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 });
+
 ContactSection.displayName = "ContactSection";
+
 export default ContactSection;
