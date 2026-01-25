@@ -58,7 +58,7 @@ const InternationalCourier = () => {
       "description": "Worldwide courier delivery service from Mumbai to 200+ countries with customs clearance.",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Trackon Courier Mumbai",
+        "name": "Trackon Courier",
         "telephone": `+91-${phoneNumber}`,
         "address": {
           "@type": "PostalAddress",
@@ -120,7 +120,7 @@ const InternationalCourier = () => {
                 <article className="bg-card rounded-xl p-6 md:p-8 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Service Overview</h2>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                    International courier service from Trackon Courier Mumbai connects you to the world. Whether you need to send important documents to the United States, business samples to the United Kingdom, or personal parcels to family in the UAE — we handle the complete shipping process including customs documentation.
+                    International courier service from Trackon Courier connects you to the world. Whether you need to send important documents to the United States, business samples to the United Kingdom, or personal parcels to family in the UAE — we handle the complete shipping process including customs documentation.
                   </p>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                     We partner with global courier networks to ensure your international shipments are handled professionally from pickup in Andheri West to doorstep delivery anywhere in the world. Our team assists with proper documentation, customs declarations, and provides accurate delivery timelines based on destination country requirements.
@@ -254,7 +254,7 @@ const InternationalCourier = () => {
                 <article className="bg-card rounded-xl p-6 md:p-8 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Pickup & Contact Information</h2>
                   <address className="not-italic text-muted-foreground space-y-3 mb-6">
-                    <p><strong className="text-foreground">Business:</strong> Trackon Courier Mumbai</p>
+                    <p><strong className="text-foreground">Business:</strong> Trackon Courier</p>
                     <p><strong className="text-foreground">Office:</strong> Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Andheri West, Mumbai - 400053</p>
                     <p><strong className="text-foreground">Phone:</strong> <a href="tel:8097512951" className="text-primary hover:underline">8097512951</a></p>
                     <p><strong className="text-foreground">International Enquiries:</strong> Monday to Saturday, 10 AM to 6 PM</p>

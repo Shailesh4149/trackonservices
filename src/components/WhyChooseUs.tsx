@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
         <header className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block text-accent font-semibold mb-4">Why Us</span>
           <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Choose Trackon Courier Mumbai
+            Why Choose Trackon Courier
           </h2>
           <p className="text-muted-foreground text-lg">
             We combine local expertise with professional courier services to deliver your packages safely and on time.

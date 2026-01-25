@@ -58,7 +58,7 @@ const SameDayCourier = () => {
       "description": "Fast same day courier delivery service in Andheri West, Mumbai. Book before 2 PM for evening delivery.",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Trackon Courier Mumbai",
+        "name": "Trackon Courier",
         "telephone": `+91-${phoneNumber}`,
         "address": {
           "@type": "PostalAddress",
@@ -229,7 +229,7 @@ const SameDayCourier = () => {
                 <article className="bg-card rounded-xl p-6 md:p-8 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Pickup & Contact Information</h2>
                   <address className="not-italic text-muted-foreground space-y-3 mb-6">
-                    <p><strong className="text-foreground">Business:</strong> Trackon Courier Mumbai</p>
+                    <p><strong className="text-foreground">Business:</strong> Trackon Courier</p>
                     <p><strong className="text-foreground">Office:</strong> Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Andheri West, Mumbai - 400053</p>
                     <p><strong className="text-foreground">Phone:</strong> <a href="tel:8097512951" className="text-primary hover:underline">8097512951</a></p>
                     <p><strong className="text-foreground">Same Day Cutoff:</strong> Book before 2 PM for evening delivery</p>

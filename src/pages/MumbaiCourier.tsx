@@ -45,7 +45,7 @@ const MumbaiCourier = () => {
 
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'courier service Mumbai, courier services in Mumbai, same day courier Mumbai, express courier Mumbai, Trackon Courier Mumbai, parcel delivery Mumbai, best courier Mumbai');
+      metaKeywords.setAttribute('content', 'courier service Mumbai, courier services in Mumbai, same day courier Mumbai, express courier Mumbai, Trackon Courier, parcel delivery Mumbai, best courier Mumbai');
     }
 
     // JSON-LD Schema - links to main LocalBusiness, no duplication
@@ -348,7 +348,7 @@ const MumbaiCourier = () => {
         <section className="py-8 bg-secondary">
           <div className="container">
             <p className="text-center text-muted-foreground">
-              <strong>Trackon Courier Mumbai</strong> – Headquarters: Andheri West, Mumbai – 400053 | 
+              <strong>Trackon Courier</strong> – Headquarters: Andheri West, Mumbai – 400053 | 
               Serving all Mumbai suburbs including Andheri, Bandra, Goregaon, Malad, Kandivali, Santacruz, and more. 
               Find us on Google • Trusted by local customers.
             </p>

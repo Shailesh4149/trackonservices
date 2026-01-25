@@ -8,7 +8,7 @@ import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const Sitemap = () => {
   useEffect(() => {
-    document.title = "Sitemap | Trackon Courier Mumbai - All Pages";
+    document.title = "Sitemap | Trackon Courier - All Pages";
     
     const updateMeta = (name: string, content: string, isProperty = false) => {
       const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
