@@ -61,7 +61,7 @@ function getStaticHomepageHtml(): string {
           Courier Service in Andheri West, Mumbai
         </h1>
         <p class="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-          Need fast and reliable courier delivery in Andheri West? Trackon Courier Mumbai offers same-day pickup and express delivery services across Mumbai. Whether you need to send documents, parcels, or bulk shipments — we ensure safe, on-time delivery with real-time tracking. Serving Andheri and nearby areas with doorstep pickup and affordable rates.
+          Need fast and reliable courier delivery in Andheri West? Trackon Courier offers same-day pickup and express delivery services across Mumbai. Whether you need to send documents, parcels, or bulk shipments — we ensure safe, on-time delivery with real-time tracking. Serving Andheri and nearby areas with doorstep pickup and affordable rates.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="tel:8097512951" class="inline-flex items-center justify-center rounded-md text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-8">
@@ -157,7 +157,7 @@ function getStaticHomepageHtml(): string {
   <section id="why-us" class="py-20 bg-muted/30">
     <div class="container">
       <header class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Trackon Courier Mumbai</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Trackon Courier</h2>
         <p class="text-lg text-muted-foreground max-w-2xl mx-auto">Your trusted local courier partner for reliable and affordable delivery services.</p>
       </header>
       <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0">
@@ -213,7 +213,7 @@ function getStaticHomepageHtml(): string {
       </header>
       <article class="max-w-2xl mx-auto">
         <address class="not-italic bg-card rounded-xl p-8 shadow-sm border border-border mb-8">
-          <h3 class="text-xl font-bold text-foreground mb-4">Trackon Courier Mumbai</h3>
+          <h3 class="text-xl font-bold text-foreground mb-4">Trackon Courier</h3>
           <p class="text-muted-foreground mb-2"><strong>Address:</strong> Shop No. 1/2, Ever Shine Mens Wear, Juhu Versova Link Road, Andheri West, Mumbai - 400053</p>
           <p class="text-muted-foreground mb-2"><strong>Phone:</strong> <a href="tel:8097512951" class="text-primary hover:underline">8097512951</a></p>
           <p class="text-muted-foreground mb-2"><strong>Email:</strong> <a href="mailto:sonacourierservices@gmail.com" class="text-primary hover:underline">sonacourierservices@gmail.com</a></p>
@@ -231,12 +231,12 @@ function getStaticHomepageHtml(): string {
 <footer class="bg-card border-t border-border py-12">
   <div class="container">
     <div class="grid md:grid-cols-4 gap-8">
-      <div><h3 class="font-bold text-lg text-foreground mb-4">Trackon Courier Mumbai</h3><p class="text-muted-foreground text-sm">Your trusted courier partner for same-day, express, and international delivery services in Mumbai.</p></div>
+      <div><h3 class="font-bold text-lg text-foreground mb-4">Trackon Courier</h3><p class="text-muted-foreground text-sm">Your trusted courier partner for same-day, express, and international delivery services in Mumbai.</p></div>
       <nav aria-label="Quick links"><h3 class="font-bold text-lg text-foreground mb-4">Quick Links</h3><ul class="space-y-2 list-none p-0"><li><a href="/" class="text-muted-foreground hover:text-primary text-sm">Home</a></li><li><a href="/about" class="text-muted-foreground hover:text-primary text-sm">About Us</a></li><li><a href="/blog" class="text-muted-foreground hover:text-primary text-sm">Blog</a></li><li><a href="/faq" class="text-muted-foreground hover:text-primary text-sm">FAQ</a></li><li><a href="/sitemap" class="text-muted-foreground hover:text-primary text-sm">Sitemap</a></li></ul></nav>
       <nav aria-label="Services"><h3 class="font-bold text-lg text-foreground mb-4">Our Services</h3><ul class="space-y-2 list-none p-0"><li><a href="/services/same-day-courier" class="text-muted-foreground hover:text-primary text-sm">Same Day Courier</a></li><li><a href="/services/express-courier" class="text-muted-foreground hover:text-primary text-sm">Express Courier</a></li><li><a href="/services/pan-india-courier" class="text-muted-foreground hover:text-primary text-sm">Pan India Courier</a></li><li><a href="/services/international-courier" class="text-muted-foreground hover:text-primary text-sm">International Courier</a></li></ul></nav>
       <div><h3 class="font-bold text-lg text-foreground mb-4">Contact Us</h3><address class="not-italic text-muted-foreground text-sm space-y-2"><p><a href="tel:8097512951" class="hover:text-primary">8097512951</a></p><p><a href="mailto:sonacourierservices@gmail.com" class="hover:text-primary">sonacourierservices@gmail.com</a></p><p>Andheri West, Mumbai - 400053</p></address></div>
     </div>
-    <div class="border-t border-border mt-8 pt-8 text-center"><p class="text-muted-foreground text-sm">© 2024 Trackon Courier Mumbai. All rights reserved.</p></div>
+    <div class="border-t border-border mt-8 pt-8 text-center"><p class="text-muted-foreground text-sm">© 2024 Trackon Courier. All rights reserved.</p></div>
   </div>
 </footer>
 `;

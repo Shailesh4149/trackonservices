@@ -32,7 +32,7 @@ const SameDayCourier = () => {
 
     updateMeta("description", "Same day courier service in Andheri West, Mumbai. Book before 2 PM for delivery by evening. Trackon Courier offers fast local pickup. Call 8097512951.");
     updateMeta("keywords", "same day courier andheri west, same day delivery mumbai, urgent courier service, local courier andheri");
-    updateMeta("og:title", "Same Day Courier Service in Andheri West | Trackon Courier Mumbai", true);
+    updateMeta("og:title", "Same Day Courier Service in Andheri West | Trackon Courier", true);
     updateMeta("og:description", "Same day courier service in Andheri West, Mumbai. Book before 2 PM for delivery by evening. Call 8097512951.", true);
 
     let canonical = document.querySelector('link[rel="canonical"]');

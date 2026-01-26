@@ -31,7 +31,7 @@ const SEOHead = () => {
 
     // Add Open Graph tags - CTR optimized
     const ogTags = [
-      { property: "og:title", content: "Fast Courier Pickup Andheri West – Call Now | Trackon Courier Mumbai" },
+      { property: "og:title", content: "Fast Courier Pickup Andheri West – Call Now | Trackon Courier" },
       { property: "og:description", content: "Same Day Courier Near You – Trusted Local Service. 2,000+ deliveries, ★★★★★ rated. Doorstep pickup in 30-60 mins. Serving Mumbai since 2019. Call 8097512951." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
@@ -54,7 +54,7 @@ const SEOHead = () => {
       script.text = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Trackon Courier Mumbai",
+        "name": "Trackon Courier",
         "alternateName": ["Trackon Courier", "Trackon Courier Service", "Trackon Courier Services"],
         "description": "Fastest courier service in Mumbai. Best courier services near me. Courier tracking, courier charges, courier office near me. Trackon Courier Andheri, DN Nagar, Jogeshwari, Goregaon, Versova. Same-day delivery and express shipping.",
         "telephone": "+91-8097512951",
