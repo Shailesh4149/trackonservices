@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     keywords: "fastest courier service mumbai, quick delivery mumbai, express courier, same day delivery, urgent courier service",
     metaDescription: "Complete guide to the fastest courier services in Mumbai for 2025. Compare same-day delivery, express options, pricing, and find the best service for urgent packages.",
-    image: "/placeholder.svg",
+    image: "/blog/fastest-courier-mumbai.webp",
     relatedServices: ["express-delivery", "same-day-delivery"],
     content: `
 ## Why Speed Matters in Courier Services
@@ -116,7 +116,7 @@ Ready to ship? Call us at **8097512951** for instant quotes and booking.
     readTime: "6 min read",
     keywords: "best tracking service, parcel tracking, real-time tracking, courier tracking, shipment tracking",
     metaDescription: "Learn how to choose the best parcel tracking service. Compare features, understand real-time tracking benefits, and find reliable courier tracking solutions.",
-    image: "/placeholder.svg",
+    image: "/blog/tracking-service-guide.webp",
     relatedServices: ["domestic-courier", "international-shipping"],
     content: `
 ## The Importance of Parcel Tracking
@@ -210,7 +210,7 @@ Track your shipments with confidence. Contact Trackon Courier at **8097512951**.
     readTime: "10 min read",
     keywords: "improve logistics efficiency, small business shipping, reduce shipping costs, logistics optimization, business courier solutions",
     metaDescription: "10 proven strategies to improve logistics efficiency for small businesses. Reduce shipping costs, optimize operations, and improve delivery times.",
-    image: "/placeholder.svg",
+    image: "/blog/logistics-efficiency.webp",
     relatedServices: ["domestic-courier", "doorstep-pickup"],
     content: `
 ## Introduction
@@ -335,7 +335,7 @@ Ready to optimize your shipping? Contact Trackon Courier at **8097512951** for c
     readTime: "7 min read",
     keywords: "same day delivery, express courier, courier comparison, fast delivery options, urgent shipping",
     metaDescription: "Same day delivery vs express courier: complete comparison guide. Understand pricing, delivery times, and choose the right service for your urgent shipments.",
-    image: "/placeholder.svg",
+    image: "/blog/same-day-vs-express.webp",
     relatedServices: ["same-day-delivery", "express-delivery"],
     content: `
 ## Understanding the Difference
@@ -483,7 +483,7 @@ Need help deciding? Call Trackon Courier at **8097512951** – we'll recommend t
     readTime: "12 min read",
     keywords: "international shipping india, courier abroad, international courier cost, customs clearance, global shipping",
     metaDescription: "Complete guide to international shipping from India. Learn about costs, delivery times, customs requirements, prohibited items, and tips for global courier services.",
-    image: "/placeholder.svg",
+    image: "/blog/international-shipping.webp",
     relatedServices: ["international-shipping"],
     content: `
 ## Introduction to International Shipping from India
@@ -656,7 +656,7 @@ Ready to ship internationally? Contact Trackon Courier at **8097512951** for quo
     readTime: "8 min read",
     keywords: "pack fragile items, secure packaging, fragile shipping, protect delicate items, packaging tips",
     metaDescription: "Learn how to pack fragile items for safe courier delivery. Step-by-step guide with professional packaging techniques to protect glass, electronics, and delicate items.",
-    image: "/placeholder.svg",
+    image: "/blog/packaging-guide.webp",
     relatedServices: ["secure-packaging", "domestic-courier"],
     content: `
 ## Why Proper Packaging Matters
@@ -825,7 +825,7 @@ Need help with fragile items? Contact Trackon Courier at **8097512951** for prof
     readTime: "11 min read",
     keywords: "e-commerce shipping mumbai, online business courier, COD delivery, fulfillment services, e-commerce logistics",
     metaDescription: "E-commerce shipping guide for Mumbai businesses. Learn about fulfillment options, COD services, returns management, and choosing the right courier partner.",
-    image: "/placeholder.svg",
+    image: "/blog/mumbai-delivery-areas.webp",
     relatedServices: ["domestic-courier", "doorstep-pickup", "same-day-delivery"],
     content: `
 ## The E-commerce Shipping Challenge
@@ -1035,7 +1035,7 @@ Ready to scale your e-commerce shipping? Contact Trackon Courier at **8097512951
     readTime: "7 min read",
     keywords: "document courier, secure document delivery, important document shipping, legal document courier, confidential courier",
     metaDescription: "Learn why speed and security matter in document courier services. Understand secure handling, confidential delivery, and choosing reliable document courier.",
-    image: "/placeholder.svg",
+    image: "/blog/business-courier-solutions.webp",
     relatedServices: ["domestic-courier", "express-delivery", "same-day-delivery"],
     content: `
 ## The Critical Nature of Document Delivery
