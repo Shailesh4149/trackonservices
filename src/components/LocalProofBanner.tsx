@@ -25,16 +25,16 @@ const LocalProofBanner = () => {
   ];
 
   return (
-    <section className="py-4 bg-accent/10 border-y border-accent/20" aria-label="Trust signals">
-      <div className="container">
-        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 list-none">
+    <section className="py-4 bg-accent/10 border-y border-accent/20 overflow-hidden" aria-label="Trust signals">
+      <div className="container px-4">
+        <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 list-none">
           {proofItems.map((item, index) => (
             <li 
               key={index} 
-              className="flex items-center gap-2 text-sm font-medium"
+              className="flex items-center gap-2 text-xs sm:text-sm font-medium whitespace-nowrap"
             >
               <item.icon 
-                className={`w-4 h-4 ${item.accent ? 'text-accent' : 'text-primary'}`} 
+                className={`w-4 h-4 flex-shrink-0 ${item.accent ? 'text-accent' : 'text-primary'}`} 
                 aria-hidden="true" 
               />
               <span className="text-foreground">{item.text}</span>
