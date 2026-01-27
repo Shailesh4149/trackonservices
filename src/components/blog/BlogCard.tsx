@@ -12,9 +12,17 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
     return (
       <article className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-elevated transition-all">
         <Link to={`/blog/${post.slug}`} className="block">
-          <div className="aspect-[16/9] bg-secondary flex items-center justify-center">
-            <div className="text-6xl text-muted-foreground/30">📦</div>
-          </div>
+        <div className="aspect-[16/9] bg-secondary overflow-hidden">
+          <img 
+            src={post.image} 
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = '/placeholder.svg';
+            }}
+          />
+        </div>
           <div className="p-6 md:p-8">
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
               <span className="inline-flex items-center gap-1 px-3 py-1 bg-accent/10 text-accent rounded-full font-medium">
@@ -59,8 +67,16 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
   return (
     <article className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-elevated transition-all h-full flex flex-col">
       <Link to={`/blog/${post.slug}`} className="block flex-1 flex flex-col">
-        <div className="aspect-[16/9] bg-secondary flex items-center justify-center">
-          <div className="text-4xl text-muted-foreground/30">📦</div>
+        <div className="aspect-[16/9] bg-secondary overflow-hidden">
+          <img 
+            src={post.image} 
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = '/placeholder.svg';
+            }}
+          />
         </div>
         <div className="p-5 flex-1 flex flex-col">
           <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
