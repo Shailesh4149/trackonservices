@@ -29,18 +29,18 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
             <p className="text-background/70 mb-4 max-w-md">
               Your trusted partner for fast, reliable, and secure courier services across Mumbai and Pan India. Same-day delivery, express shipping, and doorstep pickup available.
             </p>
-            <div className="space-y-2">
+            <div className="space-y-2 overflow-hidden">
               <a href="tel:8097512951" className="flex items-center gap-2 text-background/70 hover:text-accent transition-colors">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 flex-shrink-0" />
                 <span>8097512951</span>
               </a>
               <a href="mailto:sonacourierservices@gmail.com" className="flex items-center gap-2 text-background/70 hover:text-accent transition-colors">
-                <Mail className="w-4 h-4" />
-                <span>sonacourierservices@gmail.com</span>
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <span className="break-all">sonacourierservices@gmail.com</span>
               </a>
               <div className="flex items-start gap-2 text-background/70">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
-                <span>Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, Kapaswadi Loknayak Nagar, Near Hotel Shankri, Andheri (W) Mumbai</span>
+                <span className="break-words">Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, Kapaswadi Loknayak Nagar, Near Hotel Shankri, Andheri (W) Mumbai</span>
               </div>
             </div>
           </div>

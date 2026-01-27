@@ -6,9 +6,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-hero-gradient overflow-hidden pt-20">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10" aria-hidden="true">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-foreground rounded-full blur-3xl" />
+      <div className="absolute inset-0 opacity-10 overflow-hidden" aria-hidden="true">
+        <div className="absolute top-20 -left-10 md:left-10 w-48 h-48 md:w-72 md:h-72 bg-accent rounded-full blur-3xl" />
+        <div className="absolute bottom-20 -right-10 md:right-10 w-64 h-64 md:w-96 md:h-96 bg-primary-foreground rounded-full blur-3xl" />
       </div>
 
       <div className="container relative z-10 py-12 md:py-20">
