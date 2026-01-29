@@ -18,6 +18,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             loading="lazy"
+            decoding="async"
             onError={(e) => {
               e.currentTarget.src = '/placeholder.svg';
             }}
@@ -73,6 +74,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             loading="lazy"
+            decoding="async"
             onError={(e) => {
               e.currentTarget.src = '/placeholder.svg';
             }}
