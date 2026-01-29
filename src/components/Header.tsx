@@ -15,6 +15,9 @@ const Header = () => {
             src={trackonLogo} 
             alt="Trackon Courier - Swift. Safe. Sure." 
             className="h-10 md:h-12 w-auto"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         </Link>
 
