@@ -78,7 +78,7 @@ const ServicesSection = () => {
                 <img
                   src={service.backgroundImage}
                   alt={service.imageAlt}
-                  className="absolute inset-0 w-full h-full object-cover opacity-[0.08] group-hover:opacity-[0.12] group-hover:scale-110 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700"
                   loading="lazy"
                   decoding="async"
                 />
