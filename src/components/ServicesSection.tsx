@@ -84,7 +84,7 @@ const ServicesSection = () => {
                 />
                 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-card via-card/95 to-card/90" />
+                <div className="absolute inset-0 bg-gradient-to-br from-card/70 via-card/50 to-card/40" />
                 
                 {/* Shimmer Effect on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 animate-shimmer bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-opacity duration-500" />
