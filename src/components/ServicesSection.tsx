@@ -74,31 +74,28 @@ const ServicesSection = () => {
                 className="group relative overflow-hidden bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 border border-border cursor-pointer block h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Background Image Layer - Clean and Sharp */}
+                {/* Background Image Layer */}
                 <img
                   src={service.backgroundImage}
                   alt={service.imageAlt}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700"
                   loading="lazy"
                   decoding="async"
                 />
                 
-                {/* Subtle top gradient for visual interest */}
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-transparent" />
-                
-                {/* Content backdrop for text readability */}
-                <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-card via-card/95 to-transparent" />
+                {/* Stronger Gradient Overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-card/30" />
                 
                 {/* Shimmer Effect on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 animate-shimmer bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-opacity duration-500" />
 
-                <article className="relative z-10 flex flex-col h-full justify-end">
-                  <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:bg-accent-gradient transition-colors duration-300 shadow-md" aria-hidden="true">
+                <article className="relative z-10">
+                  <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-accent-gradient transition-colors duration-300 shadow-md" aria-hidden="true">
                     <service.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors duration-300 group-hover:animate-icon-float" />
                   </div>
-                  <h3 className="text-xl font-extrabold text-foreground mb-2">{service.title}</h3>
-                  <p className="text-foreground/90 font-medium mb-4">{service.description}</p>
-                  <span className="text-accent font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                  <h3 className="text-xl font-extrabold text-foreground mb-2 drop-shadow-sm">{service.title}</h3>
+                  <p className="text-foreground/80 font-medium mb-4 drop-shadow-sm">{service.description}</p>
+                  <span className="text-accent font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all duration-300 drop-shadow-sm">
                     Learn More 
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </span>
