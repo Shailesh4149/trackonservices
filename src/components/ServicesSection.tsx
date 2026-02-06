@@ -83,19 +83,19 @@ const ServicesSection = () => {
                   decoding="async"
                 />
                 
-                {/* Stronger Gradient Overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-card/30" />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-card/70 via-card/50 to-card/40" />
                 
                 {/* Shimmer Effect on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 animate-shimmer bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-opacity duration-500" />
 
                 <article className="relative z-10">
-                  <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-accent-gradient transition-colors duration-300 shadow-md" aria-hidden="true">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-accent-gradient transition-colors duration-300" aria-hidden="true">
                     <service.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors duration-300 group-hover:animate-icon-float" />
                   </div>
-                  <h3 className="text-xl font-extrabold text-foreground mb-2 drop-shadow-sm">{service.title}</h3>
-                  <p className="text-foreground/80 font-medium mb-4 drop-shadow-sm">{service.description}</p>
-                  <span className="text-accent font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all duration-300 drop-shadow-sm">
+                  <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4">{service.description}</p>
+                  <span className="text-accent font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
                     Learn More 
                     <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </span>
