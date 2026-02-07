@@ -1,4 +1,5 @@
 import { Truck, Users, IndianRupee, MapPin, HeadphonesIcon } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const features = [
   {
@@ -29,10 +30,12 @@ const features = [
 ];
 
 const WhyChooseUs = () => {
+  const sectionRef = useScrollAnimation();
+
   return (
-    <section id="why-choose-us" className="py-16 md:py-24 bg-background" aria-labelledby="why-choose-heading">
+    <section id="why-choose-us" className="py-16 md:py-24 bg-background" aria-labelledby="why-choose-heading" ref={sectionRef}>
       <div className="container">
-        <header className="text-center max-w-2xl mx-auto mb-12">
+        <header className="text-center max-w-2xl mx-auto mb-12" data-animate>
           <span className="inline-block text-accent font-semibold mb-4">Why Us</span>
           <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Why Choose Trackon Courier
@@ -43,11 +46,11 @@ const WhyChooseUs = () => {
         </header>
 
         <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 list-none">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <li
               key={feature.title}
-              className="bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-300 border border-border"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-300 border border-border hover:-translate-y-1"
+              data-animate="scale"
             >
               <article>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4" aria-hidden="true">

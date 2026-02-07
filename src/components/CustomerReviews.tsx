@@ -1,5 +1,6 @@
 import { Star, MapPin, Quote } from "lucide-react";
 import React from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface CustomerReviewsProps {
   areaName?: string;
@@ -7,6 +8,8 @@ interface CustomerReviewsProps {
 
 const CustomerReviews = React.forwardRef<HTMLElement, CustomerReviewsProps>(
   ({ areaName = "Andheri West & Mumbai" }, ref) => {
+  const sectionRef = useScrollAnimation();
+
   const reviews = [
     {
       text: "Excellent service! Pickup was within an hour and delivery was same-day. Highly recommended for urgent documents.",
@@ -25,10 +28,12 @@ const CustomerReviews = React.forwardRef<HTMLElement, CustomerReviewsProps>(
     }
   ];
 
+  const slideDirections = ["slide-left", "scale", "slide-right"] as const;
+
   return (
-    <section className="py-12 md:py-16 bg-card" aria-labelledby="reviews-heading">
+    <section className="py-12 md:py-16 bg-card" aria-labelledby="reviews-heading" ref={sectionRef}>
       <div className="container">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10" data-animate>
           <span className="inline-block text-accent font-semibold mb-3">Customer Reviews</span>
           <h2 id="reviews-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-3">
             Trusted by Local Customers
@@ -45,7 +50,8 @@ const CustomerReviews = React.forwardRef<HTMLElement, CustomerReviewsProps>(
           {reviews.map((review, index) => (
             <article 
               key={index} 
-              className="bg-secondary rounded-xl p-6 shadow-card relative"
+              className="bg-secondary rounded-xl p-6 shadow-card hover:shadow-elevated transition-shadow duration-300 relative"
+              data-animate={slideDirections[index]}
             >
               <Quote className="w-8 h-8 text-accent/20 absolute top-4 right-4" aria-hidden="true" />
               <div className="flex items-center gap-1 mb-3 text-accent" role="img" aria-label="5 star rating">
@@ -66,7 +72,7 @@ const CustomerReviews = React.forwardRef<HTMLElement, CustomerReviewsProps>(
           ))}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-sm text-muted-foreground mt-8" data-animate>
           Find us on Google • Trusted by local customers in {areaName}
         </p>
       </div>

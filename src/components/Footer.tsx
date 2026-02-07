@@ -2,10 +2,12 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import trackonLogo from "@/assets/trackon-logo.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const sectionRef = useScrollAnimation();
 
   const getLink = (hash: string) => {
     return isHomePage ? hash : `/${hash}`;
@@ -14,9 +16,9 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer ref={ref} className="bg-foreground text-background py-12">
+    <footer ref={sectionRef} className="bg-foreground text-background py-12">
       <div className="container">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8" data-animate>
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
