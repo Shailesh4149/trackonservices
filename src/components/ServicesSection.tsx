@@ -1,5 +1,6 @@
 import { Package, Truck, Plane, Clock, Shield, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -53,10 +54,12 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const sectionRef = useScrollAnimation();
+
   return (
-    <section id="services" className="py-16 md:py-24 bg-background" aria-labelledby="services-heading">
+    <section id="services" className="py-16 md:py-24 bg-background" aria-labelledby="services-heading" ref={sectionRef}>
       <div className="container">
-        <header className="text-center max-w-2xl mx-auto mb-12">
+        <header className="text-center max-w-2xl mx-auto mb-12" data-animate>
           <span className="inline-block text-accent font-semibold mb-4">What We Offer</span>
           <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Courier Services in Andheri West
@@ -67,14 +70,12 @@ const ServicesSection = () => {
         </header>
 
         <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 list-none">
-          {services.map((service, index) => (
-            <li key={service.title}>
+          {services.map((service) => (
+            <li key={service.title} data-animate="scale">
               <Link
                 to={service.href}
                 className="group relative overflow-hidden bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 border border-border cursor-pointer block h-full"
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Background Image Layer */}
                 <img
                   src={service.backgroundImage}
                   alt={service.imageAlt}
@@ -83,10 +84,8 @@ const ServicesSection = () => {
                   decoding="async"
                 />
                 
-                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-card/70 via-card/50 to-card/40" />
                 
-                {/* Shimmer Effect on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 animate-shimmer bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-opacity duration-500" />
 
                 <article className="relative z-10">

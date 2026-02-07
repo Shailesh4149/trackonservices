@@ -1,5 +1,6 @@
 import { MapPin, CheckCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const primaryAreas = [
   { name: "Andheri", slug: "andheri" },
@@ -30,10 +31,12 @@ const additionalAreas = [
 ];
 
 const AreasSection = () => {
+  const sectionRef = useScrollAnimation();
+
   return (
-    <section id="areas" className="py-16 md:py-24 bg-secondary" aria-labelledby="areas-heading">
+    <section id="areas" className="py-16 md:py-24 bg-secondary" aria-labelledby="areas-heading" ref={sectionRef}>
       <div className="container">
-        <header className="text-center max-w-3xl mx-auto mb-12">
+        <header className="text-center max-w-3xl mx-auto mb-12" data-animate>
           <span className="inline-block text-accent font-semibold mb-4">Service Coverage</span>
           <h2 id="areas-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Areas We Serve in Andheri &amp; Nearby Locations
@@ -45,8 +48,7 @@ const AreasSection = () => {
         </header>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Primary Service Areas */}
-          <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
+          <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-shadow duration-300" data-animate="slide-left">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-accent-gradient flex items-center justify-center" aria-hidden="true">
                 <MapPin className="w-6 h-6 text-accent-foreground" />
@@ -71,18 +73,14 @@ const AreasSection = () => {
               ))}
             </ul>
             <div className="mt-6 pt-4 border-t border-border">
-              <a 
-                href="tel:8097512951" 
-                className="flex items-center gap-2 text-accent font-semibold hover:underline"
-              >
+              <a href="tel:8097512951" className="flex items-center gap-2 text-accent font-semibold hover:underline">
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 <span>Call Now: 8097512951</span>
               </a>
             </div>
           </article>
 
-          {/* Additional Areas */}
-          <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card">
+          <article className="bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-shadow duration-300" data-animate="slide-right">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-hero-gradient flex items-center justify-center" aria-hidden="true">
                 <MapPin className="w-6 h-6 text-primary-foreground" />

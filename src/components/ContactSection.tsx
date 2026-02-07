@@ -1,11 +1,16 @@
 import React from "react";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
-  return <section id="contact" ref={ref} className="py-16 md:py-24 bg-hero-gradient" aria-labelledby="contact-heading">
+  const sectionRef = useScrollAnimation();
+
+  return (
+    <section id="contact" ref={sectionRef} className="py-16 md:py-24 bg-hero-gradient" aria-labelledby="contact-heading">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          <article className="text-primary-foreground">
+          <article className="text-primary-foreground" data-animate="slide-left">
             <span className="inline-block text-accent font-semibold mb-4">Get in Touch</span>
             <h2 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
               Contact Trackon Courier Andheri West
@@ -15,7 +20,6 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
               Our team is available to assist you with all your courier needs.
             </p>
 
-            {/* NAP - Name, Address, Phone */}
             <address className="space-y-4 md:space-y-6 not-italic">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary-foreground/10 flex items-center justify-center border border-primary-foreground/20 flex-shrink-0" aria-hidden="true">
@@ -23,7 +27,7 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm text-primary-foreground/70">Business Name</p>
-                  <p className="text-base md:text-lg font-bold">Trackon Courier </p>
+                  <p className="text-base md:text-lg font-bold">Trackon Courier </p>
                   <p className="text-sm text-primary-foreground/70 mt-1">Service Area: Andheri West, Mumbai</p>
                 </div>
               </div>
@@ -64,7 +68,7 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
             </address>
           </article>
 
-          <aside className="bg-card rounded-2xl p-6 md:p-8 shadow-elevated">
+          <aside className="bg-card rounded-2xl p-6 md:p-8 shadow-elevated" data-animate="slide-right">
             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Request a Pickup</h3>
             <p className="text-muted-foreground mb-6">Get in touch for instant courier booking and quotes</p>
             
@@ -90,7 +94,9 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
           </aside>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 });
+
 ContactSection.displayName = "ContactSection";
 export default ContactSection;
