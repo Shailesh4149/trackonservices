@@ -1,180 +1,217 @@
 
 
-# Plan: Improve Website Loading Speed
+# Full Website Animation Upgrade
 
-## Current Performance Analysis
+## Overview
 
-After examining your codebase, I've identified several factors that contribute to slow initial page load:
-
-### Current Setup (What's Good)
-- Lazy loading for all page routes (App.tsx)
-- SSG plugin for static HTML on homepage (good for SEO/initial paint)
-- Already uses efficient libraries like lucide-react
-
-### Performance Bottlenecks Identified
-
-| Issue | Impact | Location |
-|-------|--------|----------|
-| **Google Fonts loaded via CSS @import** | Blocks rendering until font loads | `src/index.css` line 5 |
-| **No font-display optimization** | Text invisible until font loads (FOIT) | `src/index.css` |
-| **Homepage imports not optimized** | All components load synchronously | `src/pages/Index.tsx` |
-| **No preloading of critical assets** | Browser discovers assets late | `index.html` |
-| **Logo image not optimized** | PNG format, not preloaded | `src/assets/trackon-logo.png` |
-| **Blog images not lazy loaded** | All images load on page | Blog images |
-| **Heavy dependencies in bundle** | recharts, date-fns, cmdk included even if not used on homepage | `package.json` |
+Add professional, subtle animations throughout your entire Trackon Courier website to create a more engaging, modern user experience. This plan covers scroll-triggered animations, hover effects, micro-interactions, and continuous ambient animations.
 
 ---
 
-## Implementation Plan
+## Current Animation Status
 
-### Phase 1: Critical Font Loading Optimization
-
-**Problem:** The Google Font is loaded via `@import` in CSS, which blocks rendering.
-
-**Solution:** Move font loading to `index.html` with `preconnect` and use `font-display: swap`.
-
-**Changes to `index.html`:**
-- Add preconnect for fonts (already exists, good!)
-- Add preload link for the font CSS with optimal loading
-
-**Changes to `src/index.css`:**
-- Remove the `@import` statement for Google Fonts
-- Add `font-display: swap` fallback
-
-This alone can improve perceived load time by 200-500ms.
+| Component | Current Animations | Status |
+|-----------|-------------------|--------|
+| HeroSection | `animate-fade-in` on content | Partial |
+| ServicesSection | Background zoom, shimmer, icon-float on hover | Done |
+| AreasSection | None | Needs work |
+| WhyChooseUs | `animationDelay` set but no animation class | Broken |
+| LocalTrust | None | Needs work |
+| CustomerReviews | None | Needs work |
+| ContactSection | None | Needs work |
+| LocalProofBanner | None | Needs work |
+| EnquiryForm | `animate-fade-in` | Done |
+| FloatingButtons | `hover:scale-110`, `animate-pulse` | Done |
+| Header | None | Needs work |
+| Footer | None | Optional |
 
 ---
 
-### Phase 2: Preload Critical Assets
+## New Animations to Add
 
-**Add to `index.html`:**
-```html
-<!-- Preload critical font -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+### 1. Scroll-Triggered Animations (Intersection Observer)
 
-<!-- Preload logo -->
-<link rel="preload" href="/src/assets/trackon-logo.png" as="image" type="image/png">
+Create a custom hook that triggers animations when elements enter the viewport:
+
+```text
++------------------+
+|  Above viewport  |
++------------------+
+|                  |  <- Trigger point (when 20% visible)
+|  ╭────────────╮  |
+|  │  Element   │  |  <- Animates in: fade + slide up
+|  ╰────────────╯  |
+|                  |
++------------------+
+|  Viewport        |
++------------------+
 ```
 
----
+**New Hook: `useScrollAnimation`**
+- Watches elements with `data-animate` attribute
+- Adds animation classes when element enters viewport
+- Supports staggered delays for lists
 
-### Phase 3: Optimize Header Component
+### 2. Component-Specific Animations
 
-**Problem:** The logo image loads after React hydrates.
+| Component | Animation Type | Effect |
+|-----------|---------------|--------|
+| Header | Backdrop blur on scroll | Subtle glass effect intensifies on scroll |
+| LocalProofBanner | Infinite scroll/marquee | Trust badges scroll horizontally |
+| AreasSection | Staggered fade-in | Area cards appear one by one |
+| WhyChooseUs | Scale-in on scroll | Cards pop in with scale effect |
+| LocalTrust | Counter animation | Numbers count up from 0 |
+| CustomerReviews | Slide-in from sides | Cards slide in alternating directions |
+| ContactSection | Fade + slide | Content appears smoothly |
+| Footer | Fade-in on scroll | Subtle appearance |
 
-**Solution:** Add loading="eager" and fetchpriority="high" to the logo in Header.tsx.
+### 3. New Keyframe Animations
 
-```tsx
-<img 
-  src={trackonLogo} 
-  alt="Trackon Courier" 
-  className="h-10 md:h-12 w-auto"
-  loading="eager"
-  fetchPriority="high"
-/>
+```text
+New Animations to Add:
+
+@keyframes slide-up        - Elements slide up and fade in
+@keyframes slide-in-left   - Elements slide from left
+@keyframes slide-in-right  - Elements slide from right
+@keyframes scale-up        - Elements scale from 0.9 to 1
+@keyframes count-up        - For number counters
+@keyframes marquee         - Infinite horizontal scroll
+@keyframes bounce-subtle   - Gentle bounce for icons
+@keyframes glow-pulse      - Subtle glow effect
 ```
 
----
+### 4. Hover Micro-interactions
 
-### Phase 4: Lazy Load Below-the-Fold Sections
-
-**Problem:** All homepage sections load synchronously, even those below the fold.
-
-**Solution:** Lazy load components that aren't visible on initial load.
-
-**Changes to `src/pages/Index.tsx`:**
-```tsx
-import { lazy, Suspense } from "react";
-
-// Keep critical above-fold components as regular imports
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import LocalProofBanner from "@/components/LocalProofBanner";
-import SEOHead from "@/components/SEOHead";
-import FloatingButtons from "@/components/FloatingButtons";
-
-// Lazy load below-fold components
-const ServicesSection = lazy(() => import("@/components/ServicesSection"));
-const AreasSection = lazy(() => import("@/components/AreasSection"));
-const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs"));
-const LocalTrust = lazy(() => import("@/components/LocalTrust"));
-const CustomerReviews = lazy(() => import("@/components/CustomerReviews"));
-const ContactSection = lazy(() => import("@/components/ContactSection"));
-const Footer = lazy(() => import("@/components/Footer"));
-```
+| Element | Hover Effect |
+|---------|-------------|
+| All cards | Lift + shadow increase |
+| Buttons | Scale + color shift |
+| Links | Underline animation |
+| Icons | Rotate + color change |
+| Images | Zoom + overlay |
 
 ---
 
-### Phase 5: Add Skeleton Loading States
+## Files to Create/Modify
 
-**Problem:** When lazy components load, there's a visual flash.
+### New Files
 
-**Solution:** Create a lightweight skeleton component for smooth loading.
+| File | Purpose |
+|------|---------|
+| `src/hooks/useScrollAnimation.ts` | Intersection Observer hook for scroll animations |
+| `src/hooks/useCountUp.ts` | Counter animation hook for statistics |
 
-**Create `src/components/SectionSkeleton.tsx`:**
-```tsx
-const SectionSkeleton = () => (
-  <div className="py-16 animate-pulse">
-    <div className="container">
-      <div className="h-8 bg-muted rounded w-1/3 mx-auto mb-4" />
-      <div className="h-4 bg-muted rounded w-2/3 mx-auto mb-8" />
-      <div className="grid md:grid-cols-3 gap-6">
-        {[1, 2, 3].map((i) => (
-          <div key={i} className="h-48 bg-muted rounded-xl" />
-        ))}
-      </div>
-    </div>
-  </div>
-);
-```
-
----
-
-### Phase 6: Optimize Image Loading
-
-**Changes to blog images in `src/components/blog/BlogCard.tsx`:**
-- Already has `loading="lazy"` (good!)
-- Add `decoding="async"` for non-blocking decode
-
-**Changes to `src/components/Header.tsx`:**
-- Add `decoding="async"` to the logo
-
----
-
-## Summary of Changes
+### Modified Files
 
 | File | Changes |
 |------|---------|
-| `index.html` | Add font preload, logo preload |
-| `src/index.css` | Remove @import, fonts now loaded from HTML |
-| `src/pages/Index.tsx` | Lazy load below-fold sections |
-| `src/components/Header.tsx` | Add fetchPriority="high" to logo |
-| `src/components/SectionSkeleton.tsx` | New file for loading states |
-| `src/components/blog/BlogCard.tsx` | Add decoding="async" to images |
+| `src/index.css` | Add 8+ new keyframe animations |
+| `tailwind.config.ts` | Register new animation utilities |
+| `src/components/Header.tsx` | Add scroll-based opacity/blur |
+| `src/components/LocalProofBanner.tsx` | Add marquee animation |
+| `src/components/AreasSection.tsx` | Add scroll-triggered fade-in |
+| `src/components/WhyChooseUs.tsx` | Fix animation + add scroll trigger |
+| `src/components/LocalTrust.tsx` | Add counter animation for stats |
+| `src/components/CustomerReviews.tsx` | Add staggered slide-in |
+| `src/components/ContactSection.tsx` | Add fade + slide animation |
+| `src/components/Footer.tsx` | Add subtle fade-in |
 
 ---
 
-## Expected Performance Improvement
+## Animation Specifications
 
-| Metric | Before | After (Est.) |
-|--------|--------|--------------|
-| **First Contentful Paint (FCP)** | ~2-3s | ~1-1.5s |
-| **Largest Contentful Paint (LCP)** | ~3-4s | ~1.5-2s |
-| **Time to Interactive (TTI)** | ~4-5s | ~2-3s |
-| **Initial JS Bundle** | Full | Reduced by ~30% |
+### Scroll Animation Hook
 
-These optimizations focus on:
-1. Showing content faster (font swap, preloading)
-2. Loading less JavaScript initially (lazy loading sections)
-3. Prioritizing critical assets (logo, fonts)
+```text
+Usage Pattern:
+1. Import hook in component
+2. Add ref to container
+3. Add data-animate="fade-up" to animatable elements
+4. Elements automatically animate when scrolled into view
+```
+
+### Timing Guidelines
+
+| Animation Type | Duration | Easing |
+|---------------|----------|--------|
+| Fade-in | 0.6s | ease-out |
+| Slide | 0.5s | ease-out |
+| Scale | 0.4s | ease-out |
+| Hover effects | 0.3s | ease |
+| Stagger delay | 0.1s between items | - |
+
+### Performance Considerations
+
+- Use `will-change` sparingly
+- Prefer `transform` and `opacity` (GPU-accelerated)
+- Use `Intersection Observer` instead of scroll events
+- Disable animations for users with `prefers-reduced-motion`
+
+---
+
+## Visual Preview of Animations
+
+### LocalProofBanner Marquee
+```text
+← [Clock] Serving since 2019 | [Package] 2000+ deliveries | [MapPin] Same-day pickup | [Award] Trusted →
+   ↑ Continuous horizontal scroll animation
+```
+
+### WhyChooseUs Cards Stagger
+```text
+Time 0.0s:  [ ]  [ ]  [ ]
+Time 0.2s:  [█]  [ ]  [ ]   ← First card fades in
+Time 0.4s:  [█]  [█]  [ ]   ← Second card fades in
+Time 0.6s:  [█]  [█]  [█]   ← Third card fades in
+```
+
+### LocalTrust Counter Animation
+```text
+Time 0.0s:  0+    0+    0%    0%
+Time 0.5s:  3+    1500+ 50%   50%
+Time 1.0s:  7+    3500+ 80%   80%
+Time 1.5s:  10+   5000+ 98%   100%  ← Final values
+```
+
+### CustomerReviews Alternating Slide
+```text
+         ←[Review 1]
+                     [Review 2]→
+         ←[Review 3]
+```
+
+---
+
+## Implementation Order
+
+1. **Create animation hooks** - `useScrollAnimation.ts` and `useCountUp.ts`
+2. **Update CSS** - Add all new keyframes to `index.css`
+3. **Update Tailwind config** - Register animation utilities
+4. **Update Header** - Add scroll-based effects
+5. **Update LocalProofBanner** - Add marquee animation
+6. **Update WhyChooseUs** - Fix broken animation + add scroll trigger
+7. **Update LocalTrust** - Add counter animation
+8. **Update AreasSection** - Add staggered fade-in
+9. **Update CustomerReviews** - Add slide-in animation
+10. **Update ContactSection** - Add fade animation
+11. **Update Footer** - Add subtle fade-in
+12. **Add reduced-motion support** - Accessibility compliance
 
 ---
 
 ## Technical Notes
 
-- The SSG plugin already provides static HTML for SEO crawlers - this is excellent
-- React hydration happens after static content is visible
-- Lazy loading sections won't affect SEO because the SSG plugin injects full content in production builds
-- All changes are backward compatible and don't affect functionality
+### Accessibility
+- All animations respect `prefers-reduced-motion: reduce`
+- No autoplaying animations that can't be paused
+- Animation durations under 5 seconds
+
+### Performance
+- Intersection Observer for scroll detection (no scroll event listeners)
+- CSS transforms only (no layout-triggering properties)
+- Lazy animation initialization for below-fold content
+
+### Browser Support
+- Works in all modern browsers
+- Graceful fallback for older browsers (content displays without animation)
 
