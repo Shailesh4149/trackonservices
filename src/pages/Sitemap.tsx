@@ -52,10 +52,48 @@ const Sitemap = () => {
   ];
 
   const areas = [
-    "Andheri", "Bandra", "Borivali", "Churchgate", "Colaba",
-    "Dadar", "Goregaon", "Juhu", "Kandivali", "Kurla",
-    "Malad", "Mulund", "Navi Mumbai", "Powai", "Thane",
-    "Vashi", "Vikhroli", "Worli"
+    { name: "Andheri", slug: "andheri" },
+    { name: "Andheri West", slug: "andheri-west" },
+    { name: "Andheri East", slug: "andheri-east" },
+    { name: "Andheri Station", slug: "andheri-station" },
+    { name: "Bandra", slug: "bandra" },
+    { name: "Bandra West", slug: "bandra-west" },
+    { name: "Bandra East", slug: "bandra-east" },
+    { name: "Juhu", slug: "juhu" },
+    { name: "DN Nagar", slug: "dn-nagar" },
+    { name: "Versova", slug: "versova" },
+    { name: "Azad Nagar", slug: "azad-nagar" },
+    { name: "Vile Parle", slug: "vile-parle" },
+    { name: "Santacruz", slug: "santacruz" },
+    { name: "Goregaon East", slug: "goregaon-east" },
+    { name: "Goregaon West", slug: "goregaon-west" },
+    { name: "Malad", slug: "malad" },
+    { name: "Kandivali", slug: "kandivali" },
+    { name: "Jogeshwari", slug: "jogeshwari" },
+    { name: "Saki Naka", slug: "saki-naka" },
+    { name: "Marol", slug: "marol" },
+    { name: "Chakala", slug: "chakala" },
+    { name: "Kapaswadi", slug: "kapaswadi" },
+    { name: "Juhu Versova Link Road", slug: "juhu-versova-link-road" },
+    { name: "Lokhandwala", slug: "lokhandwala" },
+    { name: "Oshiwara", slug: "oshiwara" },
+    { name: "SEEPZ", slug: "seepz" },
+    { name: "MIDC", slug: "midc" },
+    { name: "Mahakali", slug: "mahakali" },
+    { name: "Chandivali", slug: "chandivali" },
+    { name: "Vikhroli", slug: "vikhroli" },
+    { name: "Vikhroli East", slug: "vikhroli-east" },
+    { name: "Vikhroli West", slug: "vikhroli-west" },
+    { name: "Dadar", slug: "dadar" },
+    { name: "CST", slug: "cst" },
+    { name: "Shanti Nagar", slug: "shanti-nagar" },
+    { name: "Airport Area", slug: "andheri-airport" },
+    { name: "Airport Terminal 1", slug: "airport-terminal-1" },
+    { name: "Airport Terminal 2", slug: "airport-terminal-2" },
+    { name: "Airport Road", slug: "airport-road" },
+    { name: "Vasai", slug: "vasai" },
+    { name: "Virar", slug: "virar" },
+    { name: "Nalasopara", slug: "nalasopara" },
   ];
 
   const blogPosts = [
@@ -150,11 +188,11 @@ const Sitemap = () => {
                 <nav className="grid grid-cols-2 gap-2">
                   {areas.map((area) => (
                     <Link 
-                      key={area}
-                      to={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`}
+                      key={area.slug}
+                      to={`/areas/courier-service-in-${area.slug}`}
                       className="text-sm text-muted-foreground hover:text-accent transition-colors p-1"
                     >
-                      {area}
+                      {area.name}
                     </Link>
                   ))}
                 </nav>

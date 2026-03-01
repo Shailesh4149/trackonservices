@@ -3,7 +3,7 @@
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://trackonservices.lovable.app/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,37 +11,37 @@
   <!-- Main Service Pages -->
   <url>
     <loc>https://trackonservices.lovable.app/same-day-courier-andheri-west</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/express-courier-mumbai</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/pan-india-courier</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/international-courier-mumbai</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/airport-courier-mumbai</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/courier-service-mumbai</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,25 +49,25 @@
   <!-- Core Pages -->
   <url>
     <loc>https://trackonservices.lovable.app/about</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/faq</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/sitemap</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -75,183 +75,291 @@
   <!-- Generic Service Pages -->
   <url>
     <loc>https://trackonservices.lovable.app/services/domestic-courier</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/services/international-shipping</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/services/express-delivery</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/services/same-day-delivery</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/services/secure-packaging</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/services/doorstep-pickup</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Area Pages - Mumbai Locations -->
+  <!-- Area Pages - Mumbai Locations (Correct URLs) -->
   <url>
-    <loc>https://trackonservices.lovable.app/areas/andheri</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-andheri</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trackonservices.lovable.app/areas/andheri-west</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-andheri-west</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://trackonservices.lovable.app/areas/andheri-east</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-andheri-east</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trackonservices.lovable.app/areas/bandra</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/juhu</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/versova</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/dn-nagar</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/goregaon</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/goregaon-east</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/goregaon-west</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/malad</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/kandivali</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/vile-parle</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/santacruz</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/jogeshwari</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/marol</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/saki-naka</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/lokhandwala</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/oshiwara</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/powai</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/vikhroli</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/borivali</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://trackonservices.lovable.app/areas/thane</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-andheri-station</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://trackonservices.lovable.app/areas/navi-mumbai</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-bandra</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-bandra-west</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-bandra-east</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-santacruz</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-juhu</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-versova</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-dn-nagar</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-azad-nagar</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-vile-parle</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-goregaon-east</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-goregaon-west</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-malad</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-kandivali</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-jogeshwari</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-saki-naka</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-marol</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-chakala</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-kapaswadi</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-juhu-versova-link-road</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-lokhandwala</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-oshiwara</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-andheri-airport</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-airport-terminal-1</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-airport-terminal-2</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-airport-road</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-dadar</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-cst</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-chandivali</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-vikhroli</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-vikhroli-east</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-vikhroli-west</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-seepz</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-mahakali</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-shanti-nagar</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-midc</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-vasai</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-virar</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trackonservices.lovable.app/areas/courier-service-in-nalasopara</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -259,49 +367,49 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://trackonservices.lovable.app/blog/fastest-courier-service-mumbai-guide</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/best-tracking-service-parcels</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/improve-logistics-efficiency-small-business</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/same-day-delivery-vs-express-courier</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/international-shipping-india-guide</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/pack-fragile-items-courier-delivery</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/ecommerce-shipping-solutions-mumbai</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://trackonservices.lovable.app/blog/document-courier-speed-security</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
