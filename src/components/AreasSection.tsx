@@ -30,6 +30,28 @@ const additionalAreas = [
   { name: "Santacruz", slug: "santacruz" },
 ];
 
+const extendedAreas = [
+  { name: "Lokhandwala", slug: "lokhandwala" },
+  { name: "Oshiwara", slug: "oshiwara" },
+  { name: "SEEPZ", slug: "seepz" },
+  { name: "MIDC", slug: "midc" },
+  { name: "Mahakali", slug: "mahakali" },
+  { name: "Chandivali", slug: "chandivali" },
+  { name: "Vikhroli", slug: "vikhroli" },
+  { name: "Vikhroli East", slug: "vikhroli-east" },
+  { name: "Vikhroli West", slug: "vikhroli-west" },
+  { name: "Dadar", slug: "dadar" },
+  { name: "CST", slug: "cst" },
+  { name: "Shanti Nagar", slug: "shanti-nagar" },
+  { name: "Airport Area", slug: "andheri-airport" },
+  { name: "Airport T1", slug: "airport-terminal-1" },
+  { name: "Airport T2", slug: "airport-terminal-2" },
+  { name: "Airport Road", slug: "airport-road" },
+  { name: "Vasai", slug: "vasai" },
+  { name: "Virar", slug: "virar" },
+  { name: "Nalasopara", slug: "nalasopara" },
+];
+
 const AreasSection = () => {
   const sectionRef = useScrollAnimation();
 
@@ -116,6 +138,33 @@ const AreasSection = () => {
             </div>
           </article>
         </div>
+
+        {/* Extended Coverage Areas */}
+        <article className="mt-8 bg-card rounded-2xl p-6 md:p-8 shadow-card hover:shadow-elevated transition-shadow duration-300" data-animate>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center border border-border" aria-hidden="true">
+              <MapPin className="w-6 h-6 text-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Extended Mumbai Coverage</h3>
+              <p className="text-muted-foreground text-sm">Airport, South Mumbai, suburban & industrial zones</p>
+            </div>
+          </div>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 list-none">
+            {extendedAreas.map((area) => (
+              <li key={area.slug}>
+                <Link 
+                  to={`/areas/courier-service-in-${area.slug}`}
+                  className="flex items-center gap-2 hover:text-accent transition-colors group"
+                  title={`Courier service in ${area.name}`}
+                >
+                  <CheckCircle className="w-4 h-4 text-muted-foreground group-hover:text-accent flex-shrink-0" aria-hidden="true" />
+                  <span className="text-foreground text-sm group-hover:text-accent">{area.name}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </section>
   );

@@ -15,6 +15,48 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
 
   const currentYear = new Date().getFullYear();
 
+  const allMumbaiAreas = [
+    { name: "Andheri", slug: "andheri" },
+    { name: "Andheri West", slug: "andheri-west" },
+    { name: "Andheri East", slug: "andheri-east" },
+    { name: "Andheri Station", slug: "andheri-station" },
+    { name: "Juhu", slug: "juhu" },
+    { name: "DN Nagar", slug: "dn-nagar" },
+    { name: "Azad Nagar", slug: "azad-nagar" },
+    { name: "Versova", slug: "versova" },
+    { name: "Juhu Versova Link Road", slug: "juhu-versova-link-road" },
+    { name: "Saki Naka", slug: "saki-naka" },
+    { name: "Marol", slug: "marol" },
+    { name: "Jogeshwari", slug: "jogeshwari" },
+    { name: "Kapaswadi", slug: "kapaswadi" },
+    { name: "Chakala", slug: "chakala" },
+    { name: "Vile Parle", slug: "vile-parle" },
+    { name: "Goregaon West", slug: "goregaon-west" },
+    { name: "Goregaon East", slug: "goregaon-east" },
+    { name: "Malad", slug: "malad" },
+    { name: "Kandivali", slug: "kandivali" },
+    { name: "Bandra West", slug: "bandra-west" },
+    { name: "Bandra East", slug: "bandra-east" },
+    { name: "Bandra", slug: "bandra" },
+    { name: "Santacruz", slug: "santacruz" },
+    { name: "Lokhandwala", slug: "lokhandwala" },
+    { name: "Oshiwara", slug: "oshiwara" },
+    { name: "SEEPZ", slug: "seepz" },
+    { name: "MIDC", slug: "midc" },
+    { name: "Mahakali", slug: "mahakali" },
+    { name: "Chandivali", slug: "chandivali" },
+    { name: "Vikhroli", slug: "vikhroli" },
+    { name: "Dadar", slug: "dadar" },
+    { name: "CST", slug: "cst" },
+    { name: "Shanti Nagar", slug: "shanti-nagar" },
+    { name: "Airport Area", slug: "andheri-airport" },
+    { name: "Airport T1", slug: "airport-terminal-1" },
+    { name: "Airport T2", slug: "airport-terminal-2" },
+    { name: "Vasai", slug: "vasai" },
+    { name: "Virar", slug: "virar" },
+    { name: "Nalasopara", slug: "nalasopara" },
+  ];
+
   return (
     <footer ref={sectionRef} className="bg-foreground text-background py-12">
       <div className="container">
@@ -76,28 +118,15 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="border-t border-background/20 pt-8 mb-8">
           <h4 className="font-bold text-lg mb-4">Service Areas in Mumbai</h4>
           <nav className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-            <Link to="/areas/courier-service-in-andheri" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri</Link>
-            <Link to="/areas/courier-service-in-andheri-west" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri West</Link>
-            <Link to="/areas/courier-service-in-andheri-east" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri East</Link>
-            <Link to="/areas/courier-service-in-andheri-station" className="text-background/70 hover:text-accent transition-colors text-sm">Andheri Station</Link>
-            <Link to="/areas/courier-service-in-juhu" className="text-background/70 hover:text-accent transition-colors text-sm">Juhu</Link>
-            <Link to="/areas/courier-service-in-dn-nagar" className="text-background/70 hover:text-accent transition-colors text-sm">DN Nagar</Link>
-            <Link to="/areas/courier-service-in-azad-nagar" className="text-background/70 hover:text-accent transition-colors text-sm">Azad Nagar</Link>
-            <Link to="/areas/courier-service-in-versova" className="text-background/70 hover:text-accent transition-colors text-sm">Versova</Link>
-            <Link to="/areas/courier-service-in-juhu-versova-link-road" className="text-background/70 hover:text-accent transition-colors text-sm">Juhu Versova Link Road</Link>
-            <Link to="/areas/courier-service-in-saki-naka" className="text-background/70 hover:text-accent transition-colors text-sm">Saki Naka</Link>
-            <Link to="/areas/courier-service-in-marol" className="text-background/70 hover:text-accent transition-colors text-sm">Marol</Link>
-            <Link to="/areas/courier-service-in-jogeshwari" className="text-background/70 hover:text-accent transition-colors text-sm">Jogeshwari</Link>
-            <Link to="/areas/courier-service-in-kapaswadi" className="text-background/70 hover:text-accent transition-colors text-sm">Kapaswadi</Link>
-            <Link to="/areas/courier-service-in-chakala" className="text-background/70 hover:text-accent transition-colors text-sm">Chakala</Link>
-            <Link to="/areas/courier-service-in-vile-parle" className="text-background/70 hover:text-accent transition-colors text-sm">Vile Parle</Link>
-            <Link to="/areas/courier-service-in-goregaon-west" className="text-background/70 hover:text-accent transition-colors text-sm">Goregaon West</Link>
-            <Link to="/areas/courier-service-in-goregaon-east" className="text-background/70 hover:text-accent transition-colors text-sm">Goregaon East</Link>
-            <Link to="/areas/courier-service-in-malad" className="text-background/70 hover:text-accent transition-colors text-sm">Malad</Link>
-            <Link to="/areas/courier-service-in-kandivali" className="text-background/70 hover:text-accent transition-colors text-sm">Kandivali</Link>
-            <Link to="/areas/courier-service-in-bandra-west" className="text-background/70 hover:text-accent transition-colors text-sm">Bandra West</Link>
-            <Link to="/areas/courier-service-in-bandra-east" className="text-background/70 hover:text-accent transition-colors text-sm">Bandra East</Link>
-            <Link to="/areas/courier-service-in-santacruz" className="text-background/70 hover:text-accent transition-colors text-sm">Santacruz</Link>
+            {allMumbaiAreas.map((area) => (
+              <Link 
+                key={area.slug}
+                to={`/areas/courier-service-in-${area.slug}`} 
+                className="text-background/70 hover:text-accent transition-colors text-sm"
+              >
+                {area.name}
+              </Link>
+            ))}
           </nav>
         </div>
 
