@@ -91,15 +91,10 @@ const SEOHead = () => {
           "Mahakali",
           "Lokhandwala",
           "Oshiwara",
-          "Vasai",
-          "Virar",
-          "Nalasopara",
-          "Delhi",
-          "Bangalore",
-          "Chennai",
-          "Kolkata",
-          "Hyderabad",
-          "Pune"
+          "Santacruz",
+          "Marol",
+          "Saki Naka",
+          "Kapaswadi"
         ],
         "serviceType": [
           "Courier Service",
