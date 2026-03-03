@@ -22,6 +22,9 @@ const PanIndiaCourier = lazy(() => import("./pages/PanIndiaCourier"));
 const InternationalCourier = lazy(() => import("./pages/InternationalCourier"));
 const AirportCourier = lazy(() => import("./pages/AirportCourier"));
 const MumbaiCourier = lazy(() => import("./pages/MumbaiCourier"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const Pricing = lazy(() => import("./pages/Pricing"));
 
 const queryClient = new QueryClient();
 
@@ -56,6 +59,9 @@ const App = () => (
             <Route path="/international-courier-mumbai" element={<InternationalCourier />} />
             <Route path="/airport-courier-mumbai" element={<AirportCourier />} />
             <Route path="/courier-service-mumbai" element={<MumbaiCourier />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/pricing" element={<Pricing />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -95,6 +95,7 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
             <nav className="space-y-2">
               <Link to={getLink("#services")} className="block text-background/70 hover:text-accent transition-colors">Our Services</Link>
               <Link to={getLink("#areas")} className="block text-background/70 hover:text-accent transition-colors">Service Areas</Link>
+              <Link to="/pricing" className="block text-background/70 hover:text-accent transition-colors">Pricing & Rates</Link>
               <Link to="/about" className="block text-background/70 hover:text-accent transition-colors">About Us</Link>
               <Link to={getLink("#contact")} className="block text-background/70 hover:text-accent transition-colors">Contact</Link>
               <Link to={getLink("#enquiry")} className="block text-background/70 hover:text-accent transition-colors">Get Quote</Link>
@@ -132,7 +133,14 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
 
         <div className="border-t border-background/20 pt-8 text-center text-background/50 text-sm">
           <p className="mb-2 text-background/70 font-medium">Trackon Courier – Courier Service in Andheri West, Mumbai</p>
-          <p>© {currentYear} Trackon Courier. All rights reserved. | Courier Services in Mumbai | Trackon Courier Near Me</p>
+          <p className="mb-3">© {currentYear} Trackon Courier. All rights reserved. | Courier Services in Mumbai | Trackon Courier Near Me</p>
+          <nav className="flex justify-center gap-4">
+            <Link to="/privacy-policy" className="text-background/50 hover:text-accent transition-colors">Privacy Policy</Link>
+            <span className="text-background/30">|</span>
+            <Link to="/terms-of-service" className="text-background/50 hover:text-accent transition-colors">Terms of Service</Link>
+            <span className="text-background/30">|</span>
+            <Link to="/sitemap" className="text-background/50 hover:text-accent transition-colors">Sitemap</Link>
+          </nav>
         </div>
       </div>
     </footer>

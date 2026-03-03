@@ -110,8 +110,11 @@ const SEOHead = () => {
         "sameAs": ["https://share.google/CMWjYe6lqRWJfpSRN"],
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "1250"
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "27",
+          "reviewCount": "27"
         }
       });
       document.head.appendChild(script);
