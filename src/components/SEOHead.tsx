@@ -107,7 +107,7 @@ const SEOHead = () => {
           "Courier Tracking",
           "Fastest Courier Service"
         ],
-        "sameAs": [],
+        "sameAs": ["https://share.google/CMWjYe6lqRWJfpSRN"],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.8",
