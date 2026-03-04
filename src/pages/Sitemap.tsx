@@ -40,6 +40,9 @@ const Sitemap = () => {
     { name: "About Us", href: "/about", icon: Info, description: "Our story, mission, and team" },
     { name: "FAQ", href: "/faq", icon: HelpCircle, description: "Frequently asked questions" },
     { name: "Blog", href: "/blog", icon: Newspaper, description: "Courier tips and industry insights" },
+    { name: "Pricing & Rates", href: "/pricing", icon: Package, description: "Service rates and courier charges" },
+    { name: "Privacy Policy", href: "/privacy-policy", icon: FileText, description: "Our privacy and data protection policy" },
+    { name: "Terms of Service", href: "/terms-of-service", icon: FileText, description: "Terms and conditions of our services" },
   ];
 
   const services = [

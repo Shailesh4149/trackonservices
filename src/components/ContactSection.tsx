@@ -53,18 +53,19 @@ const ContactSection = React.forwardRef<HTMLElement>((props, ref) => {
                 </div>
               </a>
 
-              <div className="flex items-start gap-3 md:gap-4">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary-foreground/10 flex items-center justify-center border border-primary-foreground/20 flex-shrink-0" aria-hidden="true">
+              <a href="https://share.google/CMWjYe6lqRWJfpSRN" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 md:gap-4 group">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary-foreground/10 flex items-center justify-center border border-primary-foreground/20 group-hover:bg-primary-foreground/20 transition-colors flex-shrink-0" aria-hidden="true">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div className="min-w-0 overflow-hidden">
                   <p className="text-sm text-primary-foreground/70">Office Address</p>
-                  <p className="text-sm sm:text-base md:text-lg font-semibold break-words">
+                  <p className="text-sm sm:text-base md:text-lg font-semibold break-words group-hover:text-accent transition-colors">
                     Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, 
                     Kapaswadi Loknayak Nagar, Near Hotel Shankri, Andheri (W) Mumbai
                   </p>
+                  <p className="text-sm text-primary-foreground/70 mt-1 group-hover:text-accent transition-colors">View on Google Maps →</p>
                 </div>
-              </div>
+              </a>
             </address>
           </article>
 

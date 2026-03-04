@@ -82,10 +82,10 @@ const Footer = React.forwardRef<HTMLElement>((props, ref) => {
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <span className="break-all">sonacourierservices@gmail.com</span>
               </a>
-              <div className="flex items-start gap-2 text-background/70">
+              <a href="https://share.google/CMWjYe6lqRWJfpSRN" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-background/70 hover:text-accent transition-colors group">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-1" />
-                <span className="break-words">Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, Kapaswadi Loknayak Nagar, Near Hotel Shankri, Andheri (W) Mumbai</span>
-              </div>
+                <span className="break-words group-hover:underline">Shop No. 1/2 Ever Shine Mens Wear, Juhu Versova Link Road, Kapaswadi Loknayak Nagar, Near Hotel Shankri, Andheri (W) Mumbai</span>
+              </a>
             </div>
           </div>
 
