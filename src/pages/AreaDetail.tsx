@@ -1855,26 +1855,29 @@ const AreaDetail = () => {
                     Besides {area.name}, Trackon Courier also provides courier services in these nearby areas:
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {area.nearbyAreas.slice(0, 3).map((nearby, index) => {
+                    {area.nearbyAreas.map((nearby, index) => {
                       const nearbySlug = nearby.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                      const areaExists = areasData[nearbySlug] !== undefined;
+                      if (areaExists) {
+                        return (
+                          <Link 
+                            key={index}
+                            to={`/areas/courier-service-in-${nearbySlug}`}
+                            className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm hover:bg-accent/20 transition-colors"
+                          >
+                            Courier in {nearby}
+                          </Link>
+                        );
+                      }
                       return (
-                        <Link 
+                        <span 
                           key={index}
-                          to={`/areas/courier-service-in-${nearbySlug}`}
-                          className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm hover:bg-accent/20 transition-colors"
+                          className="px-3 py-1 bg-secondary text-foreground rounded-full text-sm"
                         >
-                          Courier in {nearby}
-                        </Link>
+                          {nearby}
+                        </span>
                       );
                     })}
-                    {area.nearbyAreas.slice(3).map((nearby, index) => (
-                      <span 
-                        key={index}
-                        className="px-3 py-1 bg-secondary text-foreground rounded-full text-sm"
-                      >
-                        {nearby}
-                      </span>
-                    ))}
                   </div>
                 </article>
 
