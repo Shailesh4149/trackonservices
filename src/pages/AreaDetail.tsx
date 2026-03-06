@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { MapPin, Phone, MessageCircle, Clock, CheckCircle, ArrowLeft, Star, Building2, Lightbulb, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -1495,6 +1496,8 @@ const AreaDetail = () => {
   // Extract area slug - handle both /area/:slug and /areas/courier-service-in-:slug formats
   const extractedSlug = slug || (areaSlug?.replace('courier-service-in-', '') || '');
   const area = extractedSlug ? areasData[extractedSlug] : null;
+
+  useCanonical(slug ? `/areas/${slug}` : undefined);
 
   useEffect(() => {
     if (area) {

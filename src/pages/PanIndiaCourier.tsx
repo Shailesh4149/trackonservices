@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Link } from "react-router-dom";
 import { Package, Phone, MessageCircle, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,8 @@ import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const PanIndiaCourier = () => {
   const phoneNumber = "8097512951";
+
+  useCanonical("/pan-india-courier");
 
   useEffect(() => {
     document.title = "Pan India Courier Service | All India Delivery | Trackon";

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Link } from "react-router-dom";
 import { Clock, Phone, MessageCircle, MapPin, CheckCircle, ArrowRight, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,8 @@ import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const SameDayCourier = () => {
   const phoneNumber = "8097512951";
+
+  useCanonical("/same-day-courier-andheri-west");
 
   useEffect(() => {
     document.title = "Same Day Courier Service Andheri West | Trackon Courier";

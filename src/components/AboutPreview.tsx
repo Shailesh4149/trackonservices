@@ -36,12 +36,12 @@ const AboutPreview = () => {
               About Trackon Courier
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Mumbai's Most Trusted Courier Partner Since 2010
+              Mumbai's Most Trusted Courier Partner Since 2019
             </h2>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              For over 14 years, Trackon Courier has been delivering excellence across Mumbai and beyond. 
-              What started as a small local delivery service has grown into a comprehensive logistics 
-              solution trusted by 50,000+ satisfied customers.
+              Since 2019, Trackon Courier has been delivering excellence across Mumbai and beyond. 
+              What started as a local delivery service in Andheri West has grown into a comprehensive logistics 
+              solution with 50,000+ successful deliveries and 30+ five-star Google reviews.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               We combine local expertise with nationwide reach, ensuring your packages—whether documents, 
@@ -51,12 +51,12 @@ const AboutPreview = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div className="text-center p-3 bg-secondary/50 rounded-lg">
-                <div className="text-2xl font-bold text-primary">14+</div>
-                <div className="text-xs text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-primary">50K+</div>
+                <div className="text-xs text-muted-foreground">Deliveries</div>
               </div>
               <div className="text-center p-3 bg-secondary/50 rounded-lg">
-                <div className="text-2xl font-bold text-primary">50K+</div>
-                <div className="text-xs text-muted-foreground">Happy Customers</div>
+                <div className="text-2xl font-bold text-primary">30+</div>
+                <div className="text-xs text-muted-foreground">5-Star Reviews</div>
               </div>
               <div className="text-center p-3 bg-secondary/50 rounded-lg">
                 <div className="text-2xl font-bold text-primary">99%</div>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Link } from "react-router-dom";
 import { Plane, Phone, MessageCircle, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,8 @@ import Breadcrumb from "@/components/seo/Breadcrumb";
 
 const InternationalCourier = () => {
   const phoneNumber = "8097512951";
+
+  useCanonical("/international-courier-mumbai");
 
   useEffect(() => {
     document.title = "International Courier Service Mumbai | Worldwide Shipping";

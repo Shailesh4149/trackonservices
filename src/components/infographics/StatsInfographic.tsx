@@ -15,8 +15,8 @@ const stats = [
   },
   {
     icon: Users,
-    value: "10,000+",
-    label: "Happy Customers",
+    value: "30+",
+    label: "5-Star Reviews",
     color: "text-accent"
   },
   {

@@ -47,8 +47,8 @@ const LocalTrust = React.forwardRef<HTMLElement>((_, ref) => {
 
           <aside data-animate="slide-right">
             <ul className="grid grid-cols-2 gap-4 list-none">
-              <CountStat end={10} suffix="+" label="Years of Experience" icon={Clock} colorClass="accent" />
-              <CountStat end={5000} suffix="+" label="Happy Customers" icon={Users} colorClass="primary" />
+              <CountStat end={50000} suffix="+" label="Successful Deliveries" icon={Clock} colorClass="accent" />
+              <CountStat end={30} suffix="+" label="5-Star Reviews" icon={Users} colorClass="primary" />
               <CountStat end={98} suffix="%" label="On-Time Delivery" icon={Award} colorClass="accent" />
               <CountStat end={100} suffix="%" label="Secure Handling" icon={Shield} colorClass="primary" />
             </ul>
