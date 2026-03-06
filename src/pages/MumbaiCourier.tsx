@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, MessageCircle, CheckCircle, Clock, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,8 @@ const mumbaiAreas = [
 ];
 
 const MumbaiCourier = () => {
+  useCanonical("/courier-service-mumbai");
+
   useEffect(() => {
     // SEO Meta Tags - CTR optimized
     document.title = "Fast Courier Service Mumbai – Call Now | Same Day Pickup | Trackon Courier";

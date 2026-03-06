@@ -5,10 +5,13 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import Breadcrumb from "@/components/seo/Breadcrumb";
 import StatsInfographic from "@/components/infographics/StatsInfographic";
+import { useCanonical } from "@/hooks/useCanonical";
 
 const About = () => {
+  useCanonical("/about");
+
   useEffect(() => {
-    document.title = "About Trackon Courier | Mumbai's Trusted Courier Service Since 2010";
+    document.title = "About Trackon Courier | Mumbai's Trusted Courier Service Since 2019";
     
     const updateMeta = (name: string, content: string, isProperty = false) => {
       const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
@@ -27,9 +30,9 @@ const About = () => {
       }
     };
 
-    updateMeta("description", "Learn about Trackon Courier - Mumbai's trusted courier service since 2010. 50,000+ happy customers, 500+ cities covered, 99% on-time delivery rate.");
+    updateMeta("description", "Learn about Trackon Courier - Mumbai's trusted courier service since 2019. 50,000+ deliveries, every city in India covered, 99% on-time delivery rate.");
     updateMeta("og:title", "About Trackon Courier | Mumbai's Trusted Courier Service", true);
-    updateMeta("og:description", "Learn about Trackon Courier - Mumbai's trusted courier service since 2010.", true);
+    updateMeta("og:description", "Learn about Trackon Courier - Mumbai's trusted courier service since 2019.", true);
   }, []);
 
   const breadcrumbItems = [
@@ -38,12 +41,12 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2010", title: "Founded", description: "Started operations in Mumbai with a vision to revolutionize courier services" },
-    { year: "2013", title: "Pan India Expansion", description: "Extended services to 100+ cities across India" },
-    { year: "2016", title: "International Launch", description: "Began international shipping to 50+ countries" },
-    { year: "2019", title: "Tech Integration", description: "Launched real-time tracking and mobile app" },
-    { year: "2022", title: "500+ Cities", description: "Expanded network to cover 500+ cities nationwide" },
-    { year: "2024", title: "200+ Countries", description: "Now shipping to over 200 countries worldwide" },
+    { year: "2019", title: "Founded", description: "Started operations in Andheri West, Mumbai with a vision for reliable courier services" },
+    { year: "2020", title: "Local Expansion", description: "Extended coverage across all Mumbai suburbs and Western Railway belt" },
+    { year: "2021", title: "Pan India Launch", description: "Began shipping to every city across India with trusted network partners" },
+    { year: "2023", title: "International Reach", description: "Launched international shipping to 200+ countries worldwide" },
+    { year: "2024", title: "50,000+ Deliveries", description: "Crossed 50,000 successful deliveries milestone with 30+ five-star reviews" },
+    { year: "2025", title: "Digital Growth", description: "Enhanced real-time tracking and online booking for faster service" },
   ];
 
   const values = [
@@ -54,9 +57,9 @@ const About = () => {
   ];
 
   const team = [
-    { role: "Operations Team", count: "50+", description: "Dedicated professionals managing logistics" },
-    { role: "Delivery Partners", count: "200+", description: "Trained delivery executives across Mumbai" },
-    { role: "Support Staff", count: "24/7", description: "Round-the-clock customer assistance" },
+    { role: "Operations Team", count: "10+", description: "Dedicated professionals managing logistics" },
+    { role: "Delivery Network", count: "Pan India", description: "Partner network covering every city in India" },
+    { role: "Support Staff", count: "6 Days", description: "Mon-Sat customer assistance" },
   ];
 
   return (
@@ -69,12 +72,12 @@ const About = () => {
             <Breadcrumb items={breadcrumbItems} />
             
             <div className="max-w-4xl">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 About Trackon Courier
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
-                Mumbai's trusted courier partner since 2010. We've built our reputation on reliability, 
-                speed, and exceptional customer service across India and 200+ countries worldwide.
+                Mumbai's trusted courier partner since 2019. With 50,000+ successful deliveries and 30+ five-star reviews, 
+                we've built our reputation on reliability, speed, and exceptional customer service across India and 200+ countries worldwide.
               </p>
             </div>
           </div>
@@ -95,21 +98,21 @@ const About = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Story</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Trackon Courier was founded in 2010 with a simple mission: to make courier services 
-                    accessible, reliable, and affordable for everyone in Mumbai. What started as a small 
-                    operation with just three delivery executives has grown into one of Mumbai's most 
-                    trusted courier networks.
+                  Trackon Courier was founded in 2019 with a simple mission: to make courier services 
+                    accessible, reliable, and affordable for everyone in Mumbai. Starting from our 
+                    shop in Andheri West, we've grown into one of Mumbai's most trusted courier 
+                    networks with over 50,000 successful deliveries.
                   </p>
                   <p>
-                    Over the years, we've expanded our services to cover all major cities across India 
-                    and now offer international shipping to over 200 countries. Our growth has been 
-                    fueled by our unwavering commitment to customer satisfaction and on-time delivery.
+                    We've expanded our services to cover every city across India and now offer 
+                    international shipping to over 200 countries. Our growth has been fueled by 
+                    our unwavering commitment to customer satisfaction, reflected in our 30+ 
+                    five-star Google reviews.
                   </p>
                   <p>
-                    Today, we serve thousands of customers daily, from individuals sending personal 
-                    packages to businesses managing complex logistics needs. Our team of 250+ 
-                    professionals works tirelessly to ensure your parcels reach their destination 
-                    safely and on time.
+                    Today, we serve hundreds of customers daily, from individuals sending personal 
+                    packages to businesses managing complex logistics needs. Our dedicated team 
+                    works tirelessly to ensure your parcels reach their destination safely and on time.
                   </p>
                 </div>
               </div>

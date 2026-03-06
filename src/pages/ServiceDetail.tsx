@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Package, Truck, Plane, Clock, Shield, MapPin, Phone, MessageCircle, ArrowLeft, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -99,6 +100,8 @@ const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? servicesData[slug as keyof typeof servicesData] : null;
   const phoneNumber = "8097512951";
+
+  useCanonical(slug ? `/services/${slug}` : undefined);
 
   useEffect(() => {
     if (service) {

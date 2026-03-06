@@ -34,6 +34,7 @@ const Header = () => {
           <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Blog</Link>
           <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors font-medium">About Us</Link>
           <Link to="/faq" className="text-muted-foreground hover:text-foreground transition-colors font-medium">FAQ</Link>
+          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Pricing</Link>
           <a href="/#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Contact</a>
         </div>
 
@@ -64,6 +65,7 @@ const Header = () => {
             <Link to="/blog" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">Blog</Link>
             <Link to="/about" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">About Us</Link>
             <Link to="/faq" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">FAQ</Link>
+            <Link to="/pricing" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">Pricing</Link>
             <a href="/#contact" className="py-2 text-muted-foreground hover:text-foreground transition-colors font-medium">Contact</a>
             <a href="tel:8097512951" className="flex items-center gap-2 text-primary font-bold py-2">
               <Phone className="w-5 h-5" />

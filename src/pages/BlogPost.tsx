@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/seo/Breadcrumb";
 import RelatedPosts from "@/components/blog/RelatedPosts";
 import { Button } from "@/components/ui/button";
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
+import { useCanonical } from "@/hooks/useCanonical";
 
 // Simple markdown parser for blog content
 const parseMarkdown = (content: string): string => {
@@ -44,13 +45,49 @@ const BlogPost = () => {
   const post = slug ? getBlogPost(slug) : null;
   const relatedPosts = slug ? getRelatedPosts(slug, 3) : [];
 
+  useCanonical(slug ? `/blog/${slug}` : undefined);
+
   useEffect(() => {
     if (post) {
       document.title = `${post.title} | Trackon Courier Blog`;
       const meta = document.querySelector('meta[name="description"]');
       if (meta) meta.setAttribute("content", post.metaDescription);
+
+      // Add BlogPosting JSON-LD
+      const scriptId = "blogposting-jsonld";
+      let script = document.getElementById(scriptId) as HTMLScriptElement;
+      if (!script) {
+        script = document.createElement("script");
+        script.id = scriptId;
+        script.type = "application/ld+json";
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.metaDescription,
+        "image": `https://trackonservices.lovable.app${post.image}`,
+        "author": { "@type": "Organization", "name": "Trackon Courier" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Trackon Courier",
+          "logo": { "@type": "ImageObject", "url": "https://trackonservices.lovable.app/logo.png" }
+        },
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://trackonservices.lovable.app/blog/${slug}`
+        }
+      });
+
+      return () => {
+        const el = document.getElementById(scriptId);
+        if (el) el.remove();
+      };
     }
-  }, [post]);
+  }, [post, slug]);
 
   if (!post) {
     return (

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone } from "lucide-react";
@@ -46,6 +47,8 @@ const pricingData = [
 
 const Pricing = () => {
   const sectionRef = useScrollAnimation();
+
+  useCanonical("/pricing");
 
   useEffect(() => {
     document.title = "Courier Charges & Rates Mumbai | Trackon Courier – Affordable Pricing";

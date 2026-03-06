@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -7,6 +8,8 @@ import Breadcrumb from "@/components/seo/Breadcrumb";
 import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
+  useCanonical("/blog");
+
   useEffect(() => {
     document.title = "Courier & Logistics Blog | Tips & Guides | Trackon Courier";
     const meta = document.querySelector('meta[name="description"]');

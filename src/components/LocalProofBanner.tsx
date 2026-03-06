@@ -3,7 +3,7 @@ import { Award, Package, Clock, MapPin } from "lucide-react";
 const LocalProofBanner = () => {
   const proofItems = [
     { icon: Clock, text: "Serving Mumbai since 2019", accent: true },
-    { icon: Package, text: "2,000+ successful deliveries", accent: false },
+    { icon: Package, text: "50,000+ successful deliveries", accent: false },
     { icon: MapPin, text: "Same-day pickup in Andheri West", accent: true },
     { icon: Award, text: "Trusted by local businesses", accent: false },
   ];
