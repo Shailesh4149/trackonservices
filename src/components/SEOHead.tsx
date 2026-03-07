@@ -7,7 +7,7 @@ const SEOHead = () => {
 
     // Add meta description - CTR optimized, human-readable
     const metaDescription = document.querySelector('meta[name="description"]');
-    const descriptionContent = "Same Day Courier Near You – Trusted Local Service in Andheri West, Mumbai. 2,000+ successful deliveries, serving Mumbai since 2019. Doorstep pickup within 30-60 mins. ★★★★★ rated by local customers. Call 8097512951 for instant quote.";
+    const descriptionContent = "Same Day Courier Near You – Trusted Local Service in Andheri West, Mumbai. 50,000+ successful deliveries across India, serving Mumbai since 2019. Doorstep pickup within 30-60 mins. ★★★★★ rated by local customers. Call 8097512951 for instant quote.";
     if (metaDescription) {
       metaDescription.setAttribute("content", descriptionContent);
     } else {
