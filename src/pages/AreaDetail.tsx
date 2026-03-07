@@ -1579,8 +1579,8 @@ const AreaDetail = () => {
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "500"
+            "ratingValue": "5.0",
+            "reviewCount": "30"
           }
         }
       ];

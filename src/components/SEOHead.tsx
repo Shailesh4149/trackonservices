@@ -7,7 +7,7 @@ const SEOHead = () => {
 
     // Add meta description - CTR optimized, human-readable
     const metaDescription = document.querySelector('meta[name="description"]');
-    const descriptionContent = "Same Day Courier Near You – Trusted Local Service in Andheri West, Mumbai. 2,000+ successful deliveries, serving Mumbai since 2019. Doorstep pickup within 30-60 mins. ★★★★★ rated by local customers. Call 8097512951 for instant quote.";
+    const descriptionContent = "Same Day Courier Near You – Trusted Local Service in Andheri West, Mumbai. 50,000+ successful deliveries across India, serving Mumbai since 2019. Doorstep pickup within 30-60 mins. ★★★★★ rated by local customers. Call 8097512951 for instant quote.";
     if (metaDescription) {
       metaDescription.setAttribute("content", descriptionContent);
     } else {
@@ -32,7 +32,7 @@ const SEOHead = () => {
     // Add Open Graph tags - CTR optimized
     const ogTags = [
       { property: "og:title", content: "Fast Courier Pickup Andheri West – Call Now | Trackon Courier" },
-      { property: "og:description", content: "Same Day Courier Near You – Trusted Local Service. 2,000+ deliveries, ★★★★★ rated. Doorstep pickup in 30-60 mins. Serving Mumbai since 2019. Call 8097512951." },
+      { property: "og:description", content: "Same Day Courier Near You – Trusted Local Service. 50,000+ deliveries, ★★★★★ rated. Doorstep pickup in 30-60 mins. Serving Mumbai since 2019. Call 8097512951." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
     ];
@@ -113,20 +113,14 @@ const SEOHead = () => {
           "ratingValue": "5.0",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "27",
-          "reviewCount": "27"
+          "ratingCount": "30",
+          "reviewCount": "30"
         }
       });
       document.head.appendChild(script);
     }
 
-    // Add canonical URL
-    if (!document.querySelector('link[rel="canonical"]')) {
-      const canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      canonical.href = window.location.origin;
-      document.head.appendChild(canonical);
-    }
+    // Canonical is now handled by useCanonical hook in Index.tsx
 
   }, []);
 
