@@ -43,7 +43,7 @@ const MumbaiCourier = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Same Day Courier Near You in Mumbai. ★★★★★ rated, 2,000+ deliveries, serving Mumbai since 2019. Doorstep pickup in 1-2 hours. Based in Andheri West. Call 8097512951.');
+      metaDescription.setAttribute('content', 'Same Day Courier Near You in Mumbai. ★★★★★ rated, 50,000+ deliveries across India, serving Mumbai since 2019. Doorstep pickup in 1-2 hours. Based in Andheri West. Call 8097512951.');
     }
 
     const metaKeywords = document.querySelector('meta[name="keywords"]');
