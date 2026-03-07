@@ -113,8 +113,8 @@ const SEOHead = () => {
           "ratingValue": "5.0",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "27",
-          "reviewCount": "27"
+          "ratingCount": "30",
+          "reviewCount": "30"
         }
       });
       document.head.appendChild(script);
