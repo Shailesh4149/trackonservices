@@ -5,6 +5,7 @@ import LocalProofBanner from "@/components/LocalProofBanner";
 import SEOHead from "@/components/SEOHead";
 import FloatingButtons from "@/components/FloatingButtons";
 import SectionSkeleton from "@/components/SectionSkeleton";
+import { useCanonical } from "@/hooks/useCanonical";
 
 // Lazy load below-fold components for faster initial load
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
