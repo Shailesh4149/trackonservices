@@ -120,13 +120,7 @@ const SEOHead = () => {
       document.head.appendChild(script);
     }
 
-    // Add canonical URL
-    if (!document.querySelector('link[rel="canonical"]')) {
-      const canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      canonical.href = window.location.origin;
-      document.head.appendChild(canonical);
-    }
+    // Canonical is now handled by useCanonical hook in Index.tsx
 
   }, []);
 

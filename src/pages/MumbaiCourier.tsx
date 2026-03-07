@@ -116,7 +116,7 @@ const MumbaiCourier = () => {
               <p className="text-primary-foreground/80 mb-8 flex flex-wrap items-center gap-4 text-sm font-medium">
                 <span>★★★★★ Rated by local customers</span>
                 <span>•</span>
-                <span>2,000+ successful deliveries</span>
+                <span>50,000+ successful deliveries</span>
                 <span>•</span>
                 <span>Serving Mumbai since 2019</span>
               </p>

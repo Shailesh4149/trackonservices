@@ -17,6 +17,7 @@ const ContactSection = lazy(() => import("@/components/ContactSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
+  useCanonical("/");
   return (
     <>
       <SEOHead />
