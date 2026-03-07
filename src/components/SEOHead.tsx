@@ -32,7 +32,7 @@ const SEOHead = () => {
     // Add Open Graph tags - CTR optimized
     const ogTags = [
       { property: "og:title", content: "Fast Courier Pickup Andheri West – Call Now | Trackon Courier" },
-      { property: "og:description", content: "Same Day Courier Near You – Trusted Local Service. 2,000+ deliveries, ★★★★★ rated. Doorstep pickup in 30-60 mins. Serving Mumbai since 2019. Call 8097512951." },
+      { property: "og:description", content: "Same Day Courier Near You – Trusted Local Service. 50,000+ deliveries, ★★★★★ rated. Doorstep pickup in 30-60 mins. Serving Mumbai since 2019. Call 8097512951." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
     ];
