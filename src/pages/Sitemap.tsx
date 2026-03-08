@@ -46,12 +46,12 @@ const Sitemap = () => {
   ];
 
   const services = [
-    { name: "Domestic Courier", href: "/services/domestic-courier", icon: Package },
-    { name: "International Shipping", href: "/services/international-shipping", icon: Plane },
-    { name: "Express Delivery", href: "/services/express-delivery", icon: Truck },
-    { name: "Same Day Delivery", href: "/services/same-day-delivery", icon: Clock },
-    { name: "Secure Packaging", href: "/services/secure-packaging", icon: Shield },
-    { name: "Doorstep Pickup", href: "/services/doorstep-pickup", icon: MapPin },
+    { name: "Same Day Courier", href: "/same-day-courier-andheri-west", icon: Clock },
+    { name: "Express Courier", href: "/express-courier-mumbai", icon: Truck },
+    { name: "Pan India Courier", href: "/pan-india-courier", icon: Package },
+    { name: "International Courier", href: "/international-courier-mumbai", icon: Plane },
+    { name: "Airport Courier", href: "/airport-courier-mumbai", icon: MapPin },
+    { name: "Courier Service Mumbai", href: "/courier-service-mumbai", icon: Shield },
   ];
 
   const areas = [
