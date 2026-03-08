@@ -66,6 +66,10 @@ const App = () => (
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/book-courier-online" element={<BookCourierOnline />} />
+            <Route path="/courier-pickup-from-home" element={<CourierPickupFromHome />} />
+            <Route path="/courier-charges-per-kg" element={<CourierChargesPerKg />} />
+            <Route path="/courier-near-me-open-now" element={<CourierNearMeOpenNow />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
