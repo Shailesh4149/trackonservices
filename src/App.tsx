@@ -25,6 +25,10 @@ const MumbaiCourier = lazy(() => import("./pages/MumbaiCourier"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Pricing = lazy(() => import("./pages/Pricing"));
+const BookCourierOnline = lazy(() => import("./pages/BookCourierOnline"));
+const CourierPickupFromHome = lazy(() => import("./pages/CourierPickupFromHome"));
+const CourierChargesPerKg = lazy(() => import("./pages/CourierChargesPerKg"));
+const CourierNearMeOpenNow = lazy(() => import("./pages/CourierNearMeOpenNow"));
 
 const queryClient = new QueryClient();
 
